@@ -1,0 +1,50 @@
+Шаблон бага
+
+*Описание:*
+
+Согласно постановке [get pillbox|https://wiki.mos.social/pages/viewpage.action?pageId=414240175] если в ответе getPatientPillboxList totalItemsCount<=1, то medicationsCount=totalItemsCount, а schedulesCount=количество назначений, для которых medication.pillboxStatus = scheduled
+ !Постановка.png|thumbnail! 
+но вместо этого отрабатывает АС2 и возвращается ошибка LN_MEDS_ERROR
+ !Ошибка.png|thumbnail! 
+
+*Шаги:*
+1. Выполнить запрос в соответствии с примером.
+
+Пример:
+{code:java}
+curl -X 'GET' \
+  'http://emiasinfo1.emias.solit-clouds.ru/api/v2/medication/pillbox?patientId=23522176' \
+  -H 'accept: application/json' \
+  -H 'EI-token: cXDXWf9cgqok7HAL4QPlScF7X8_KipsEsNPrLJ4REVo'
+{code}
+
+*Ожидаемый результат:*
+В ответе вернулись medicationsCount=0 и schedulesCount=0
+
+*Фактический результат:*
+В ответе вернулась ошибка LN_MEDS_ERROR
+
+
+
+
+
+Закрытие бага
+{color:#00875a}*Исправлено*{color}
+ !Исправлено.png|thumbnail! 
+Проверено на:
+{code:java}
+http://emiasinfo1.emias.solit-clouds.ru/
+version:"1.0.0" 
+628d474d239b15dc124231d4ca15085f0891e218{code}
+
+
+
+Закрытие задачи
+{color:#00875a}Проверено {color}
+http://emiasinfo1.emias.solit-clouds.ru/
+b635f445ea1e0e6ccee7488d3ed5de3e26cb9fb4
+
+Проверены:
+1. Работа метода после доработки
+2. Получение пустой истории
+3. Написана [документация|https://testit.solit-clouds.ru/projects/145062/tests?isolatedSection=25265d96-a8fa-4d73-b2f2-ebdfbab696ae]
