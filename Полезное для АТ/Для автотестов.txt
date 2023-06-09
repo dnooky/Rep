@@ -1,0 +1,11 @@
+Для автотестов
+
+JSONPATH
+ПОИСК JSONPATH БЕЗ []
+$.error.code - расписать весь путь (иначе $..code вернет ответ со скобками [])
+
+XPATH
+ПОЛУЧИТЬ ЗНАЧЕНИЕ АТРИБУТА XML
+//ResultSet/@fetchSize
+КОЛ-ВО ЗАПИСЕЙ В JDBC
+count(//*:Row)
