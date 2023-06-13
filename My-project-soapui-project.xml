@@ -17451,21 +17451,12 @@ including as a SOAP header.</xsd:documentation>
    </soap:Header>
    <soap:Body>\r
       <typ:GetScheduleRequest>\r
-         <typ:requestGUID>?</typ:requestGUID>\r
-         <typ:medicationId>?</typ:medicationId>\r
-         <typ:patientId>?</typ:patientId>\r
-         <!--Optional:-->\r
+         <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
+         <typ:medicationId>1057673</typ:medicationId>\r
+         <typ:patientId>18833793</typ:patientId>\r
          <typ:periodTerm>\r
-            <!--Optional:-->\r
-            <v1:start>?</v1:start>\r
-            <!--Optional:-->\r
-            <v1:end>?</v1:end>\r
+            <v1:start>2023-06-13</v1:start>\r
          </typ:periodTerm>\r
-         <!--Optional:-->\r
-         <typ:options>\r
-            <!--Zero or more repetitions:-->\r
-            <v1:entry key="?">?</v1:entry>\r
-         </typ:options>\r
       </typ:GetScheduleRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getScheduleRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="55e45b63-69c6-4df4-bd5c-a056347a3ca7" isOneWay="false" action="getScheduleProject" name="getScheduleProject" bindingOperationName="getScheduleProject" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="629c809e-8087-4d1b-bc7e-bdb17c127f37" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
@@ -26705,7 +26696,1732 @@ including as a SOAP header.</xsd:documentation>
          <appointmentId>?</appointmentId>\r
       </api:shiftAppointment>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:#shiftAppointment"/></con:call></con:operation></con:interface><con:interface xsi:type="con:RestService" id="31386af6-a5d8-4e98-a64d-722d4fb2ee24" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://emiasinfo1.emias.solit-clouds.ru" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://emiasinfo1.emias.solit-clouds.ru</con:endpoint></con:endpoints><con:resource name="logout" path="/api/v1/user/authentication/logout" id="068d019e-645d-446f-b531-a0ff59c7b1ab"><con:settings/><con:parameters/><con:method name="Method 1" id="bdcedc07-e667-4656-9e06-7dd4943ed2d1" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:log="http://emiasinfo1.emias.solit-clouds.ru/api/v1/user/authentication/logout">log:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="0d9178c4-e1da-4f0e-bf61-a348e7ffdd59" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="check" path="/api/v1/user/authentication/check" id="6944f842-bf8f-4a06-90ea-7173e3eb24d3"><con:settings/><con:parameters/><con:method name="Method 1" id="88e480f2-6a9f-4dca-b947-d0036c496d0b" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:chec="http://emiasinfo1.emias.solit-clouds.ru/api/v1/user/authentication/check">chec:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="0f09a5f6-dfd7-426c-b502-7886ed7414ca" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="8e4e3cf0-d417-40d4-8198-983248086ba3" name="authentication/logout"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4afb6346-0ccf-461d-9147-a43a9ff182b8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС0_ID279037" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="logout. Ошибка SERVER_ERROR" id="a5634437-fb7f-4986-8422-1e606b194863"><con:settings/><con:config service="http://emiasinfo1.emias.solit-clouds.ru" resourcePath="/api/v1/user/authentication/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="logout. Ошибка SERVER_ERROR" id="0d9178c4-e1da-4f0e-bf61-a348e7ffdd59" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:#shiftAppointment"/></con:call></con:operation></con:interface><con:interface xsi:type="con:RestService" id="31386af6-a5d8-4e98-a64d-722d4fb2ee24" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://emiasinfo1.emias.solit-clouds.ru" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://emiasinfo1.emias.solit-clouds.ru</con:endpoint></con:endpoints><con:resource name="logout" path="/api/v1/user/authentication/logout" id="068d019e-645d-446f-b531-a0ff59c7b1ab"><con:settings/><con:parameters/><con:method name="Method 1" id="bdcedc07-e667-4656-9e06-7dd4943ed2d1" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:log="http://emiasinfo1.emias.solit-clouds.ru/api/v1/user/authentication/logout">log:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="0d9178c4-e1da-4f0e-bf61-a348e7ffdd59" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="check" path="/api/v1/user/authentication/check" id="6944f842-bf8f-4a06-90ea-7173e3eb24d3"><con:settings/><con:parameters/><con:method name="Method 1" id="88e480f2-6a9f-4dca-b947-d0036c496d0b" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:chec="http://emiasinfo1.emias.solit-clouds.ru/api/v1/user/authentication/check">chec:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="0f09a5f6-dfd7-426c-b502-7886ed7414ca" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" id="ac19a251-af19-4938-98b4-9eb8915ba9db" wsaVersion="NONE" name="LaboratoryOtherDictionariesServiceBinding" type="wsdl" bindingName="{http://emias.mos.ru/laboratory/v1/dictionary/other/soap/}LaboratoryOtherDictionariesServiceBinding" soapVersion="1_2" anonymous="optional" definition="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?wsdl"><con:part><con:url>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:dto="http://emias.mos.ru/laboratory/v1/dictionary/other/" xmlns:ct="http://emias.mos.ru/laboratory/v1/common/types/">
+  <wsdl:types>
+    <xs:schema>
+      <xs:import namespace="http://emias.mos.ru/laboratory/v1/dictionary/other/" schemaLocation="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=dictionary-other-wsdl-types.xsd"/>
+      <xs:import namespace="http://emias.mos.ru/laboratory/v1/common/types/" schemaLocation="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=common-types.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="faultMessage">
+    <wsdl:part element="ct:LaboratoryFaultInfo" name="errorInfo"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReasonCullTubeResponse">
+    <wsdl:part element="dto:getReasonCullTubeResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMemoryCardRequest">
+    <wsdl:part element="dto:getMemoryCardRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMethodOfObtainingBiopsyMaterialRequest">
+    <wsdl:part element="dto:getMethodOfObtainingBiopsyMaterialRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMemoryCardForLKRequest">
+    <wsdl:part element="dto:getMemoryCardForLKRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReasonCancelAssignmentRequest">
+    <wsdl:part element="dto:getReasonCancelAssignmentRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSamplingTypeResponse">
+    <wsdl:part element="dto:getSamplingTypeResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReasonCullTubeRequest">
+    <wsdl:part element="dto:getReasonCullTubeRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPriorityRequest">
+    <wsdl:part element="dto:getPriorityRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMemoryCardResponse">
+    <wsdl:part element="dto:getMemoryCardResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getClinicalLaboratoriesResponse">
+    <wsdl:part element="dto:getClinicalLaboratoriesResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSamplingTypeRequest">
+    <wsdl:part element="dto:getSamplingTypeRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMethodOfObtainingBiopsyMaterialResponse">
+    <wsdl:part element="dto:getMethodOfObtainingBiopsyMaterialResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTakeCytologyBMListResponse">
+    <wsdl:part element="dto:getTakeCytologyBMListResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReasonCancelAssignmentResponse">
+    <wsdl:part element="dto:getReasonCancelAssignmentResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getServiceResponse">
+    <wsdl:part element="dto:getServiceResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getColorsListRequest">
+    <wsdl:part element="dto:getColorsListRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getColorsListResponse">
+    <wsdl:part element="dto:getColorsListResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddSignRequest">
+    <wsdl:part element="dto:getAddSignRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBiopsyResearchGoalRequest">
+    <wsdl:part element="dto:getBiopsyResearchGoalRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddSignResponse">
+    <wsdl:part element="dto:getAddSignResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTakeCytologyBMListRequest">
+    <wsdl:part element="dto:getTakeCytologyBMListRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBiopsyResearchGoalResponse">
+    <wsdl:part element="dto:getBiopsyResearchGoalResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContingentCodeResponse">
+    <wsdl:part element="dto:getContingentCodeResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getClinicalLaboratoriesRequest">
+    <wsdl:part element="dto:getClinicalLaboratoriesRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContingentCodeRequest">
+    <wsdl:part element="dto:getContingentCodeRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTreatmentResponse">
+    <wsdl:part element="dto:getTreatmentResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPriorityResponse">
+    <wsdl:part element="dto:getPriorityResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getServiceRequest">
+    <wsdl:part element="dto:getServiceRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTreatmentRequest">
+    <wsdl:part element="dto:getTreatmentRequest" name="request"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMemoryCardForLKResponse">
+    <wsdl:part element="dto:getMemoryCardForLKResponse" name="response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="LaboratoryOtherDictionariesServicePorts">
+    <wsdl:operation name="getClinicalLaboratories">
+      <wsdl:documentation>Метод возвращает список всех КДЛ</wsdl:documentation>
+      <wsdl:input message="tns:getClinicalLaboratoriesRequest"></wsdl:input>
+      <wsdl:output message="tns:getClinicalLaboratoriesResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSamplingType">
+      <wsdl:documentation>Метод возвращает список профилей взятия</wsdl:documentation>
+      <wsdl:input message="tns:getSamplingTypeRequest"></wsdl:input>
+      <wsdl:output message="tns:getSamplingTypeResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReasonCullTube">
+      <wsdl:documentation>Метод возвращает список причин выбраковки пробирок</wsdl:documentation>
+      <wsdl:input message="tns:getReasonCullTubeRequest"></wsdl:input>
+      <wsdl:output message="tns:getReasonCullTubeResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getContingentCode">
+      <wsdl:documentation>Метод возвращает список кодов контингентов</wsdl:documentation>
+      <wsdl:input message="tns:getContingentCodeRequest"></wsdl:input>
+      <wsdl:output message="tns:getContingentCodeResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAddSign">
+      <wsdl:documentation>Метод возвращает список дополнительных признаков</wsdl:documentation>
+      <wsdl:input message="tns:getAddSignRequest"></wsdl:input>
+      <wsdl:output message="tns:getAddSignResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPriority">
+      <wsdl:documentation>Метод возвращает список приоритетов назначений</wsdl:documentation>
+      <wsdl:input message="tns:getPriorityRequest"></wsdl:input>
+      <wsdl:output message="tns:getPriorityResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReasonCancelAssignment">
+      <wsdl:documentation>Метод возвращает список причин отмены назначений</wsdl:documentation>
+      <wsdl:input message="tns:getReasonCancelAssignmentRequest"></wsdl:input>
+      <wsdl:output message="tns:getReasonCancelAssignmentResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getService">
+      <wsdl:documentation>Метод получения услуги МГФОМС</wsdl:documentation>
+      <wsdl:input message="tns:getServiceRequest"></wsdl:input>
+      <wsdl:output message="tns:getServiceResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMemoryCard">
+      <wsdl:documentation>Метод предоставления правил подготовки пациента к взятию биоматериала</wsdl:documentation>
+      <wsdl:input message="tns:getMemoryCardRequest"></wsdl:input>
+      <wsdl:output message="tns:getMemoryCardResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMemoryCardForLK">
+      <wsdl:documentation>Метод предоставления правил подготовки пациента к взятию биоматериала в ЛК</wsdl:documentation>
+      <wsdl:input message="tns:getMemoryCardForLKRequest"></wsdl:input>
+      <wsdl:output message="tns:getMemoryCardForLKResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getColorsList">
+      <wsdl:documentation>Метод возвращает список гистологических окрасок</wsdl:documentation>
+      <wsdl:input message="tns:getColorsListRequest"></wsdl:input>
+      <wsdl:output message="tns:getColorsListResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBiopsyResearchGoal">
+      <wsdl:documentation>Метод возвращает список целей прижизненного патолого-анатомического исследования биопсийного (операционного) материала</wsdl:documentation>
+      <wsdl:input message="tns:getBiopsyResearchGoalRequest"></wsdl:input>
+      <wsdl:output message="tns:getBiopsyResearchGoalResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTakeCytologyBMList">
+      <wsdl:documentation>Метод возвращает список способов взятия цитологического БМ</wsdl:documentation>
+      <wsdl:input message="tns:getTakeCytologyBMListRequest"></wsdl:input>
+      <wsdl:output message="tns:getTakeCytologyBMListResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMethodOfObtainingBiopsyMaterial">
+      <wsdl:documentation>Метод возвращает способы получения биопсийного материала</wsdl:documentation>
+      <wsdl:input message="tns:getMethodOfObtainingBiopsyMaterialRequest"></wsdl:input>
+      <wsdl:output message="tns:getMethodOfObtainingBiopsyMaterialResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTreatment">
+      <wsdl:documentation>Метод возвращает справочник медицинских манипуляций</wsdl:documentation>
+      <wsdl:input message="tns:getTreatmentRequest"></wsdl:input>
+      <wsdl:output message="tns:getTreatmentResponse"></wsdl:output>
+      <wsdl:fault message="tns:faultMessage" name="generalFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LaboratoryOtherDictionariesServiceBinding" type="tns:LaboratoryOtherDictionariesServicePorts">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getClinicalLaboratories">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSamplingType">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReasonCullTube">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getContingentCode">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAddSign">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPriority">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReasonCancelAssignment">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getService">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMemoryCard">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMemoryCardForLK">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getColorsList">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBiopsyResearchGoal">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTakeCytologyBMList">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMethodOfObtainingBiopsyMaterial">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTreatment">
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="generalFault">
+        <soap12:fault name="generalFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LaboratoryOtherDictionariesService">
+    <wsdl:port binding="tns:LaboratoryOtherDictionariesServiceBinding" name="LaboratoryOtherDictionariesService">
+      <wsdl:documentation>Сервис предоставления данных справочников (кроме ЕСЛИ) ЕМИАС-ЦЛС</wsdl:documentation>
+      <soap12:address location="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=dictionary-other-wsdl-types.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/laboratory/v1/dictionary/other/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dto="http://emias.mos.ru/laboratory/v1/dictionary/other/types/">
+  <xs:import namespace="http://emias.mos.ru/laboratory/v1/dictionary/other/types/" schemaLocation="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=dictionary-other-types.xsd"/>
+  <xs:element name="getClinicalLaboratoriesRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на получение списка всех КДЛ</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="moId" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getClinicalLaboratoriesResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на получение списка всех КДЛ</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="clinicalLaboratory" type="dto:ClinicalLaboratory">
+          <xs:annotation>
+            <xs:documentation>Список КДЛ</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSamplingTypeRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на список профилей взятия</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getSamplingTypeResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на список профилей взятия</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="samlingType" type="dto:SamplingType">
+          <xs:annotation>
+            <xs:documentation>Список профилей взятия</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPriorityRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на список приоритетов назначений</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getPriorityResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на список приоритетов назначений</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="priority" type="dto:Priority">
+          <xs:annotation>
+            <xs:documentation>Список приоритетов назначений</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReasonCullTubeRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на список причин выбраковки пробирок</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getReasonCullTubeResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на список причин выбраковки пробирок</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="reasonCullTube" type="dto:ReasonCullTube">
+          <xs:annotation>
+            <xs:documentation>Список причин выбраковки пробирок</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getContingentCodeRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на список кодов контингента</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getContingentCodeResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на список кодов контингента</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="contingentCode" type="dto:ContingentCode">
+          <xs:annotation>
+            <xs:documentation>Список кодов контингента</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAddSignRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на список дополнительных признаков</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getAddSignResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на список дополнительных признаков</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="additionalSign" type="dto:AdditionalSign">
+          <xs:annotation>
+            <xs:documentation>Список дополнительных признаков</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReasonCancelAssignmentRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос списка причин отмены назначений</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getReasonCancelAssignmentResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос списка причин отмены назначений</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="reasonCancelAssignment" type="dto:ReasonCancelAssignment">
+          <xs:annotation>
+            <xs:documentation>Список причин отмены назначений</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMemoryCardRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на предоставление правил подготовки пациента к взятию биоматериала</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="request" type="dto:PairBiomaterialLaboratory"/>
+        <xs:element minOccurs="0" name="devide" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMemoryCardResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на предоставление правил подготовки пациента к взятию биоматериала</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="result" type="dto:MemoryCard"/>
+        <xs:element name="devide" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMemoryCardForLKRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на предоставление правил подготовки пациента к взятию биоматериала в ЛК</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="laboratoryId" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMemoryCardForLKResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на предоставление правил подготовки пациента к взятию биоматериала в ЛК</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="result" type="dto:MemoryCardForLK"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getServiceRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на получение услуги МГФОМС</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="samplingTypeId" type="xs:long"/>
+        <xs:element name="fullYears" type="xs:long"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getServiceResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на получение услуги МГФОМС</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="service" type="dto:Service"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getColorsListRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на получение списка гистологических окрасок</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getColorsListResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на получение списка гистологических окрасок</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="color" type="dto:Color">
+          <xs:annotation>
+            <xs:documentation>Список гистологических окрасок</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBiopsyResearchGoalRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на получение списка целей прижизненного патолого-анатомического исследования биопсийного (операционного) материала</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getBiopsyResearchGoalResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на получение целей прижизненного патолого-анатомического исследования биопсийного (операционного) материала</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="biopsyResearchGoal" type="dto:BiopsyResearchGoal">
+          <xs:annotation>
+            <xs:documentation>Список целей прижизненного патолого-анатомического исследования биопсийного (операционного) материала</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTakeCytologyBMListRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на получение списка способов взятия цитологического БМ</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getTakeCytologyBMListResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос на получение способов взятия цитологического БМ</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="takeCytologyBM" type="dto:TakeCytologyBM">
+          <xs:annotation>
+            <xs:documentation>Список способов взятия цитологического БМ</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMethodOfObtainingBiopsyMaterialRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на получение списка способов получения биопсийного материала</xs:documentation>
+    </xs:annotation>
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="getMethodOfObtainingBiopsyMaterialResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос получения способов получения биопсийного материала</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="methodOfObtainingBiopsyMaterial" type="dto:MethodOfObtainingBiopsyMaterial">
+          <xs:annotation>
+            <xs:documentation>Список способов получения биопсийного материала</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTreatmentRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос на получение медицинских манипуляций</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="laboratoryType" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTreatmentResponse">
+    <xs:annotation>
+      <xs:documentation>Ответ на запрос получения медицинских манипуляций</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="treatment" type="dto:Treatment">
+          <xs:annotation>
+            <xs:documentation>Список способов получения биопсийного материала</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=dictionary-other-types.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/laboratory/v1/dictionary/other/types/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://emias.mos.ru/laboratory/v1/dictionary/other/types/" xmlns:dt="http://emias.mos.ru/laboratory/v1/dictionary/types/">
+  <xs:import namespace="http://emias.mos.ru/laboratory/v1/dictionary/types/" schemaLocation="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=dictionary-types.xsd"/>
+  <xs:complexType name="ClinicalLaboratory">
+    <xs:annotation>
+      <xs:documentation>Клинико-диагностическая лаборатория</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="shortName" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element minOccurs="0" name="moId" type="xs:long"/>
+      <xs:element minOccurs="0" name="lpuId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BMLocusPair">
+    <xs:annotation>
+      <xs:documentation>Пара биоматериал + локус</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="locusId" type="xs:long"/>
+      <xs:element name="bmId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SamplingType">
+    <xs:annotation>
+      <xs:documentation>Профиль взятия</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="self" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="bmLocusPair" type="tns:BMLocusPair"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReasonCullTube">
+    <xs:annotation>
+      <xs:documentation>Причина выбраковки пробирки</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContingentCode">
+    <xs:annotation>
+      <xs:documentation>Код контингента</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdditionalSign">
+    <xs:annotation>
+      <xs:documentation>Дополнительный признак</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Priority">
+    <xs:annotation>
+      <xs:documentation>Причина выбраковки пробирки</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="cito" type="xs:boolean"/>
+      <xs:element name="longTerm" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="fromPeriod" type="xs:long"/>
+      <xs:element minOccurs="0" name="toPeriod" type="xs:long"/>
+      <xs:element minOccurs="0" name="offset" type="xs:long"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="freePeriod" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CompatibilityGroup">
+    <xs:annotation>
+      <xs:documentation>Группа совместимости</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="clinicalLaboratory" type="tns:ClinicalLaboratory"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="laboratoryList" type="dt:Laboratory"/>
+      <xs:element minOccurs="0" name="locus" type="dt:Locus"/>
+      <xs:element minOccurs="0" name="biomaterial" type="dt:Biomaterial"/>
+      <xs:element minOccurs="0" name="takeBiomaterial" type="dt:TakeBM"/>
+      <xs:element minOccurs="0" name="vial" type="dt:Vial"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReasonCancelAssignment">
+    <xs:annotation>
+      <xs:documentation>Причины отмены назначения</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MemoryCard">
+    <xs:annotation>
+      <xs:documentation>Памятка для подготовки пациента к процедуре сдачи биоматериала</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="biomaterialId" type="xs:long"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="content" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MemoryCardForLK">
+    <xs:annotation>
+      <xs:documentation>Памятка для подготовки пациента к процедуре сдачи биоматериала в ЛК</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="laboratoryId" type="xs:long"/>
+      <xs:element name="laboratoryName" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="memoText" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PairBiomaterialLaboratory">
+    <xs:annotation>
+      <xs:documentation>Памятка для подготовки пациента к процедуре сдачи биоматериала</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="biomaterialId" type="xs:long"/>
+      <xs:element name="laboratoryId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Service">
+    <xs:annotation>
+      <xs:documentation>Медицинская услуга МГФОМС</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="code" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Color">
+    <xs:annotation>
+      <xs:documentation>Гистологическая окраска</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BiopsyResearchGoal">
+    <xs:annotation>
+      <xs:documentation>Цель прижизненного патолого-анатомического исследования биопсийного (операционного)
+                материала</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TakeCytologyBM">
+    <xs:annotation>
+      <xs:documentation>Способ взятия цитологического БМ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MethodOfObtainingBiopsyMaterial">
+    <xs:annotation>
+      <xs:documentation>Способ получения биопсийного материала</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Treatment">
+    <xs:annotation>
+      <xs:documentation>Медицинская манипуляция</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="treatmentCode" type="xs:long"/>
+      <xs:element name="treatmentTitle" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BmObtainingMethod">
+    <xs:annotation>
+      <xs:documentation>Справочник способов получения биопсийного материала.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IGHObjective">
+    <xs:annotation>
+      <xs:documentation>Задача ИГХ.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="access_kpi" type="xs:boolean"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MgiSpecialization">
+    <xs:annotation>
+      <xs:documentation>Специализация МГИ исследования.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MGIMethod">
+    <xs:annotation>
+      <xs:documentation>Метод МГИ исследования.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+      <xs:element name="mgiMaterialType" type="tns:MGIMaterialType"/>
+      <xs:element name="mgiSpecialization" type="tns:MgiSpecialization"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MGIMaterialType">
+    <xs:annotation>
+      <xs:documentation>Тип материала МГИ.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MGIParameters">
+    <xs:annotation>
+      <xs:documentation>Параметры МГИ исследования.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+      <xs:element name="mgiMethod" type="tns:MGIMethod"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CytologicalConclusion">
+    <xs:annotation>
+      <xs:documentation>Заключение цитологического диагностического исследования.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StrokeType">
+    <xs:annotation>
+      <xs:documentation>Тип гинекологического мазка (цитология).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatternOfChanges">
+    <xs:annotation>
+      <xs:documentation>Характер изменения клеток (гинекологическая цитология)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GynecologistConclusion">
+    <xs:annotation>
+      <xs:documentation>Заключение гинекологического диагностического исследования.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdditionalClarifications">
+    <xs:annotation>
+      <xs:documentation>Дополнительное уточнение (гинекологическая цитология).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InflammatoryProcess">
+    <xs:annotation>
+      <xs:documentation>Список воспалительных процессов (цитология)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MGIParametersLIS">
+    <xs:annotation>
+      <xs:documentation>Параметры МГИ исследования.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BethesdaClassification">
+    <xs:annotation>
+      <xs:documentation>Список классификаций Бетесда для результатов гинекологических исследований</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element name="interpretation" type="xs:string"/>
+      <xs:element name="conclusion" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=dictionary-types.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/laboratory/v1/dictionary/types/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://emias.mos.ru/laboratory/v1/dictionary/types/" xmlns:ct="http://emias.mos.ru/laboratory/v1/common/types/">
+  <xs:import namespace="http://emias.mos.ru/laboratory/v1/common/types/" schemaLocation="http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=common-types.xsd"/>
+  <xs:complexType name="LaboratorySearchItem">
+    <xs:annotation>
+      <xs:documentation>Критерии поиска в справочнике ЛИ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element name="laboratoryId" type="xs:long"/>
+        <xs:element name="laboratoryKindId" type="xs:long"/>
+        <xs:element name="laboratorySubKindId" type="xs:long"/>
+      </xs:choice>
+      <xs:element minOccurs="0" name="accessKPI" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LaboratoryPage">
+    <xs:annotation>
+      <xs:documentation>Страница результатов поиска элементов справочника ЛИ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="results" type="tns:Laboratory"/>
+      <xs:element name="paging" type="ct:ResponsePageInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Laboratory">
+    <xs:annotation>
+      <xs:documentation>Лабораторное исследование</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>ИД ЛИ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="code" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код ЛИ по справочнику ЕСЛИ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Наименование</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="shortName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Краткое наименование</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="omsCode" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код ЛИ по ОМС</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="laboratoryKindId" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>ИД вида исследования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="laboratorySubKindId" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>ИД подвида исследования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="takeBMId" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>ИД правила подготовки к взятию биоматериала</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="needPrintForm" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Требуется печать бланка</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="urgency" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Признак актуальности</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AnthropometricData">
+    <xs:annotation>
+      <xs:documentation>Антропометрические данные</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="value" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="laboratoryId" type="xs:long"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeviationValue">
+    <xs:annotation>
+      <xs:documentation>Отклонения от нормы</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="type_mark" type="xs:long"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Biomaterial">
+    <xs:annotation>
+      <xs:documentation>Биоматериал</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="hl7Code" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LaboratoryKind">
+    <xs:annotation>
+      <xs:documentation>Вид лабораторного исследования</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="shortName" type="xs:string"/>
+      <xs:element minOccurs="0" name="hl7Code" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LaboratorySubKind">
+    <xs:annotation>
+      <xs:documentation>Подвид лабораторного исследования</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="shortName" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+      <xs:element name="labKindId" type="xs:long"/>
+      <xs:element minOccurs="0" name="takeBMId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Locus">
+    <xs:annotation>
+      <xs:documentation>Локус</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TakeBM">
+    <xs:annotation>
+      <xs:documentation>Правило взятия БМ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="content" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Test">
+    <xs:annotation>
+      <xs:documentation>Тест</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="shortName" type="xs:string"/>
+      <xs:element name="labId" type="xs:long"/>
+      <xs:element name="required" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="mnemonicCode" type="xs:string"/>
+      <xs:element name="valid" type="xs:boolean"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TestPage">
+    <xs:annotation>
+      <xs:documentation>Страница результатов поиска элементов справочника тестов</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="results" type="tns:Test"/>
+      <xs:element name="paging" type="ct:ResponsePageInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Unit">
+    <xs:annotation>
+      <xs:documentation>Единица измерения</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="hl7Code" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Vial">
+    <xs:annotation>
+      <xs:documentation>Расходный материал</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="shortName" type="xs:string"/>
+      <xs:element name="fillingOrder" type="xs:long"/>
+      <xs:element minOccurs="0" name="hl7Code" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TypRejectTake">
+    <xs:annotation>
+      <xs:documentation>Типовой отказ приема биоматериала</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="content" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PrepareTakeBM">
+    <xs:annotation>
+      <xs:documentation>Правило подготовки к взятию БМ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="content" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PrimaryTubeStatus">
+    <xs:annotation>
+      <xs:documentation>Статус первичной пробирки</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistryEntryStatus">
+    <xs:annotation>
+      <xs:documentation>Статус реестровой записи первичной пробирки</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContainerStatus">
+    <xs:annotation>
+      <xs:documentation>Статус контейнера (пакетоа) первичных пробирок</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TypicalRejectTest">
+    <xs:annotation>
+      <xs:documentation>Причины отказа</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="content" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Mocks:-->
+  <xs:complexType name="BiomaterialExt">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="parentId" type="xs:long"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="hl7Code" type="xs:string"/>
+      <xs:element name="urgency" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries?xsd=common-types.xsd</con:url><con:content><![CDATA[<xsd:schema elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/laboratory/v1/common/types/" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://emias.mos.ru/laboratory/v1/common/types/">
+  <xsd:complexType name="RequestPageInfo">
+    <xsd:sequence>
+      <xsd:element default="0" minOccurs="1" name="page" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Номер страницы</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element default="0" minOccurs="1" name="pageSize" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Размер страницы</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponsePageInfo">
+    <xsd:complexContent>
+      <xsd:extension base="tns:RequestPageInfo">
+        <xsd:sequence>
+          <xsd:element default="0" minOccurs="1" name="total" type="xsd:long">
+            <xsd:annotation>
+              <xsd:documentation>Всего записей</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Validation">
+    <xsd:annotation>
+      <xsd:documentation>Результат выполнения валидации</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="success" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Признак - ошибки валидации отсутствуют</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="messages" type="tns:ValidationMessage">
+        <xsd:annotation>
+          <xsd:documentation>Список сообщений валидации</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ValidationMessage">
+    <xsd:annotation>
+      <xsd:documentation>Сообщение валидации</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="code" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Код сообщения</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="message" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Текст сообщения</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="parameters" type="tns:ValidationParameter">
+        <xsd:annotation>
+          <xsd:documentation>Параметры сообщения</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="type" type="tns:ValidationMessageType">
+        <xsd:annotation>
+          <xsd:documentation>Тип сообщения</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ValidationParameter">
+    <xsd:annotation>
+      <xsd:documentation>Параметр валидации</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="code" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Код параметра</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="value" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Значение параметра</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="ValidationMessageType">
+    <xsd:annotation>
+      <xsd:documentation>Тип сообщения</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ERROR">
+        <xsd:annotation>
+          <xsd:documentation>Сообщение о ошибке</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="WARNING">
+        <xsd:annotation>
+          <xsd:documentation>Предупреждение</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="INFO">
+        <xsd:annotation>
+          <xsd:documentation>Информационное сообщение</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LaboratoryFaultInfo">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="1" name="validation" type="tns:Validation">
+          <xsd:annotation>
+            <xsd:documentation>Список ошибок</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="LaboratoryUserContext">
+    <xsd:complexType>
+      <xsd:annotation>
+        <xsd:documentation>Контекст пользователя</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="employeeJobId" type="xsd:long">
+          <xsd:annotation>
+            <xsd:documentation>Идентификатор исполнения должности</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="lpuId" type="xsd:long">
+          <xsd:annotation>
+            <xsd:documentation>ИД ЛПУ</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="fullName" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>ФИО пользователя</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="position" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Должность медработника</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element minOccurs="0" name="availableResourceId" type="xsd:long">
+          <xsd:annotation>
+            <xsd:documentation>ИД доступного ресурса</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="UserContext">
+    <xsd:annotation>
+      <xsd:documentation>Контекст пользователя (output)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="login" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Имя пользователя</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="employeeJobId" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Идентификатор исполнения должности</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="lpuId" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>ИД ЛПУ</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="fullName" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>ФИО пользователя</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="position" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Должность медработника</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="availableResourceId" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>ИД доступного ресурса</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="User">
+    <xsd:annotation>
+      <xsd:documentation>Контекст пользователя (output)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="fio" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>ФИО пользователя</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="lpuId" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>ИД ЛПУ</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="position" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Название должности медработника</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UserExt">
+    <xsd:complexContent>
+      <xsd:extension base="tns:User">
+        <xsd:sequence>
+          <xsd:element name="employeeJobId" type="xsd:long">
+            <xsd:annotation>
+              <xsd:documentation>ИД исполнения должности медработника</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ResponsePageInfoFull">
+    <xsd:annotation>
+      <xsd:documentation>Параметры пейджинга</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="pageNumber" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Номер страницы (zero-based)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="pageTotal" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Общее количество страниц</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="pageSize" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Размер страницы</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="morePagesAvailable" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Флаг доступности страниц с результатами для постраничного листания
+                        (true - если доступны еще страницы, false - иначе)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="totalItemsCount" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Общее количество элементов (на всех страницах)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SortingOptions">
+    <xsd:annotation>
+      <xsd:documentation>Условия сортировки</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element maxOccurs="3" name="sortOrder" type="tns:SortOrder">
+        <xsd:annotation>
+          <xsd:documentation>Условия сортировки (используются в соответствии с переданной последовательностью)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SortOrder">
+    <xsd:annotation>
+      <xsd:documentation>Сортировка</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="attributeName" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>Наименование поля, по которому должна быть произведена сортировка</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute default="false" name="descending" type="xsd:boolean">
+      <xsd:annotation>
+        <xsd:documentation>Направление сортировки</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="DatePeriod">
+    <xsd:annotation>
+      <xsd:documentation>Диапазон дат для поиска</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="dateFrom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="dateTo" type="xsd:date"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint></con:endpoints><con:operation id="b434b771-fe4f-4f44-8c57-96cd195d3eb0" isOneWay="false" action="" name="getAddSign" bindingOperationName="getAddSign" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="56ba5e18-dab1-4f4b-b4db-11cafc594b4b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getAddSignRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getAddSignRequest"/></con:call></con:operation><con:operation id="8eea6d89-cc92-4240-beec-2edb6be1df30" isOneWay="false" action="" name="getBiopsyResearchGoal" bindingOperationName="getBiopsyResearchGoal" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bc98ca82-e08f-4f80-93ef-7e74e9eb9746" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getBiopsyResearchGoalRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getBiopsyResearchGoalRequest"/></con:call></con:operation><con:operation id="cf2b82db-bf85-4481-a603-cfe6d20fa3dd" isOneWay="false" action="" name="getClinicalLaboratories" bindingOperationName="getClinicalLaboratories" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b9f40ec3-2d61-4278-8be2-9605bddf5172" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getClinicalLaboratoriesRequest>\r
+         <oth:moId>?</oth:moId>\r
+      </oth:getClinicalLaboratoriesRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getClinicalLaboratoriesRequest"/></con:call></con:operation><con:operation id="db2512dc-6bb1-40ca-9d58-c717a0da955e" isOneWay="false" action="" name="getColorsList" bindingOperationName="getColorsList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d01157f5-1c39-4c18-92f2-cb3048e882f3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getColorsListRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getColorsListRequest"/></con:call></con:operation><con:operation id="41b05eb4-a87b-474a-9fa8-bb681e740adc" isOneWay="false" action="" name="getContingentCode" bindingOperationName="getContingentCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5726b0ac-8f14-434b-971c-3aad2d34b741" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getContingentCodeRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getContingentCodeRequest"/></con:call></con:operation><con:operation id="880457a6-e933-47dd-b8f3-c68d60795409" isOneWay="false" action="" name="getMemoryCard" bindingOperationName="getMemoryCard" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="34ac1ef3-20c2-4e34-8514-512f664f2251" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/" xmlns:typ="http://emias.mos.ru/laboratory/v1/dictionary/other/types/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getMemoryCardRequest>\r
+         <!--1 or more repetitions:-->\r
+         <oth:request>\r
+            <typ:biomaterialId>?</typ:biomaterialId>\r
+            <typ:laboratoryId>?</typ:laboratoryId>\r
+         </oth:request>\r
+         <!--Optional:-->\r
+         <oth:devide>?</oth:devide>\r
+      </oth:getMemoryCardRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getMemoryCardRequest"/></con:call></con:operation><con:operation id="6a2c482a-ae09-4fd8-94fe-29ee8eb7d306" isOneWay="false" action="" name="getMemoryCardForLK" bindingOperationName="getMemoryCardForLK" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="061d905b-fa27-467f-ab41-217d385533f3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getMemoryCardForLKRequest>\r
+         <!--1 or more repetitions:-->\r
+         <oth:laboratoryId>?</oth:laboratoryId>\r
+      </oth:getMemoryCardForLKRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getMemoryCardForLKRequest"/></con:call><con:call id="20733dec-a368-4552-bb9e-b42a59818e8e" name="getMemoryCard LK"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
+   <soap:Header>\r
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+         <wsse:UsernameToken wsu:Id="UsernameToken-6578b63e-31ec-47bd-a08e-006a7fb73944">\r
+            <wsse:Username>EIM/EIM</wsse:Username>\r
+         </wsse:UsernameToken>\r
+      </wsse:Security>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <ns2:getMemoryCardRequest xmlns="http://emias.mos.ru/laboratory/v1/dictionary/other/types/" xmlns:ns2="http://emias.mos.ru/laboratory/v1/dictionary/other/" xmlns:ns3="http://emias.mos.ru/laboratory/v1/common/types/" xmlns:ns4="http://emias.mos.ru/laboratory/v1/dictionary/types/">\r
+         <ns2:request>\r
+            <biomaterialId>2</biomaterialId>\r
+            <laboratoryId>2908</laboratoryId>\r
+         </ns2:request>\r
+         <ns2:request>\r
+            <biomaterialId>2</biomaterialId>\r
+            <laboratoryId>175</laboratoryId>\r
+         </ns2:request>\r
+         <ns2:request>\r
+            <biomaterialId>2</biomaterialId>\r
+            <laboratoryId>502</laboratoryId>\r
+         </ns2:request>\r
+         <ns2:request>\r
+            <biomaterialId>2</biomaterialId>\r
+            <laboratoryId>2907</laboratoryId>\r
+         </ns2:request>\r
+      </ns2:getMemoryCardRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getMemoryCardForLKRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1135cb10-d8ac-4b7b-b9f6-65251934bc26" isOneWay="false" action="" name="getMethodOfObtainingBiopsyMaterial" bindingOperationName="getMethodOfObtainingBiopsyMaterial" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5644d746-24a3-4c5c-8c13-019ba7e3997f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getMethodOfObtainingBiopsyMaterialRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getMethodOfObtainingBiopsyMaterialRequest"/></con:call></con:operation><con:operation id="39a0f418-b038-433f-8f93-48ce5b9c67bf" isOneWay="false" action="" name="getPriority" bindingOperationName="getPriority" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc0e7f32-6eab-43db-af31-11777f4720c9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getPriorityRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getPriorityRequest"/></con:call></con:operation><con:operation id="f1813e2b-5b21-4c88-997c-ae66cf5d3712" isOneWay="false" action="" name="getReasonCancelAssignment" bindingOperationName="getReasonCancelAssignment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e9db594f-a636-4ab0-85bf-df3f5e9add6a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getReasonCancelAssignmentRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getReasonCancelAssignmentRequest"/></con:call></con:operation><con:operation id="1b291aa1-d098-48ce-95f5-2cff1fe75b61" isOneWay="false" action="" name="getReasonCullTube" bindingOperationName="getReasonCullTube" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="363eb045-c32f-4ac6-b73a-1bea89c82dc8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getReasonCullTubeRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getReasonCullTubeRequest"/></con:call></con:operation><con:operation id="24c1a78e-5fea-400b-96ae-8e8e31bf75d4" isOneWay="false" action="" name="getSamplingType" bindingOperationName="getSamplingType" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7bea7c9e-b609-4a6b-9fcf-7f4ff6a6930c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getSamplingTypeRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getSamplingTypeRequest"/></con:call></con:operation><con:operation id="3a0d14e1-4a9b-4b69-8924-9842dde2d91a" isOneWay="false" action="" name="getService" bindingOperationName="getService" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="378183bd-c956-41d1-9b38-ce6849f04ce4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getServiceRequest>\r
+         <oth:samplingTypeId>?</oth:samplingTypeId>\r
+         <oth:fullYears>?</oth:fullYears>\r
+      </oth:getServiceRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getServiceRequest"/></con:call></con:operation><con:operation id="a9b3a26a-2c4f-4fa7-8792-113e93a45987" isOneWay="false" action="" name="getTakeCytologyBMList" bindingOperationName="getTakeCytologyBMList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8d8578e6-7fa8-4266-87a1-707ab7395ee8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getTakeCytologyBMListRequest/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getTakeCytologyBMListRequest"/></con:call></con:operation><con:operation id="4e70f61c-e49b-4d0f-9157-d6649563f821" isOneWay="false" action="" name="getTreatment" bindingOperationName="getTreatment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5264c288-2e97-407c-b071-d8997d12c3b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <oth:getTreatmentRequest>\r
+         <oth:laboratoryType>?</oth:laboratoryType>\r
+      </oth:getTreatmentRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getTreatmentRequest"/></con:call></con:operation></con:interface><con:testSuite id="8e4e3cf0-d417-40d4-8198-983248086ba3" name="authentication/logout"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4afb6346-0ccf-461d-9147-a43a9ff182b8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС0_ID279037" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="logout. Ошибка SERVER_ERROR" id="a5634437-fb7f-4986-8422-1e606b194863"><con:settings/><con:config service="http://emiasinfo1.emias.solit-clouds.ru" resourcePath="/api/v1/user/authentication/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="logout. Ошибка SERVER_ERROR" id="0d9178c4-e1da-4f0e-bf61-a348e7ffdd59" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
   "deviceGuid": "e1428369-71c0-40ee-a71e-7b7b8b4dc29",
   "patientId": [
     17612323
