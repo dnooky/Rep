@@ -5845,7 +5845,7 @@
          <typ:timestamp>?</typ:timestamp>\r
       </typ:getCatalogCountRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/nsiProductPublication/publicationService/v1/publicationServicePortType/getCatalogCountRequest"/></con:call></con:operation><con:operation id="a6c834f6-e49b-41a3-b343-520516b6a3f0" isOneWay="false" action="getCatalogItems" name="getCatalogItems" bindingOperationName="getCatalogItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93552a36-8d68-497e-a4fc-9b69107249df" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/" xmlns:v1="http://emias.mos.ru/nsiProductPublication/core/v1/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/nsiProductPublication/publicationService/v1/publicationServicePortType/getCatalogCountRequest"/></con:call></con:operation><con:operation id="a6c834f6-e49b-41a3-b343-520516b6a3f0" isOneWay="false" action="getCatalogItems" name="getCatalogItems" bindingOperationName="getCatalogItems" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93552a36-8d68-497e-a4fc-9b69107249df" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/" xmlns:v1="http://emias.mos.ru/nsiProductPublication/core/v1/">\r
    <soap:Header>\r
       <user:userContext>\r
          <user:systemName>?</user:systemName>\r
@@ -5888,7 +5888,25 @@
          <typ:timestamp>?</typ:timestamp>\r
       </typ:getCatalogItemsRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/nsiProductPublication/publicationService/v1/publicationServicePortType/getCatalogItemsRequest"/></con:call></con:operation><con:operation id="581ea6fe-9256-497d-8372-5d14054f5774" isOneWay="false" action="getCatalogList" name="getCatalogList" bindingOperationName="getCatalogList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a4892ec-f4f6-40b5-a88a-7af96817037e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/">\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/nsiProductPublication/publicationService/v1/publicationServicePortType/getCatalogItemsRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5d199c3f-803f-4ed0-9e78-ecf758d5f52a" name="getCatalogItems"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
+   <soap:Header>\r
+      <wsse:Security soap:mustUnderstand="true" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">\r
+         <wsse:UsernameToken wsu:Id="UsernameToken-f11a5e5a-091a-4d8d-8305-42d0e2e23f31" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+            <wsse:Username>EIM/EIM</wsse:Username>\r
+         </wsse:UsernameToken>\r
+      </wsse:Security>\r
+      <ns2:userContext xmlns:ns4="http://emias.mos.ru/system/v1/faults/" xmlns:ns3="http://emias.mos.ru/nsiProductPublication/core/v1/" xmlns:ns2="http://emias.mos.ru/system/v1/userContext/" xmlns="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/">\r
+         <ns2:userName>EIM</ns2:userName>\r
+         <ns2:userRoleId>0</ns2:userRoleId>\r
+         <ns2:jobExecutionId>0</ns2:jobExecutionId>\r
+      </ns2:userContext>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <getCatalogItemsRequest xmlns="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/" xmlns:ns2="http://emias.mos.ru/system/v1/userContext/" xmlns:ns3="http://emias.mos.ru/nsiProductPublication/core/v1/" xmlns:ns4="http://emias.mos.ru/system/v1/faults/">\r
+         <id>45145485</id>\r
+      </getCatalogItemsRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/nsiProductPublication/publicationService/v1/publicationServicePortType/getCatalogItemsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="581ea6fe-9256-497d-8372-5d14054f5774" isOneWay="false" action="getCatalogList" name="getCatalogList" bindingOperationName="getCatalogList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a4892ec-f4f6-40b5-a88a-7af96817037e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/">\r
    <soap:Header>\r
       <user:userContext>\r
          <user:systemName>?</user:systemName>\r
@@ -17239,7 +17257,22 @@ including as a SOAP header.</xsd:documentation>
          </typ:options>\r
       </typ:GetDrugInfoRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getDrugInfoRequest"/></con:call></con:operation><con:operation id="2e64bffc-e353-4d90-90a8-56add1e4c389" isOneWay="false" action="getHistoryAdhoc" name="getHistoryAdhoc" bindingOperationName="getHistoryAdhoc" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3c9532e2-34dc-4c6e-8649-47ce44a2ea2a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getDrugInfoRequest"/></con:call><con:call id="e5ee5f17-d2b7-458c-878b-c0f088d7f674" name="getDrugInfo"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">
+            <wsse:Username>EIM/EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <typ:GetDrugInfoRequest>\r
+         <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
+         <typ:drugInfo>\r
+            <typ:smnnId>?</typ:smnnId>\r
+      </typ:GetDrugInfoRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getDrugInfoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2e64bffc-e353-4d90-90a8-56add1e4c389" isOneWay="false" action="getHistoryAdhoc" name="getHistoryAdhoc" bindingOperationName="getHistoryAdhoc" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3c9532e2-34dc-4c6e-8649-47ce44a2ea2a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
    <soap:Header>\r
       <oas:Security>\r
          <!--You may enter ANY elements at this point-->\r
@@ -17275,11 +17308,11 @@ including as a SOAP header.</xsd:documentation>
    <soap:Body>\r
       <typ:GetHistoryAdhocRequest>\r
          <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
-         <typ:medicationId>1000478</typ:medicationId>\r
+         <typ:medicationId>1200310</typ:medicationId>\r
          <typ:patientId>17248972</typ:patientId>\r
          <typ:periodTerm>\r
-            <v1:start>2022-06-06</v1:start>\r
-            <v1:end>2022-06-06</v1:end>\r
+            <v1:start>2022-08-10</v1:start>\r
+            <v1:end>2023-08-09</v1:end>\r
          </typ:periodTerm>\r
       </typ:GetHistoryAdhocRequest>\r
    </soap:Body>\r
@@ -17329,8 +17362,8 @@ including as a SOAP header.</xsd:documentation>
    <soap:Body>\r
       <typ:GetMedicationRequest>\r
          <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
-         <typ:medicationId>1066345</typ:medicationId>\r
-         <typ:patientId>18833793</typ:patientId>\r
+         <typ:medicationId>1200310</typ:medicationId>\r
+         <typ:patientId>17248972</typ:patientId>\r
       </typ:GetMedicationRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getMedicationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a669a60d-73fd-414a-8fc9-f1c494d860c5" isOneWay="false" action="getPatientPillboxList" name="getPatientPillboxList" bindingOperationName="getPatientPillboxList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="305b7592-84e9-4981-b65d-c4c7fc967262" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
@@ -17359,7 +17392,24 @@ including as a SOAP header.</xsd:documentation>
          </typ:options>\r
       </typ:GetPatientPillboxListRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getPatientPillboxListRequest"/></con:call></con:operation><con:operation id="95091ca6-1f07-4f35-ba3f-35a48674700b" isOneWay="false" action="getRegime" name="getRegime" bindingOperationName="getRegime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1ac7e00d-f266-4704-816f-acf6f7de1c50" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getPatientPillboxListRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="298ef4a5-86a0-4bc9-83fc-6081934394ca" name="getPatientPillboxList"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">
+            <wsse:Username>EIM/EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <typ:GetPatientPillboxListRequest>\r
+         <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
+         <typ:patientId>18833793</typ:patientId>\r
+         <typ:statusFilter>active</typ:statusFilter>\r
+         <typ:pagingOptions pageNumber="0" pageSize="20">\r
+         </typ:pagingOptions>\r
+      </typ:GetPatientPillboxListRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getPatientPillboxListRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="95091ca6-1f07-4f35-ba3f-35a48674700b" isOneWay="false" action="getRegime" name="getRegime" bindingOperationName="getRegime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1ac7e00d-f266-4704-816f-acf6f7de1c50" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
    <soap:Header>\r
       <oas:Security>\r
          <!--You may enter ANY elements at this point-->\r
@@ -17412,10 +17462,10 @@ including as a SOAP header.</xsd:documentation>
    <soap:Body>\r
       <typ:GetScheduleRequest>\r
          <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
-         <typ:medicationId>1057673</typ:medicationId>\r
-         <typ:patientId>18833793</typ:patientId>\r
+         <typ:medicationId>1200310</typ:medicationId>\r
+         <typ:patientId>17248972</typ:patientId>\r
          <typ:periodTerm>\r
-            <v1:start>2023-06-13</v1:start>\r
+            <v1:start>2025-08-09</v1:start>\r
          </typ:periodTerm>\r
       </typ:GetScheduleRequest>\r
    </soap:Body>\r
@@ -22702,49 +22752,36 @@ including as a SOAP header.</xsd:documentation>
          </typ:options>\r
       </typ:tempCheckSymptomsRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types/InterviewServicePortType/tempCheckSymptomsRequest"/></con:call></con:operation><con:operation id="7b411720-f7fd-4b55-9752-7e251a409f41" isOneWay="false" action="tempGetDialog" name="tempGetDialog" bindingOperationName="tempGetDialog" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2cba7d9a-ad11-4c6d-a94a-54b38fe3dbcb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types/InterviewServicePortType/tempCheckSymptomsRequest"/></con:call></con:operation><con:operation id="7b411720-f7fd-4b55-9752-7e251a409f41" isOneWay="false" action="tempGetDialog" name="tempGetDialog" bindingOperationName="tempGetDialog" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2cba7d9a-ad11-4c6d-a94a-54b38fe3dbcb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
    <soap:Header>\r
-      <user:userContext>\r
-         <user:systemName>?</user:systemName>\r
-         <user:userName>?</user:userName>\r
-         <user:userRoleId>?</user:userRoleId>\r
-         <!--Optional:-->\r
-         <user:isUserRoleSystemWide>?</user:isUserRoleSystemWide>\r
-         <user:userRights>\r
-            <!--Zero or more repetitions:-->\r
-            <user:userRightId>?</user:userRightId>\r
-         </user:userRights>\r
-         <user:jobExecutionId>?</user:jobExecutionId>\r
-         <!--Optional:-->\r
-         <user:hostIp>?</user:hostIp>\r
-         <!--Optional:-->\r
-         <user:hostName>?</user:hostName>\r
-         <!--Optional:-->\r
-         <user:options>\r
-            <!--Zero or more repetitions:-->\r
-            <user:entry key="?">?</user:entry>\r
-         </user:options>\r
-      </user:userContext>\r
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">\r
+         <wsse:UsernameToken wsu:Id="UsernameToken-ba3ad9a4-3426-4f52-9a76-320f55abb0d8" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+            <wsse:Username>EIM/EIM</wsse:Username>\r
+         </wsse:UsernameToken>\r
+      </wsse:Security>\r
+      <ns2:userContext xmlns="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types" xmlns:ns2="http://emias.mos.ru/system/v1/userContext/" xmlns:ns3="http://emias.mos.ru/system/v1/faults/">\r
+         <ns2:systemName>EIM</ns2:systemName>\r
+         <ns2:userName>EIM</ns2:userName>\r
+         <ns2:userRoleId>7187</ns2:userRoleId>\r
+         <ns2:userRights>\r
+            <ns2:userRightId>37070004</ns2:userRightId>\r
+         </ns2:userRights>\r
+         <ns2:jobExecutionId>0</ns2:jobExecutionId>\r
+      </ns2:userContext>\r
    </soap:Header>\r
    <soap:Body>\r
-      <typ:tempGetDialogRequest>\r
-         <typ:dialogUuid>?</typ:dialogUuid>\r
-         <typ:complaints>?</typ:complaints>\r
-         <typ:codeTemp>?</typ:codeTemp>\r
-         <typ:flowNumber>?</typ:flowNumber>\r
-         <typ:source>?</typ:source>\r
-         <typ:patientId>?</typ:patientId>\r
-         <typ:age>?</typ:age>\r
-         <typ:gender>?</typ:gender>\r
-         <typ:positionNomCode>?</typ:positionNomCode>\r
-         <!--Optional:-->\r
-         <typ:options>\r
-            <!--Zero or more repetitions:-->\r
-            <typ:entry key="?">?</typ:entry>\r
-         </typ:options>\r
-      </typ:tempGetDialogRequest>\r
+      <tempGetDialogRequest xmlns="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types" xmlns:ns2="http://emias.mos.ru/system/v1/userContext/" xmlns:ns3="http://emias.mos.ru/system/v1/faults/">\r
+         <complaints>Боль</complaints>\r
+         <codeTemp>A4DfzPJD</codeTemp>\r
+         <flowNumber>0</flowNumber>\r
+         <source>EIM</source>\r
+         <patientId>10166510</patientId>\r
+         <age>83</age>\r
+         <gender>FEMALE</gender>\r
+         <positionNomCode>0</positionNomCode>\r
+      </tempGetDialogRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types/InterviewServicePortType/tempGetDialogRequest"/></con:call></con:operation><con:operation id="6b1d39df-1ffb-4836-a142-e43a365a19b7" isOneWay="false" action="tempSendResult" name="tempSendResult" bindingOperationName="tempSendResult" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="60a57fb2-8c45-41a0-a01f-5ab56f61951f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types">\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types/InterviewServicePortType/tempGetDialogRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6b1d39df-1ffb-4836-a142-e43a365a19b7" isOneWay="false" action="tempSendResult" name="tempSendResult" bindingOperationName="tempSendResult" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="60a57fb2-8c45-41a0-a01f-5ab56f61951f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types">\r
    <soap:Header>\r
       <user:userContext>\r
          <user:systemName>?</user:systemName>\r
