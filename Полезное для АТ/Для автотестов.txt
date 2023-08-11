@@ -9,3 +9,11 @@ XPATH
 //ResultSet/@fetchSize
 КОЛ-ВО ЗАПИСЕЙ В JDBC
 count(//*:Row)
+
+GROOVY
+ЕСЛИ ЕСТЬ ПАРАМЕТРЫ С АТТРИБУТАМИ, ТО ПОЛУЧАТЬ ИХ ЗНАЧЕНИЯ НУЖНО ЧЕРЕЗ XPATH
+def soapNSI = groovyUtils.getXmlHolder('Получить содержимое справочника НСИ#Response')
+soapNSI.getNodeValue('//ns3:items['+i+']/ns3:itemAttribute[@name = "ARCHIVED"]')
+
+получить из xml значение аттрибута и там много всяких аттрибутов
+//parent[@name='Parent_1']//child/@name - https://stackoverflow.com/questions/4835891/extract-value-of-attribute-node-via-xpath
