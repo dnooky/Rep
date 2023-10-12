@@ -2188,7 +2188,7 @@
          <eno>?</eno>\r
       </v5:createAppointment>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/createAppointment"/></con:call><con:call id="cc9aa524-ad71-4621-9027-e43c424f2576" name="createAppointment"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/createAppointment"/><con:wsrmConfig version="1.2"/></con:call><con:call id="cc9aa524-ad71-4621-9027-e43c424f2576" name="createAppointment"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">
    <soap:Header>
       <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
          <wsse:UsernameToken>
@@ -2198,24 +2198,14 @@
    </soap:Header>\r
    <soap:Body>\r
       <v5:createAppointment>\r
-         <omsNumber>?</omsNumber>\r
-         <!--Optional:-->\r
-         <omsSeries>?</omsSeries>\r
-         <birthDate>?</birthDate>\r
-         <availableResourceId>?</availableResourceId>\r
-         <complexResourceId>?</complexResourceId>\r
-         <startTime>?</startTime>\r
-         <endTime>?</endTime>\r
-         <!--You have a CHOICE of the next 2 items at this level-->\r
-         <referralId>?</referralId>\r
-         <receptionTypeId>?</receptionTypeId>\r
-         <!--Optional:-->\r
-         <complaintId>?</complaintId>\r
-         <!--Optional:-->\r
-         <inquiryPurposeId>?</inquiryPurposeId>\r
-         <externalSystemId>?</externalSystemId>\r
-         <!--Optional:-->\r
-         <eno>?</eno>\r
+         <omsNumber>7758010875002485</omsNumber>\r
+         <birthDate>1989-01-24</birthDate>\r
+         <availableResourceId>20577535539</availableResourceId>\r
+         <complexResourceId>241282413</complexResourceId>\r
+         <startTime>2023-10-12T11:30:00+03:00</startTime>\r
+         <endTime>2023-10-12T12:45:00+03:00</endTime>\r
+         <receptionTypeId>1863</receptionTypeId>
+         <externalSystemId>EIM</externalSystemId>\r
       </v5:createAppointment>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/createAppointment"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="83444053-02d8-4de2-a140-ff44c17b9580" isOneWay="false" action="urn://createAppointmentForGroup" name="createAppointmentForGroup" bindingOperationName="createAppointmentForGroup" type="Request-Response" outputName="createAppointmentForGroupResponse" inputName="createAppointmentForGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="19a2d75a-f288-4288-a0fc-3973bb0be01d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
@@ -2287,8 +2277,8 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getAppointmentReceptionsByPatient>\r
-         <omsNumber>775801087500248</omsNumber>\r
-         <birthDate>1989-01-20</birthDate>\r
+         <omsNumber>5541984121623250</omsNumber>\r
+         <birthDate>1974-12-08</birthDate>\r
          <externalSystemId>EIM</externalSystemId>
          <signActiveArchive>0</signActiveArchive>
       </v5:getAppointmentReceptionsByPatient>\r
@@ -2342,8 +2332,8 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getAssignmentsInfo>\r
-         <omsNumber>7700003097180466</omsNumber>\r
-         <birthDate>1966-04-18</birthDate>\r
+         <omsNumber>0000000000044446</omsNumber>\r
+         <birthDate>2005-01-18</birthDate>\r
          <returnExtended>true</returnExtended>\r
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getAssignmentsInfo>\r
@@ -2470,10 +2460,9 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getDoctorsInfo>\r
-         <omsNumber>7700007178231039</omsNumber>\r
+         <omsNumber>770000717823103</omsNumber>\r
          <birthDate>1939-10-23</birthDate>\r
-         <referralId>74417596414</referralId>
-         <includeArWithoutSlots>false</includeArWithoutSlots>
+         <specialityId>1</specialityId>
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getDoctorsInfo>\r
    </soap:Body>\r
@@ -2533,7 +2522,30 @@
          <externalSystemId>?</externalSystemId>\r
       </v5:getDoctorsInfoForLI>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getDoctorsInfoForLI"/></con:call></con:operation><con:operation id="c92d1a5c-f234-4247-bbe8-f41457ff5b69" isOneWay="false" action="urn://getDutyARScheduleByPatient" name="getDutyARScheduleByPatient" bindingOperationName="getDutyARScheduleByPatient" type="Request-Response" outputName="getDutyARScheduleByPatientResponse" inputName="getDutyARScheduleByPatient" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2dc99309-9acc-4802-a73e-762576643808" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getDoctorsInfoForLI"/></con:call><con:call id="aa3a8fbf-0756-4804-a7be-db29590bf7e1" name="getDoctorsInfoForLi"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <v5:getDoctorsInfoForLI>\r
+         <omsNumber>7700007178231039</omsNumber>\r
+         <birthDate>1939-10-23</birthDate>\r
+         <assignment>\r
+            <moId>204</moId>\r
+            <samplingTypeId>1</samplingTypeId>\r
+            <period>\r
+               <dateFrom>2023-10-11</dateFrom>\r
+               <dateTo>2025-10-24</dateTo>\r
+            </period>\r
+         </assignment>\r
+         <externalSystemId>EIM</externalSystemId>\r
+      </v5:getDoctorsInfoForLI>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getDoctorsInfoForLI"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c92d1a5c-f234-4247-bbe8-f41457ff5b69" isOneWay="false" action="urn://getDutyARScheduleByPatient" name="getDutyARScheduleByPatient" bindingOperationName="getDutyARScheduleByPatient" type="Request-Response" outputName="getDutyARScheduleByPatientResponse" inputName="getDutyARScheduleByPatient" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2dc99309-9acc-4802-a73e-762576643808" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <v5:getDutyARScheduleByPatient>\r
@@ -2582,8 +2594,8 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getReferralsInfo>\r
-         <omsNumber>7796889789001236</omsNumber>\r
-         <birthDate>2011-03-10</birthDate>\r
+         <omsNumber>770000309718046</omsNumber>\r
+         <birthDate>1966-04-18</birthDate>\r
          <returnExtended>true</returnExtended>\r
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getReferralsInfo>\r
@@ -2609,7 +2621,7 @@
          <externalSystemId>?</externalSystemId>\r
       </v5:getSpecialitiesInfo>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getSpecialitiesInfo"/></con:call><con:call id="c488ffb9-0df9-44ba-a316-89c61932e7f6" name="getSpecialitiesInfo"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getSpecialitiesInfo"/><con:wsrmConfig version="1.2"/></con:call><con:call id="c488ffb9-0df9-44ba-a316-89c61932e7f6" name="getSpecialitiesInfo"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">
    <soap:Header>
       <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
          <wsse:UsernameToken>
@@ -2619,9 +2631,15 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getSpecialitiesInfo>\r
-         <omsNumber>770000717823103</omsNumber>\r
-         <birthDate>1939-10-23</birthDate>\r
-         <externalSystemId>EIM</externalSystemId>\r
+         <omsNumber>7700003097180466</omsNumber>\r
+         <birthDate>1966-04-18</birthDate>\r
+         <quotaTypes>
+            <quotaType>1</quotaType>
+         </quotaTypes>
+         <disableQuotaTypes>
+            <quotaType>2</quotaType>
+         </disableQuotaTypes>        
+         <externalSystemId>EIM</externalSystemId>
       </v5:getSpecialitiesInfo>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getSpecialitiesInfo"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="330f785a-c6ea-4389-a51d-58293e3af164" isOneWay="false" action="urn://getSpecialitiesInfoForGroup" name="getSpecialitiesInfoForGroup" bindingOperationName="getSpecialitiesInfoForGroup" type="Request-Response" outputName="getSpecialitiesInfoForGroupResponse" inputName="getSpecialitiesInfoForGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a96e0d24-7307-477c-a300-f3ff813bad5b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
@@ -2684,20 +2702,14 @@
    </soap:Header>
    <soap:Body>\r
       <v5:shiftAppointment>\r
-         <omsNumber>?</omsNumber>\r
-         <!--Optional:-->\r
-         <omsSeries>?</omsSeries>\r
-         <birthDate>?</birthDate>\r
-         <availableResourceId>?</availableResourceId>\r
-         <!--Optional:-->\r
-         <complexResourceId>?</complexResourceId>\r
-         <startTime>?</startTime>\r
-         <endTime>?</endTime>\r
-         <!--You have a CHOICE of the next 2 items at this level-->\r
-         <referralId>?</referralId>\r
-         <receptionTypeId>?</receptionTypeId>\r
-         <appointmentId>?</appointmentId>\r
-         <externalSystemId>?</externalSystemId>\r
+         <omsNumber>7700007178231039</omsNumber>\r
+         <birthDate>1939-10-23</birthDate>\r
+         <availableResourceId>18999430452</availableResourceId>\r
+         <complexResourceId>159296763</complexResourceId>\r
+         <startTime>2023-10-12T12:10:00</startTime>\r
+         <endTime>2023-10-12T12:15:00</endTime>\r
+         <appointmentId>391922902223</appointmentId>\r
+         <externalSystemId>EIM</externalSystemId>\r
       </v5:shiftAppointment>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/shiftAppointment"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="645af47a-ceca-410a-a023-38f8fab78b14" isOneWay="false" action="urn://shiftAppointmentForGroup" name="shiftAppointmentForGroup" bindingOperationName="shiftAppointmentForGroup" type="Request-Response" outputName="shiftAppointmentForGroupResponse" inputName="shiftAppointmentForGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="69c5ecf3-6a9a-4cc8-b09d-01ed403f3c18" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
@@ -10844,8 +10856,8 @@
    </soap:Header>\r
    <soap:Body>\r
       <ns2:getPatientInfo3 xmlns:ns2="http://api.service.soap.emias.lanit.ru/v2/" xmlns:ns3="http://api.service.soap.emias.lanit.ru/v33/" xmlns:ns4="http://api.service.soap.emias.lanit.ru/" xmlns:ns5="urn:emias:llo.lookup">\r
-         <omsNumber>7700003050130949</omsNumber>\r
-         <birthDate>1949-09-13T00:00:00</birthDate>\r
+         <omsNumber>7796699729001463</omsNumber>\r
+         <birthDate>2003-03-20T00:00:00</birthDate>\r
          <typeAttach>0</typeAttach>\r
          <typeAttach>1</typeAttach>\r
          <typeAttach>2</typeAttach>\r
@@ -17215,7 +17227,7 @@ including as a SOAP header.</xsd:documentation>
          </typ:options>\r
       </typ:GetDayScheduleRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getDayScheduleRequest"/></con:call><con:call id="dbed2681-3566-4f7b-bbff-6664c17cf61e" name="getDaySchedule"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/getDayScheduleRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="dbed2681-3566-4f7b-bbff-6664c17cf61e" name="getDaySchedule"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
    <soap:Header>
       <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
          <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">
@@ -17226,12 +17238,10 @@ including as a SOAP header.</xsd:documentation>
    <soap:Body>\r
       <typ:GetDayScheduleRequest>\r
          <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
-         <typ:patientId>17883118</typ:patientId>\r
-         <!--Optional:-->\r
+         <typ:patientId>30000000506224</typ:patientId>\r
          <typ:periodTerm>\r
-            <!--Optional:-->\r
-            <v1:start>2023-09-26</v1:start>\r
-            <!--Optional:-->\r
+            <v1:start>2023-10-11</v1:start>\r
+            <v1:end>2023-11-10</v1:end>
          </typ:periodTerm>\r
       </typ:GetDayScheduleRequest>\r
    </soap:Body>\r
