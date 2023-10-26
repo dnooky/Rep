@@ -17204,7 +17204,22 @@ including as a SOAP header.</xsd:documentation>
          </typ:options>\r
       </typ:DeleteScheduleRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/deleteScheduleRequest"/></con:call></con:operation><con:operation id="645541c9-efab-4173-89e7-360093217a1e" isOneWay="false" action="endMedication" name="endMedication" bindingOperationName="endMedication" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b0a7c8b2-d490-4ced-8ba1-688f715c3e71" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/deleteScheduleRequest"/></con:call><con:call id="afe6a3fc-99a8-4a3c-b18e-169665c5c53c" name="deleteSchedule"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">
+            <wsse:Username>EIM/EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <typ:DeleteScheduleRequest>\r
+         <typ:requestGUID>${=java.util.UUID.randomUUID()}</typ:requestGUID>\r
+         <typ:medicationId>1435308</typ:medicationId>\r
+         <typ:patientId>11715757</typ:patientId>\r
+      </typ:DeleteScheduleRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/ln/pillbox/v1/pillboxServicePortType/deleteScheduleRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="645541c9-efab-4173-89e7-360093217a1e" isOneWay="false" action="endMedication" name="endMedication" bindingOperationName="endMedication" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b0a7c8b2-d490-4ced-8ba1-688f715c3e71" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:typ="http://emias.mos.ru/ln/pillbox/v1/types/" xmlns:v1="http://emias.mos.ru/ln/core/v1/">\r
    <soap:Header>\r
       <oas:Security>\r
          <!--You may enter ANY elements at this point-->\r

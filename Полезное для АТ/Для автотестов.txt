@@ -1,12 +1,15 @@
 Для автотестов
 
+ЗАПУСТИТЬ ШАГ
+testRunner.runTestStepByName( "getDrugInfo")
+
 JSONPATH
 ПОИСК JSONPATH БЕЗ []
 $.error.code - расписать весь путь (иначе $..code вернет ответ со скобками [])
 
 XPATH
 ПОЛУЧИТЬ ЗНАЧЕНИЕ АТРИБУТА XML
-//ResultSet/@fetchSize
+//ResultSet/@fetchSize (иногда может быть пример - //*:medication[2]//*:medicationInfo[1]/@id)
 КОЛ-ВО ЗАПИСЕЙ В JDBC
 count(//*:Row)
 
@@ -17,3 +20,19 @@ soapNSI.getNodeValue('//ns3:items['+i+']/ns3:itemAttribute[@name = "ARCHIVED"]')
 
 получить из xml значение аттрибута и там много всяких аттрибутов
 //parent[@name='Parent_1']//child/@name - https://stackoverflow.com/questions/4835891/extract-value-of-attribute-node-via-xpath
+
+ПОЛУЧИТЬ ТЕКУЩУЮ ДАТУ
+Date date = new Date()
+String datePart = date.format("yyyy-MM-dd")
+
+РАСПАРСИТЬ ДАТУ
+String dTF = "yyyy-MM-dd'T'hh:mm:ss"
+String dateTimeFormat="yyyy-MM-dd'T'hh:mm:ss.SSS+03:00" //устанавливаем формат даты
+def currentDate = new Date() // получаем текущую дату
+def date_min = Date.parse(dateTimeFormat, onlyTextSoap.Body.GetPlanExtensionResponse.result.eventsPeriod[n].endTime.text())// объявляем дату в распарсенном формате
+
+ПОЛУЧИТЬ МИНИМАЛЬНОЕ ЗНАЧЕНИЕ
+def min_date_soap = Collections.min(massiv_date)
+
+УБРАТЬ НУЛИ В КОНЦЕ ДАТЫ
+long min_time = min_date.getTime()/1000 (если дата с .sss)
