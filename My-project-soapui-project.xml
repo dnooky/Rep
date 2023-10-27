@@ -2632,13 +2632,7 @@
    <soap:Body>\r
       <v5:getSpecialitiesInfo>\r
          <omsNumber>7700003097180466</omsNumber>\r
-         <birthDate>1966-04-18</birthDate>\r
-         <quotaTypes>
-            <quotaType>1</quotaType>
-         </quotaTypes>
-         <disableQuotaTypes>
-            <quotaType>2</quotaType>
-         </disableQuotaTypes>        
+         <birthDate>1966-04-18</birthDate>\r       
          <externalSystemId>EIM</externalSystemId>
       </v5:getSpecialitiesInfo>\r
    </soap:Body>\r
@@ -4515,7 +4509,7 @@
       <typ:piListRequest>\r
          <typ:getForm>true</typ:getForm>\r
          <typ:ident>EMIASINFO</typ:ident>\r
-         <typ:oms>0000000000123456</typ:oms>\r
+         <typ:oms>7700007178231039</typ:oms>\r
          <typ:options>\r
             <typ:entry key="get_sale_date">true</typ:entry>\r
             <typ:entry key="check_periodical">true</typ:entry>\r

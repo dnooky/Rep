@@ -36,3 +36,8 @@ def min_date_soap = Collections.min(massiv_date)
 
 УБРАТЬ НУЛИ В КОНЦЕ ДАТЫ
 long min_time = min_date.getTime()/1000 (если дата с .sss)
+
+ПОЛУЧИТЬ СОКРАЩЕННЫЙ МЕСЯЦ
+def sdf1 = new SimpleDateFormat("MMM")
+def currentTime = sdf1.format(currentDate)
+def shortMonth = currentTime.substring(0,3)
