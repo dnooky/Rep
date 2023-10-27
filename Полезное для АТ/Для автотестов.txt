@@ -31,6 +31,13 @@ String dateTimeFormat="yyyy-MM-dd'T'hh:mm:ss.SSS+03:00" //устанавлива
 def currentDate = new Date() // получаем текущую дату
 def date_min = Date.parse(dateTimeFormat, onlyTextSoap.Body.GetPlanExtensionResponse.result.eventsPeriod[n].endTime.text())// объявляем дату в распарсенном формате
 
+ТЕКУЩУЮ ДАТУ В НУЖНЫЙ ФОРМАТ
+def currentDate = new Date() // получаем текущую дату
+def sdf = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss.SSS+03:00")
+def sdf1 = new SimpleDateFormat("MMM")
+def sdf2 = new SimpleDateFormat("d")
+def currentTime = sdf.format(currentDate)
+
 ПОЛУЧИТЬ МИНИМАЛЬНОЕ ЗНАЧЕНИЕ
 def min_date_soap = Collections.min(massiv_date)
 
