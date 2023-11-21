@@ -13,6 +13,9 @@ XPATH
 КОЛ-ВО ЗАПИСЕЙ В JDBC
 count(//*:Row)
 
+ПРОВЕРИТЬ, ЧТО В БД ЗАПИСЬ=NULL
+concat(//*:F_USER_DEVICE.ESIA_AUTHENTICATION/text(),"")
+
 GROOVY
 ЕСЛИ ЕСТЬ ПАРАМЕТРЫ С АТТРИБУТАМИ, ТО ПОЛУЧАТЬ ИХ ЗНАЧЕНИЯ НУЖНО ЧЕРЕЗ XPATH
 def soapNSI = groovyUtils.getXmlHolder('Получить содержимое справочника НСИ#Response')
