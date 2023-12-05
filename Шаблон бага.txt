@@ -32,7 +32,17 @@ curl -X 'GET' \
 В ответе вернулась ошибка LN_MEDS_ERROR
 
 
-
+{color:#ffab00}*Не исправлено*{color}
+Теперь на все запросы возвращается ошибка HOSP_LIST_ERROR
+!Ошибка2.png|thumbnail! 
+Проверено на:
+{code:java}
+http://application-emiasinfo4.emias.solit-clouds.ru/
+Проект собран из репозитория: https://git.emias.mos.ru/emias-info/services
+Версия: 1.7.0 (new)
+Ветка: release_1.7.0 (new)
+Ревизия: 275aed62b0197c221c6dff0bf4e7397a392259b0
+{code}
 
 
 Закрытие бага

@@ -2198,13 +2198,13 @@
    </soap:Header>\r
    <soap:Body>\r
       <v5:createAppointment>\r
-         <omsNumber>7758010875002485</omsNumber>\r
-         <birthDate>1989-01-24</birthDate>\r
-         <availableResourceId>20577535539</availableResourceId>\r
-         <complexResourceId>241282413</complexResourceId>\r
-         <startTime>2023-10-12T11:30:00+03:00</startTime>\r
-         <endTime>2023-10-12T12:45:00+03:00</endTime>\r
-         <receptionTypeId>1863</receptionTypeId>
+         <omsNumber>7700003097180466</omsNumber>\r
+         <birthDate>1966-04-18</birthDate>\r
+         <availableResourceId>20705461696</availableResourceId>\r
+         <complexResourceId>243090513</complexResourceId>\r
+         <startTime>2023-11-28T15:00:00+03:00</startTime>\r
+         <endTime>2023-11-28T15:30:00+03:00</endTime>\r
+         <receptionTypeId>1879</receptionTypeId>
          <externalSystemId>EIM</externalSystemId>\r
       </v5:createAppointment>\r
    </soap:Body>\r
@@ -2277,7 +2277,7 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getAppointmentReceptionsByPatient>\r
-         <omsNumber>7788799744000985</omsNumber>\r
+         <omsNumber>77887997440009</omsNumber>\r
          <birthDate>2002-11-05</birthDate>\r
          <externalSystemId>EIM</externalSystemId>
          <signActiveArchive>0</signActiveArchive>
@@ -2332,8 +2332,8 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getAssignmentsInfo>\r
-         <omsNumber>0000000000044446</omsNumber>\r
-         <birthDate>2005-01-18</birthDate>\r
+         <omsNumber>7700003097180466</omsNumber>\r
+         <birthDate>1966-04-18</birthDate>\r
          <returnExtended>true</returnExtended>\r
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getAssignmentsInfo>\r
@@ -2381,10 +2381,12 @@
    </soap:Header>\r
    <soap:Body>\r
       <ns3:getAvailableResourceScheduleInfo xmlns:ns2="http://api.service.soap.emias.lanit.ru/core/v5/" xmlns:ns3="http://api.service.soap.emias.lanit.ru/v5/">\r
-         <availableResourceId>20293371758</availableResourceId>\r
-         <complexResourceId>240066763</complexResourceId>
-         <omsNumber>7752910879000540</omsNumber>\r
-         <birthDate>1980-07-20</birthDate>\r
+         <availableResourceId>20705461696</availableResourceId>\r
+         <complexResourceId>243090513</complexResourceId>
+         <omsNumber>0556130838000530</omsNumber>\r
+         <birthDate>1968-03-11</birthDate>\r
+         <referralId>74441350789</referralId>
+         <appointmentId>391929884615</appointmentId>
          <externalSystemId>EIM</externalSystemId>\r
       </ns3:getAvailableResourceScheduleInfo>\r
    </soap:Body>\r
@@ -2460,9 +2462,10 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getDoctorsInfo>\r
-         <omsNumber>0000000000044446</omsNumber>\r
-         <birthDate>2005-01-18</birthDate>\r
-         <specialityId>1</specialityId>
+         <omsNumber>0556130838000530</omsNumber>\r
+         <birthDate>1968-03-11</birthDate>\r
+         <referralId>74441350789</referralId>
+         <appointmentId>391929884615</appointmentId>
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getDoctorsInfo>\r
    </soap:Body>\r
@@ -2631,7 +2634,7 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getSpecialitiesInfo>\r
-         <omsNumber>7700003097180466</omsNumber>\r
+         <omsNumber>770000309718046</omsNumber>\r
          <birthDate>1966-04-18</birthDate>\r       
          <externalSystemId>EIM</externalSystemId>
       </v5:getSpecialitiesInfo>\r
@@ -5910,7 +5913,7 @@
    </soap:Header>\r
    <soap:Body>\r
       <getCatalogItemsRequest xmlns="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/" xmlns:ns2="http://emias.mos.ru/system/v1/userContext/" xmlns:ns3="http://emias.mos.ru/nsiProductPublication/core/v1/" xmlns:ns4="http://emias.mos.ru/system/v1/faults/">\r
-         <id>4017</id>\r
+         <id>5102</id>\r
       </getCatalogItemsRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/nsiProductPublication/publicationService/v1/publicationServicePortType/getCatalogItemsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="581ea6fe-9256-497d-8372-5d14054f5774" isOneWay="false" action="getCatalogList" name="getCatalogList" bindingOperationName="getCatalogList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a4892ec-f4f6-40b5-a88a-7af96817037e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://emias.mos.ru/nsiProductPublication/publicationService/v1/types/">\r
@@ -19069,9 +19072,9 @@ including as a SOAP header.</xsd:documentation>
    </soap:Header>\r
    <soap:Body>\r
       <GetLinkRequest xmlns="http://emias.mos.ru/inquiry-purpose/link/v3/types/" xmlns:ns2="http://emias.mos.ru/system/v1/userContext/" xmlns:ns3="http://emias.mos.ru/system/v1/faults/">\r
-         <appointmentId>391928171748</appointmentId>\r
-         <patientId>21491165</patientId>\r
-         <positionNomCode>8</positionNomCode>\r
+         <appointmentId>391928730373</appointmentId>\r
+         <patientId>30379945</patientId>\r
+         <positionNomCode>6</positionNomCode>\r
       </GetLinkRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/inquiry-purpose/link/v3/soap/LinkService/GetLinkRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="26f196c5-2375-46db-bd0f-c01649cd79d0" isOneWay="false" action="GetLinkByAppoinmentId" name="GetLinkByAppoinmentId" bindingOperationName="GetLinkByAppoinmentId" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4dbc3df0-de9e-4d08-a1e6-8a761b5d276a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/inquirypurpose/link/v3S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v1/userContext/" xmlns:typ="http://emias.mos.ru/inquiry-purpose/link/v3/types/">\r
@@ -20160,7 +20163,7 @@ including as a SOAP header.</xsd:documentation>
          </typ:options>\r
       </v1:GetInquiryPurposesRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/inquiry-purpose/inquiry-purpose-orchestration/v1/soap/InquiryPurposeOrchestrationService/GetInquiryPurposesRequest"/></con:call><con:call id="1378b0bc-0362-498c-a55c-106427c68ac0" name="getInquiryPurpose"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/inquirypurpose/orchestration/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/inquiry-purpose/inquiry-purpose-orchestration/v1/soap/InquiryPurposeOrchestrationService/GetInquiryPurposesRequest"/></con:call><con:call id="1378b0bc-0362-498c-a55c-106427c68ac0" name="getInquiryPurpose"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/inquirypurpose/orchestration/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
    <soap:Header>\r
       <ns4:userContext xmlns:ns5="http://emias.mos.ru/system/v1/faults/" xmlns:ns4="http://emias.mos.ru/system/v1/userContext/" xmlns:ns3="http://emias.mos.ru/inquiry-purpose/inquiry-purpose-orchestration/v1/" xmlns:ns2="http://emias.mos.ru/inquiry-purpose/inquiry-purpose-orchestration/v1/types/">\r
          <ns4:systemName>EIM</ns4:systemName>\r
@@ -21029,7 +21032,7 @@ including as a SOAP header.</xsd:documentation>
          <typ:appointmentId>?</typ:appointmentId>\r
       </typ:GetPatientComplaintsRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/inquiry-purpose/complaints/v1/soap/ComplaintsService/GetPatientComplaintsRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="237d961f-0eb1-4001-865f-47c45608d75a" wsaVersion="NONE" name="ЧатБот" type="wsdl" bindingName="{http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types}InterviewServiceBinding" soapVersion="1_2" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="InterviewWsdl" targetNamespace="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/inquiry-purpose/complaints/v1/soap/ComplaintsService/GetPatientComplaintsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="237d961f-0eb1-4001-865f-47c45608d75a" wsaVersion="NONE" name="ЧатБот" type="wsdl" bindingName="{http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types}InterviewServiceBinding" soapVersion="1_2" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="InterviewWsdl" targetNamespace="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:schema>
       <xsd:import namespace="http://srv-dtchatboatbackp1-app01.mosgorzdrav.local/api/v1/soap/wsdl/types" schemaLocation="http://esbcamelvv.test.emias.mos.ru/proxy/chatbot/interviewService/v1S/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkVgle.K.grUZc6G5ZwMa4J.6UR2sce7Qp.7oYoqk81D_mgLkpUzu9a5z2Cq"/>
@@ -25878,7 +25881,7 @@ including as a SOAP header.</xsd:documentation>
    <soap:Body>\r
       <oth:getAddSignRequest/>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getAddSignRequest"/></con:call></con:operation><con:operation id="8eea6d89-cc92-4240-beec-2edb6be1df30" isOneWay="false" action="" name="getBiopsyResearchGoal" bindingOperationName="getBiopsyResearchGoal" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bc98ca82-e08f-4f80-93ef-7e74e9eb9746" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getAddSignRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8eea6d89-cc92-4240-beec-2edb6be1df30" isOneWay="false" action="" name="getBiopsyResearchGoal" bindingOperationName="getBiopsyResearchGoal" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bc98ca82-e08f-4f80-93ef-7e74e9eb9746" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <oth:getBiopsyResearchGoalRequest/>\r
@@ -25900,20 +25903,17 @@ including as a SOAP header.</xsd:documentation>
    <soap:Body>\r
       <oth:getContingentCodeRequest/>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getContingentCodeRequest"/></con:call></con:operation><con:operation id="880457a6-e933-47dd-b8f3-c68d60795409" isOneWay="false" action="" name="getMemoryCard" bindingOperationName="getMemoryCard" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="34ac1ef3-20c2-4e34-8514-512f664f2251" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/" xmlns:typ="http://emias.mos.ru/laboratory/v1/dictionary/other/types/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getContingentCodeRequest"/></con:call></con:operation><con:operation id="880457a6-e933-47dd-b8f3-c68d60795409" isOneWay="false" action="" name="getMemoryCard" bindingOperationName="getMemoryCard" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="34ac1ef3-20c2-4e34-8514-512f664f2251" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/" xmlns:typ="http://emias.mos.ru/laboratory/v1/dictionary/other/types/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <oth:getMemoryCardRequest>\r
-         <!--1 or more repetitions:-->\r
          <oth:request>\r
-            <typ:biomaterialId>?</typ:biomaterialId>\r
-            <typ:laboratoryId>?</typ:laboratoryId>\r
+            <typ:biomaterialId>2</typ:biomaterialId>\r
+            <typ:laboratoryId>13214214</typ:laboratoryId>\r
          </oth:request>\r
-         <!--Optional:-->\r
-         <oth:devide>?</oth:devide>\r
       </oth:getMemoryCardRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getMemoryCardRequest"/></con:call></con:operation><con:operation id="6a2c482a-ae09-4fd8-94fe-29ee8eb7d306" isOneWay="false" action="" name="getMemoryCardForLK" bindingOperationName="getMemoryCardForLK" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="061d905b-fa27-467f-ab41-217d385533f3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/laboratory/v1/dictionary/other/soap/LaboratoryOtherDictionariesServicePorts/getMemoryCardRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6a2c482a-ae09-4fd8-94fe-29ee8eb7d306" isOneWay="false" action="" name="getMemoryCardForLK" bindingOperationName="getMemoryCardForLK" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="061d905b-fa27-467f-ab41-217d385533f3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://cls.test.emias.mos.ru/laboratory/application/api/Dictionaries</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:oth="http://emias.mos.ru/laboratory/v1/dictionary/other/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <oth:getMemoryCardForLKRequest>\r
@@ -28031,12 +28031,12 @@ including as a SOAP header.</xsd:documentation>
          <externalSystemId>?</externalSystemId>\r
       </v5:shiftAppointmentForGroup>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/shiftAppointmentForGroup"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="89aa699b-ece0-4cd7-a059-441f087619b1" wsaVersion="NONE" name="Госпитализации" type="wsdl" bindingName="{http://emias.mos.ru/hospitalization/hospitalService/v2/}hospitalServiceBinding" soapVersion="1_2" anonymous="optional" definition="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?wsdl"><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="hospitalServiceV2" targetNamespace="http://emias.mos.ru/hospitalization/hospitalService/v2/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://emias.mos.ru/hospitalization/hospitalService/v2/" xmlns:uctx="http://emias.mos.ru/system/v2/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <wsdl:documentation>Версия 1.4.0.81</wsdl:documentation>
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/shiftAppointmentForGroup"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="89aa699b-ece0-4cd7-a059-441f087619b1" wsaVersion="NONE" name="Госпитализации" type="wsdl" bindingName="{http://emias.mos.ru/hospitalization/hospitalService/v2/}hospitalServiceBinding" soapVersion="1_2" anonymous="optional" definition="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?wsdl"><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="hospitalServiceV2" targetNamespace="http://emias.mos.ru/hospitalization/hospitalService/v2/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://emias.mos.ru/hospitalization/hospitalService/v2/" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>Версия 1.4.3.128</wsdl:documentation>
   <wsdl:types>
     <xs:schema>
-      <xs:import namespace="http://emias.mos.ru/system/v2/userContext/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQugAOTDB3XtiTgBkXUbvh4N.qJHfFS7TM68sgOGBCl4-"/>
-      <xs:import namespace="http://emias.mos.ru/system/v1/faults/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQvsSKS72wTtuWBxhonVp0RSczfm3Skj5tNod"/>
+      <xs:import namespace="http://emias.mos.ru/system/v1/userContext/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQugAOTDB3XtiTgBkXUbvh0Ip781WlYcmvrJdZp8GzrY-"/>
+      <xs:import namespace="http://emias.mos.ru/system/v1/faults/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQvsSKS72wTtuWByg9TI1WJQ1OHSqO66HMx71"/>
       <xs:import namespace="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfVD2kF6sZXjcQJJ1ICudKQvUcLzLrxnR6eB1iBVf_hs9m.ZCDetDRV4DIesEDk_xQES6ZlxUAymHvEA4X"/>
     </xs:schema>
   </wsdl:types>
@@ -28094,9 +28094,9 @@ including as a SOAP header.</xsd:documentation>
       </wsp:Policy>
     </sp:SupportingTokens>
   </wsp:Policy>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQugAOTDB3XtiTgBkXUbvh4N.qJHfFS7TM68sgOGBCl4-</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/system/v2/userContext/" xmlns="http://emias.mos.ru/system/v2/userContext/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQuUAOMjB75csIli4ZYKDqcpdbA0-"/>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQugAOTDB3XtiTgBkXUbvh0Ip781WlYcmvrJdZp8GzrY-</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/system/v1/userContext/" xmlns="http://emias.mos.ru/system/v1/userContext/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQuUAOMlNthnEiDjF8Ke3UJvOzdI-"/>
   <xs:element name="userContext" type="UserContext">
     <xs:annotation>
       <xs:documentation>Контекст пользователя</xs:documentation>
@@ -28154,7 +28154,7 @@ including as a SOAP header.</xsd:documentation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQuUAOMjB75csIli4ZYKDqcpdbA0-</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQuUAOMlNthnEiDjF8Ke3UJvOzdI-</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <!--error message description-->
   <xs:complexType name="ErrorMessageCollection">
@@ -28263,10 +28263,10 @@ including as a SOAP header.</xsd:documentation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQvsSKS72wTtuWBxhonVp0RSczfm3Skj5tNod</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/system/v1/faults/" xmlns="http://emias.mos.ru/system/v1/faults/" xmlns:uctx="http://emias.mos.ru/system/v2/userContext/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQuUAOMjB75csIli4ZYKDqcpdbA0-"/>
-  <xs:import namespace="http://emias.mos.ru/system/v2/userContext/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQugAOTDB3XtiTgBkXUbvh4N.qJHfFS7TM68sgOGBCl4-"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQvsSKS72wTtuWByg9TI1WJQ1OHSqO66HMx71</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/system/v1/faults/" xmlns="http://emias.mos.ru/system/v1/faults/" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQuUAOMlNthnEiDjF8Ke3UJvOzdI-"/>
+  <xs:import namespace="http://emias.mos.ru/system/v1/userContext/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQugAOTDB3XtiTgBkXUbvh0Ip781WlYcmvrJdZp8GzrY-"/>
   <!--faults-->
   <xs:element name="fault" type="BaseFault">
     <xs:annotation>
@@ -28469,7 +28469,7 @@ including as a SOAP header.</xsd:documentation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfVD2kF6sZXjcQJJ1ICudKQvUcLzLrxnR6eB1iBVf_hs9m.ZCDetDRV4DIesEDk_xQES6ZlxUAymHvEA4X</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" version="Версия 1.4.0.81" xmlns:core="http://emias.mos.ru/hospitalization/core/v2/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfVD2kF6sZXjcQJJ1ICudKQvUcLzLrxnR6eB1iBVf_hs9m.ZCDetDRV4DIesEDk_xQES6ZlxUAymHvEA4X</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" version="Версия 1.4.3.128" xmlns:core="http://emias.mos.ru/hospitalization/core/v2/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://emias.mos.ru/hospitalization/core/v2/" schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfVD2kF6sZXjcQJJ1ICudKQv4cLiesxCc4Uwt0O.EIWYW92Xo6qRmYgGvsQQ--"/>
   <xs:element name="getHospitalizationInfoByPatientRequest">
     <xs:annotation>
@@ -28516,7 +28516,7 @@ including as a SOAP header.</xsd:documentation>
     </xs:complexType>
   </xs:element>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfVD2kF6sZXjcQJJ1ICudKQv4cLiesxCc4Uwt0O.EIWYW92Xo6qRmYgGvsQQ--</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias.mos.ru/hospitalization/core/v2/" xmlns="http://emias.mos.ru/hospitalization/core/v2/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDXDQLO9JKUaZcH_lsSkR2uTCFetzyWJNcLv8K"/>
+  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXPZNOBqZcH_lbwVjIfo.5RvA5BOhllxkY"/>
   <xs:complexType name="Hospitalization">
     <xs:annotation>
       <xs:documentation>Сущность Госпитализации</xs:documentation>
@@ -28557,7 +28557,7 @@ including as a SOAP header.</xsd:documentation>
           <xs:documentation>Диагноз при поступлении (развернутый клинический диагноз)</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="hospitalizationStatus" type="xs:string">
+      <xs:element name="hospitalizationStatus" type="KeyValuePair">
         <xs:annotation>
           <xs:documentation>Статус случая госпитализации</xs:documentation>
         </xs:annotation>
@@ -28691,9 +28691,9 @@ including as a SOAP header.</xsd:documentation>
       <xs:enumeration value="hospitalizationhospitalDate"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDXDQLO9JKUaZcH_lsSkR2uTCFetzyWJNcLv8K</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXPZNOBqZcH_lbwVjIfo.5RvA5BOhllxkY</con:url><con:content><![CDATA[<!--edited with XMLSpy v2017 rel. 3 sp1 (x64) (http://www.altova.com) by Vladimir Makarov (Private)-->
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfWT..BrFDTCIKKplRTf4WQuUAOMjB75csIli4ZYKDqcpdbA0-"/>
+  <xs:include schemaLocation="http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService?xsd=AAAADHAjUCM4P2cuZURELkK9jOJsv5giiOUhb0eXelLZ_MVcjWuwlyDKagWTUZFb5IrTJjaIkVwX6_lRYMzStnQS4B57K5YfEnz4Aq8EXihXLYVPF.1JQuUAOMlNthnEiDjF8Ke3UJvOzdI-"/>
   <!--references-->
   <xs:element name="medicalOrganizationId" type="ID">
     <xs:annotation>
@@ -28814,15 +28814,15 @@ including as a SOAP header.</xsd:documentation>
         <xs:documentation>Размер страницы</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="totalItemsCount" type="xs:long" use="required">
-      <xs:annotation>
-        <xs:documentation>Общее количество элементов в выборке</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
     <xs:attribute name="morePagesAvailable" type="xs:boolean" use="required">
       <xs:annotation>
         <xs:documentation>Флаг доступности других страниц с результатами для "постраничного листания" (true -
                     если доступны еще страницы; false - иначе)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="totalItemsCount" type="xs:long" use="required">
+      <xs:annotation>
+        <xs:documentation>Общее количество элементов в выборке</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -28882,122 +28882,72 @@ including as a SOAP header.</xsd:documentation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService</con:endpoint></con:endpoints><con:operation id="7895c131-2dbf-4631-a669-8277d54fd164" isOneWay="false" action="getHospitalizationInfoByPatient" name="getHospitalizationInfoByPatient" bindingOperationName="getHospitalizationInfoByPatient" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0dc3d2a5-3588-462a-905b-6b5aff62ceaa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v2/userContext/" xmlns:typ="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:v2="http://emias.mos.ru/hospitalization/core/v2/">\r
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService</con:endpoint></con:endpoints><con:operation id="7895c131-2dbf-4631-a669-8277d54fd164" isOneWay="false" action="getHospitalizationInfoByPatient" name="getHospitalizationInfoByPatient" bindingOperationName="getHospitalizationInfoByPatient" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0dc3d2a5-3588-462a-905b-6b5aff62ceaa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">\r
    <soap:Header>\r
-      <user:userContext>\r
-         <user:systemName>?</user:systemName>\r
-         <user:userName>?</user:userName>\r
-         <user:userRoleId>?</user:userRoleId>\r
-         <!--Optional:-->\r
-         <user:isUserRoleSystemWide>?</user:isUserRoleSystemWide>\r
-         <user:userRights>\r
-            <!--Zero or more repetitions:-->\r
-            <user:userRightId>?</user:userRightId>\r
-         </user:userRights>\r
-         <user:jobExecutionId>?</user:jobExecutionId>\r
-         <!--Optional:-->\r
-         <user:hostIp>?</user:hostIp>\r
-         <!--Optional:-->\r
-         <user:hostName>?</user:hostName>\r
-      </user:userContext>\r
+      <ns3:userContext xmlns:ns4="http://emias.mos.ru/system/v1/faults/" xmlns:ns3="http://emias.mos.ru/system/v1/userContext/" xmlns:ns2="http://emias.mos.ru/hospitalization/core/v2/" xmlns="http://emias.mos.ru/hospitalization/hospitalService/v2/types/">\r
+         <ns3:systemName>EIM</ns3:systemName>\r
+         <ns3:userName>10d59080-73a2-4587-9931-c18fb90831b2</ns3:userName>\r
+         <ns3:userRoleId>7064</ns3:userRoleId>\r
+         <ns3:isUserRoleSystemWide>true</ns3:isUserRoleSystemWide>\r
+         <ns3:userRights>\r
+            <ns3:userRightId>570001</ns3:userRightId>\r
+         </ns3:userRights>\r
+         <ns3:jobExecutionId>0</ns3:jobExecutionId>\r
+      </ns3:userContext>\r
    </soap:Header>\r
    <soap:Body>\r
-      <typ:getHospitalizationInfoByPatientRequest>\r
-         <typ:patientId>?</typ:patientId>\r
-         <typ:options>\r
-            <!--Zero or more repetitions:-->\r
-            <v2:entry key="?">?</v2:entry>\r
-         </typ:options>\r
-         <!--Optional:-->\r
-         <typ:datePeriod>\r
-            <!--Optional:-->\r
-            <v2:start>?</v2:start>\r
-            <!--Optional:-->\r
-            <v2:end>?</v2:end>\r
-         </typ:datePeriod>\r
-         <!--Optional:-->\r
-         <typ:pagingOptions pageNumber="?" pageSize="?">\r
-            <!--Optional:-->\r
-            <v2:sortingOptions>\r
-               <!--1 to 3 repetitions:-->\r
-               <v2:sortOrder>\r
-                  <v2:attributeName>?</v2:attributeName>\r
-                  <v2:descending>?</v2:descending>\r
-               </v2:sortOrder>\r
-            </v2:sortingOptions>\r
-         </typ:pagingOptions>\r
-      </typ:getHospitalizationInfoByPatientRequest>\r
+      <getHospitalizationInfoByPatientRequest xmlns="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:ns2="http://emias.mos.ru/hospitalization/core/v2/" xmlns:ns3="http://emias.mos.ru/system/v1/userContext/" xmlns:ns4="http://emias.mos.ru/system/v1/faults/">\r
+         <patientId>30202501</patientId>\r
+         <options>\r
+            <ns2:entry key="hospitalizationForLK">true</ns2:entry>\r
+            <ns2:entry key="restrictionsHemodialysis">true</ns2:entry>\r
+            <ns2:entry key="actualHospital">true</ns2:entry>\r
+         </options>\r
+         <pagingOptions pageNumber="0" pageSize="20">\r
+            <ns2:sortingOptions>\r
+               <ns2:sortOrder>\r
+                  <ns2:attributeName>hospitalizationhospitalDate</ns2:attributeName>\r
+                  <ns2:descending>true</ns2:descending>\r
+               </ns2:sortOrder>\r
+            </ns2:sortingOptions>\r
+         </pagingOptions>\r
+      </getHospitalizationInfoByPatientRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/hospitalization/hospitalService/v2/hospitalServicePortType/getHospitalizationInfoByPatientRequest"/></con:call><con:call id="7946960c-e586-4ab9-851b-e1aaf86ca6b0" name="getHospitalization"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
-    <soap:Header>
-        <wsse:Security soap:mustUnderstand="true" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-            <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-75e1b7fe-39db-401c-ad98-3cd92dc344d6">
-                <wsse:Username>EIM/EIM</wsse:Username>
-            </wsse:UsernameToken>
-        </wsse:Security>
-        <ns3:userContext xmlns:ns5="http://emias.mos.ru/system/v1/faults/" xmlns:ns4="http://emias.mos.ru/system/v1/userContext/" xmlns:ns3="http://emias.mos.ru/system/v2/userContext/" xmlns:ns2="http://emias.mos.ru/hospitalization/core/v2/" xmlns="http://emias.mos.ru/hospitalization/hospitalService/v2/types/">
-            <ns3:systemName>EIM</ns3:systemName>
-            <ns3:userName>af3e4ac5-96dd-4167-afb3-244eb7187aba</ns3:userName>
-            <ns3:isUserRoleSystemWide>true</ns3:isUserRoleSystemWide>
-            <ns3:userRights>
-                <ns3:userRightId>570001</ns3:userRightId>
-            </ns3:userRights>
-            <ns3:jobExecutionId>0</ns3:jobExecutionId>
-        </ns3:userContext>
-    </soap:Header>
-    <soap:Body>
-        <getHospitalizationInfoByPatientRequest xmlns="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:ns2="http://emias.mos.ru/hospitalization/core/v2/" xmlns:ns3="http://emias.mos.ru/system/v2/userContext/" xmlns:ns4="http://emias.mos.ru/system/v1/userContext/" xmlns:ns5="http://emias.mos.ru/system/v1/faults/">
-            <patientId>24107262</patientId>
-            <options>
-                <ns2:entry key="hospitalizationForLK">true</ns2:entry>
-                <ns2:entry key="restrictionsHemodialysis">true</ns2:entry>
-            </options>
-            <pagingOptions pageNumber="0" pageSize="0">
-                <ns2:sortingOptions>
-                    <ns2:sortOrder>
-                        <ns2:attributeName>hospitalizationhospitalDate</ns2:attributeName>
-                        <ns2:descending>true</ns2:descending>
-                    </ns2:sortOrder>
-                </ns2:sortingOptions>
-            </pagingOptions>
-        </getHospitalizationInfoByPatientRequest>
-    </soap:Body>
-</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/hospitalization/hospitalService/v2/hospitalServicePortType/getHospitalizationInfoByPatientRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="cb78a655-5330-4950-88db-8c88a0783161" name="Работающий etHosp"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamel.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:user="http://emias.mos.ru/system/v2/userContext/" xmlns:typ="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:v2="http://emias.mos.ru/hospitalization/core/v2/">
-   <soap:Header>
-      <user:userContext>
-         <user:systemName>EIM</user:systemName>
-         <user:userName>af3e4ac5-96dd-4167-afb3-244eb7187aba</user:userName>
-         <user:isUserRoleSystemWide>true</user:isUserRoleSystemWide>
-         <user:userRights>
-            <user:userRightId>570001</user:userRightId>
-         </user:userRights>
-         <user:jobExecutionId>0</user:jobExecutionId>
-      </user:userContext>
-      <wsse:Security soap:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-         <wsse:UsernameToken>
-            <wsse:Username>EIM/EIM</wsse:Username>
-         </wsse:UsernameToken>
-      </wsse:Security>
-   </soap:Header>
-   <soap:Body>
-      <typ:getHospitalizationInfoByPatientRequest>
-         <typ:patientId>20948239</typ:patientId>
-         <!--<typ:patientId>341715122166</typ:patientId>-->
-         <!--<typ:patientId>31715122166</typ:patientId>-->
-         <typ:options>
-            <v2:entry key="hospitalizationForLK">true</v2:entry>
-            <v2:entry key="restrictionsHemodialysis">true</v2:entry>
-         </typ:options>
-         <typ:pagingOptions pageNumber="0" pageSize="20">
-            <v2:sortingOptions>
-               <v2:sortOrder>
-                  <v2:attributeName>hospitalizationhospitalDate</v2:attributeName>
-                  <v2:descending>true</v2:descending>
-               </v2:sortOrder>
-            </v2:sortingOptions>
-         </typ:pagingOptions>
-      </typ:getHospitalizationInfoByPatientRequest>
-   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/hospitalization/hospitalService/v2/hospitalServicePortType/getHospitalizationInfoByPatientRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="cb78a655-5330-4950-88db-8c88a0783161" name="Работающий etHosp"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/hospitalization/hospitalService/v2/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
+   <soap:Header>\r
+      <wsse:Security soap:mustUnderstand="true" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">\r
+         <wsse:UsernameToken wsu:Id="UsernameToken-4ba4f99e-bdcd-4398-8ae7-635f72546a29" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+            <wsse:Username>EIM/EIM</wsse:Username>\r
+         </wsse:UsernameToken>\r
+      </wsse:Security>\r
+      <ns3:userContext xmlns:ns4="http://emias.mos.ru/system/v1/faults/" xmlns:ns3="http://emias.mos.ru/system/v1/userContext/" xmlns:ns2="http://emias.mos.ru/hospitalization/core/v2/" xmlns="http://emias.mos.ru/hospitalization/hospitalService/v2/types/">\r
+         <ns3:systemName>EIM</ns3:systemName>\r
+         <ns3:userName>10d59080-73a2-4587-9931-c18fb90831b2</ns3:userName>\r
+         <ns3:userRoleId>7064</ns3:userRoleId>\r
+         <ns3:isUserRoleSystemWide>true</ns3:isUserRoleSystemWide>\r
+         <ns3:userRights>\r
+            <ns3:userRightId>570001</ns3:userRightId>\r
+         </ns3:userRights>\r
+         <ns3:jobExecutionId>0</ns3:jobExecutionId>\r
+      </ns3:userContext>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <getHospitalizationInfoByPatientRequest xmlns="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:ns2="http://emias.mos.ru/hospitalization/core/v2/" xmlns:ns3="http://emias.mos.ru/system/v1/userContext/" xmlns:ns4="http://emias.mos.ru/system/v1/faults/">\r
+         <patientId>30000000506224</patientId>\r
+         <options>\r
+            <ns2:entry key="hospitalizationForLK">true</ns2:entry>\r
+            <ns2:entry key="restrictionsHemodialysis">true</ns2:entry>\r
+         </options>\r
+         <pagingOptions pageNumber="0" pageSize="50">\r
+            <ns2:sortingOptions>\r
+               <ns2:sortOrder>\r
+                  <ns2:attributeName>hospitalizationhospitalDate</ns2:attributeName>\r
+                  <ns2:descending>true</ns2:descending>\r
+               </ns2:sortOrder>\r
+            </ns2:sortingOptions>\r
+         </pagingOptions>\r
+      </getHospitalizationInfoByPatientRequest>\r
+   </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/hospitalization/hospitalService/v2/hospitalServicePortType/getHospitalizationInfoByPatientRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="1b65bd2f-740d-4648-bb74-996aa24c1dab" wsaVersion="NONE" name="ГИБДД" type="wsdl" bindingName="{http://emias2.gov.ru/emias/appointment/v1/soap/}EmiasGibddAppointmentBinding" soapVersion="1_2" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService?wsdl</con:url><con:content><![CDATA[<definitions name="EmiasGibddAppointment" targetNamespace="http://emias2.gov.ru/emias/appointment/v1/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:anw="http://emias2.gov.ru/emias/appointment/v1/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://emias2.gov.ru/emias/appointment/v1/soap/">
   <documentation>version="1.0"</documentation>
   <import location="http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService?wsdl=AAAADHAjUCM4P2cuZURELj5RSlgzK2dAjd_SqktYBl5MQzZneqwqv6LRr8dwVApKYKYfYAxtOjSjDGmxAeZ_phaf5bE179GWAye7P4cbluUFG8_.1TEhKq7sXewYC90.s01CgI12df8Vf05Vk12bRmQBJW8jZ_CaSXGh6B5yYzPjskuepI3OlhkVE7gantaTFTyd2dUh6I_R6g--" namespace="http://emias2.gov.ru/emias/appointment/v1/"></import>
@@ -29925,8 +29875,8 @@ including as a SOAP header.</xsd:documentation>
       <v1:GetAppointmentReceptionsByPatientRequest>\r
          <!--Optional:-->\r
          <upcoming>true</upcoming>\r
-         <oms>7758010875002485</oms>\r
-         <birthDate>1989-01-20</birthDate>\r
+         <oms>770000717823103</oms>\r
+         <birthDate>1939-10-23</birthDate>\r
       </v1:GetAppointmentReceptionsByPatientRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/GetAppointmentReceptionsByPatientRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="279fa1d2-e998-43f6-ab74-ea86e1e8f47b" isOneWay="false" action="GetAvailableResourceScheduleInfo" name="GetAvailableResourceScheduleInfo" bindingOperationName="GetAvailableResourceScheduleInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6614e7ef-7013-4e0a-a9e2-1c9ba5d81ba0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
