@@ -51,3 +51,21 @@ long min_time = min_date.getTime()/1000 (если дата с .sss)
 def sdf1 = new SimpleDateFormat("MMM")
 def currentTime = sdf1.format(currentDate)
 def shortMonth = currentTime.substring(0,3)
+
+ВЫЧЕСТЬ ВРЕМЯ ИЗ ТЕКУЩЕЙ ДАТЫ
+Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
+
+ВЫЧЕСТЬ ИЗ ТЕКУЩЕГО ВРЕМНИ ЛЮБОЕ ДРУГОЕ (ОТВЕТ В ФОРМАТЕ ЧЧ:ММ)
+def date = new Date()
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+int longTime = (date.getTime() - dateMinus.getTime())/1000
+int hours = (longTime / 3600)*60;
+int minutes = longTime / 3600*60 + (longTime / 3600) / 60
+int seconds = longTime % 60;
+String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())
+
+СКЛОНЕНИЕ СЛОВА В ЗАВИСИМОСТИ ОТ ДАТЫ
+callCounter = testRunner.testCase.getPropertyValue("callCounter")
+countResult = callCounter ? (callCounter.endsWith("2") || callCounter.endsWith("3") || callCounter.endsWith("4")) && !List.of("12", "13", "14").contains(callCounter) ? "раза" : "раз" : null
