@@ -41,6 +41,10 @@ def sdf1 = new SimpleDateFormat("MMM")
 def sdf2 = new SimpleDateFormat("d")
 def currentTime = sdf.format(currentDate)
 
+ПОЛУЧИТЬ ДАТУ БЕЗ ПОСЛЕДНИХ СИМВОЛОВ
+createDate="дата с лишними символами".toString()
+String createdDate = createDate.substring(0, createDate.length() - 2)
+
 ПОЛУЧИТЬ МИНИМАЛЬНОЕ ЗНАЧЕНИЕ
 def min_date_soap = Collections.min(massiv_date)
 

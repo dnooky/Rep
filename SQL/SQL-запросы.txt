@@ -29,3 +29,41 @@ staff_id,							по умолчанию дистникт выбирает сам
 amount								order by указав обязательно поле в скобках (у distinct) и затем все нужные поля
 from payment
 order by staff_id, amount desc;
+
+inner join actor a             -   если при соединении таблиц в разных таблицах поля называются одинаково, можно сократить написание до "using (название поля)"
+using (actor_id) 					при этом поле, по которому происходит соединение в результате будет выведено только 1 раз
+
+select *							- left join добавляет к левой таблице (film) добавляет правую (inventory)			
+from film f LEFT JOIN inventory i 	- right join делает наоборот, к правой (inventory) добавляет левую (film)
+using (film_id)						- full join просто соединяет обе таблицы
+
+select f.title,											- cross join выполняет декартово произведение. Выводит все возможные комбинации одного поля с другим
+a.first_name || ' ' || a.last_name as actor_name
+from film f 
+CROSS JOIN actor a
+
+select 													- запрос с группировкой по полю rating
+	rating,
+	count(*) films_count,								- посчитать кол-во в 1 группе
+	sum(название поля) as total_length,					- просуммировать все значения из группы
+	max(название поля) as max_length,					- макс.значение из группы
+	min(название поля) as min_length,					- мин. значений из группы
+	avg(название поля) as avg_length,
+	string_agg(название поля, '; ')						- вывести все значения поля из одной группы через разделитель ";"
+from 
+	film f
+group by
+	название поля; 										- по какому полю группировать
+	
+select 													- запрос с выводом сортировки по кол-ву сгруппированного значения через having
+	a.first_name || ' ' || a.last_name as actor_name,
+	count(*) as film_number
+from 
+	actor a
+join film_actor fa on
+	a.actor_id = fa.actor_id
+group by 
+	actor_name
+having 
+	count(*) > 20;
+

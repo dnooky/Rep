@@ -27965,7 +27965,22 @@ including as a SOAP header.</xsd:documentation>
          <externalSystemId>?</externalSystemId>\r
       </v5:getLpusForVaccination>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getLpusForVaccination"/></con:call></con:operation><con:operation id="7e92d6a3-af3a-426b-a71e-c1a1b46a42e1" isOneWay="false" action="urn://getReferralsInfo" name="getReferralsInfo" bindingOperationName="getReferralsInfo" type="Request-Response" outputName="getReferralsInfoResponse" inputName="getReferralsInfo" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="99061358-afa7-4690-8cd2-0bfbe8d5898f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/covidselfapp/CovidSelfAppointment/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getLpusForVaccination"/></con:call><con:call id="b75c7e58-aaf7-409b-916c-f51a8f0e958f" name="getLpusForVaccination"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/covidselfapp/CovidSelfAppointment/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <v5:getLpusForVaccination>\r
+         <omsNumber>7793899793001224</omsNumber>\r
+         <birthDate>2001-06-06</birthDate>\r
+         <externalSystemId>EIM</externalSystemId>\r
+      </v5:getLpusForVaccination>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getLpusForVaccination"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7e92d6a3-af3a-426b-a71e-c1a1b46a42e1" isOneWay="false" action="urn://getReferralsInfo" name="getReferralsInfo" bindingOperationName="getReferralsInfo" type="Request-Response" outputName="getReferralsInfoResponse" inputName="getReferralsInfo" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="99061358-afa7-4690-8cd2-0bfbe8d5898f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/covidselfapp/CovidSelfAppointment/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <v5:getReferralsInfo>\r
@@ -28983,7 +28998,7 @@ including as a SOAP header.</xsd:documentation>
    </soap:Header>\r
    <soap:Body>\r
       <getHospitalizationInfoByPatientRequest xmlns="http://emias.mos.ru/hospitalization/hospitalService/v2/types/" xmlns:ns2="http://emias.mos.ru/hospitalization/core/v2/" xmlns:ns3="http://emias.mos.ru/system/v1/userContext/" xmlns:ns4="http://emias.mos.ru/system/v1/faults/">\r
-         <patientId>16978778</patientId>\r
+         <patientId>10166510</patientId>\r
          <options>\r
             <ns2:entry key="hospitalizationForLK">true</ns2:entry>\r
             <ns2:entry key="restrictionsHemodialysis">true</ns2:entry>\r
@@ -37539,7 +37554,7 @@ def title = response.ResultSet.Row[0].'F_NOTIFICATION.TITLE'.toString()
 def description = response.ResultSet.Row[0].'F_NOTIFICATION.DESCRIPTION'
 log.info description
 assert title == 'Запись на прием к врачу'
-assert description == 'Запись отменена ' + speciality + ', ' + doctorShortName + ', ' + lpu + ', каб. ' + cabinet + ', ' + startTime</script></con:config></con:testStep><con:properties><con:property><con:name>patientId</con:name><con:value>12300</con:value></con:property><con:property><con:name>birthDate</con:name><con:value>2012-06-07</con:value></con:property><con:property><con:name>omsNumber</con:name><con:value>100000000000</con:value></con:property><con:property><con:name>appointmentIdDoctor</con:name><con:value>847816723905</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="ecf3a2e3-a16f-41f6-90a5-edfaddf8d1c3" name="А_ЕСУ_05"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b3d1891e-f662-4e71-b810-0748ee4be134" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Проверка отправки в зависимости от признаков authentication, deleted, esia_authentication, main_policy" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Проверить наличие пациента со всеми девайсами" id="d3c58780-3c13-4896-805f-3812b1b60c3d"><con:settings/><con:config><script>import groovy.sql.Sql
+assert description == 'Запись отменена ' + speciality + ', ' + doctorShortName + ', ' + lpu + ', каб. ' + cabinet + ', ' + startTime</script></con:config></con:testStep><con:properties><con:property><con:name>patientId</con:name><con:value>12300</con:value></con:property><con:property><con:name>birthDate</con:name><con:value>2012-06-07</con:value></con:property><con:property><con:name>omsNumber</con:name><con:value>100000000000</con:value></con:property><con:property><con:name>appointmentIdDoctor</con:name><con:value>847816723905</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="ecf3a2e3-a16f-41f6-90a5-edfaddf8d1c3" name="А_ЕСУ_05 - Получение сообщения об изменении статуса ТМК"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b3d1891e-f662-4e71-b810-0748ee4be134" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Проверка отправки в зависимости от признаков authentication, deleted, esia_authentication, main_policy" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Проверить наличие пациента со всеми девайсами" id="d3c58780-3c13-4896-805f-3812b1b60c3d"><con:settings/><con:config><script>import groovy.sql.Sql
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
 
@@ -37644,7 +37659,8 @@ message="""{
     "unsuccessCallCounter": 1
 }"""
 
-mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="2c4ab9eb-5c1c-42de-9b8b-e142bfd7a8b9"><con:settings/><con:config><script>import groovy.sql.Sql
+mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
+sleep(10000)</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="2c4ab9eb-5c1c-42de-9b8b-e142bfd7a8b9"><con:settings/><con:config><script>import groovy.sql.Sql
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
 
@@ -37742,7 +37758,7 @@ for(i=0; i &lt;devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>device1</con:name><con:value>1a0e59f3-245a-4812-8724-fdfd5a3833aa</con:value></con:property><con:property><con:name>device2</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device3</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device4</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device5</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device6</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device7</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>devicesToSendEsia</con:name><con:value>0, 3, 4</con:value></con:property><con:property><con:name>devicesToSendWithoutEsia</con:name><con:value>0, 5, 6</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:01:08.710</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:01:08</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37012</con:value></con:property><con:property><con:name>devicesCount</con:name><con:value>7</con:value></con:property><con:property><con:name>deviceGuid1</con:name><con:value>2818ec2f-ba37-42fc-a9ec-346af318a45e</con:value></con:property><con:property><con:name>deviceGuid2</con:name><con:value>e5ce6b68-6a71-4f81-805f-628ff9ea88e8</con:value></con:property><con:property><con:name>deviceGuid3</con:name><con:value>687234ff-a741-4b4b-878c-ad0faee794a6</con:value></con:property><con:property><con:name>deviceGuid4</con:name><con:value>f04db025-6463-4221-b948-b31083094165</con:value></con:property><con:property><con:name>deviceGuid5</con:name><con:value>680b4f5a-6612-40f1-9793-665bbad526ef</con:value></con:property><con:property><con:name>deviceGuid6</con:name><con:value>d9e4e7e1-012b-4cf9-9260-1ca4f7b8b684</con:value></con:property><con:property><con:name>deviceGuid7</con:name><con:value>d9e4e7e1-012b-4cf9-9260-1ca4f7b8b684</con:value></con:property><con:property><con:name>deviceGuid0</con:name><con:value>73c07c66-d9b8-4430-bf29-16db93fdcf92</con:value></con:property><con:property><con:name>deviceGuid0</con:name><con:value>73c07c66-d9b8-4430-bf29-16db93fdcf92</con:value></con:property><con:property><con:name>deviceGuid1</con:name><con:value>2818ec2f-ba37-42fc-a9ec-346af318a45e</con:value></con:property><con:property><con:name>deviceGuid2</con:name><con:value>e5ce6b68-6a71-4f81-805f-628ff9ea88e8</con:value></con:property><con:property><con:name>deviceGuid3</con:name><con:value>687234ff-a741-4b4b-878c-ad0faee794a6</con:value></con:property><con:property><con:name>deviceGuid4</con:name><con:value>f04db025-6463-4221-b948-b31083094165</con:value></con:property><con:property><con:name>deviceGuid5</con:name><con:value>680b4f5a-6612-40f1-9793-665bbad526ef</con:value></con:property><con:property><con:name>deviceGuid6</con:name><con:value>d9e4e7e1-012b-4cf9-9260-1ca4f7b8b684</con:value></con:property></con:properties></con:testCase><con:testCase id="87575f5b-f9ac-4151-b446-443b9fb2d85b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Проверить наличие пациента со всеми девайсами" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Проверить пациента с девайсами со всеми настройками" id="85d09202-66f0-48b3-a1e2-8b0b84487e93"><con:settings/><con:config><script><![CDATA[import groovy.sql.Sql
+</script></con:config></con:testStep><con:properties><con:property><con:name>device1</con:name><con:value>1a0e59f3-245a-4812-8724-fdfd5a3833aa</con:value></con:property><con:property><con:name>device2</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device3</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device4</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device5</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device6</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>device7</con:name><con:value>4ecb0c08-1acc-4a27-97a0-ebf80c1e43dc</con:value></con:property><con:property><con:name>devicesToSendEsia</con:name><con:value>0, 3, 4</con:value></con:property><con:property><con:name>devicesToSendWithoutEsia</con:name><con:value>0, 5, 6</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:14:32.145</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:14:32</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37992</con:value></con:property><con:property><con:name>devicesCount</con:name><con:value>7</con:value></con:property><con:property><con:name>deviceGuid1</con:name><con:value>2818ec2f-ba37-42fc-a9ec-346af318a45e</con:value></con:property><con:property><con:name>deviceGuid2</con:name><con:value>e5ce6b68-6a71-4f81-805f-628ff9ea88e8</con:value></con:property><con:property><con:name>deviceGuid3</con:name><con:value>687234ff-a741-4b4b-878c-ad0faee794a6</con:value></con:property><con:property><con:name>deviceGuid4</con:name><con:value>f04db025-6463-4221-b948-b31083094165</con:value></con:property><con:property><con:name>deviceGuid5</con:name><con:value>680b4f5a-6612-40f1-9793-665bbad526ef</con:value></con:property><con:property><con:name>deviceGuid6</con:name><con:value>d9e4e7e1-012b-4cf9-9260-1ca4f7b8b684</con:value></con:property><con:property><con:name>deviceGuid7</con:name><con:value>d9e4e7e1-012b-4cf9-9260-1ca4f7b8b684</con:value></con:property><con:property><con:name>deviceGuid0</con:name><con:value>73c07c66-d9b8-4430-bf29-16db93fdcf92</con:value></con:property><con:property><con:name>deviceGuid0</con:name><con:value>73c07c66-d9b8-4430-bf29-16db93fdcf92</con:value></con:property><con:property><con:name>deviceGuid1</con:name><con:value>2818ec2f-ba37-42fc-a9ec-346af318a45e</con:value></con:property><con:property><con:name>deviceGuid2</con:name><con:value>e5ce6b68-6a71-4f81-805f-628ff9ea88e8</con:value></con:property><con:property><con:name>deviceGuid3</con:name><con:value>687234ff-a741-4b4b-878c-ad0faee794a6</con:value></con:property><con:property><con:name>deviceGuid4</con:name><con:value>f04db025-6463-4221-b948-b31083094165</con:value></con:property><con:property><con:name>deviceGuid5</con:name><con:value>680b4f5a-6612-40f1-9793-665bbad526ef</con:value></con:property><con:property><con:name>deviceGuid6</con:name><con:value>d9e4e7e1-012b-4cf9-9260-1ca4f7b8b684</con:value></con:property></con:properties></con:testCase><con:testCase id="87575f5b-f9ac-4151-b446-443b9fb2d85b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Проверить наличие пациента со всеми девайсами" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Проверить пациента с девайсами со всеми настройками" id="85d09202-66f0-48b3-a1e2-8b0b84487e93"><con:settings/><con:config><script><![CDATA[import groovy.sql.Sql
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
 
@@ -37814,8 +37830,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -37831,6 +37855,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -37846,16 +37871,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="6b0a1f22-4a9b-40e4-b63f-8723dc38b967"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="4d78a26f-191a-4dba-9a06-27da961eb8fe"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="4d78a26f-191a-4dba-9a06-27da961eb8fe"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -38030,7 +38062,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>doctorLoginToRoom</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:33:30.776</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:34:38</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37050</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:33</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:33</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:33:30.776</con:value></con:property></con:properties></con:testCase><con:testCase id="0794b991-ae1a-4f6c-a647-b31cc4a290c0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=doctorStartCall" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="87aeeb38-b25b-4ae3-8981-1d730acdb702"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="07400ff5-6577-4c91-a502-476ebd6c4c55"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>doctorLoginToRoom</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:13:37.820</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:14:44</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37993</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:13</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:13</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:13:37.820</con:value></con:property></con:properties></con:testCase><con:testCase id="0794b991-ae1a-4f6c-a647-b31cc4a290c0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=doctorStartCall" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="87aeeb38-b25b-4ae3-8981-1d730acdb702"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="07400ff5-6577-4c91-a502-476ebd6c4c55"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -38040,8 +38072,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -38057,6 +38097,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -38072,16 +38113,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="5b02e3fd-7084-454e-be4d-c50735942add"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="5d55d315-c556-4b63-88c4-eaee88c93aad"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="5d55d315-c556-4b63-88c4-eaee88c93aad"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -38256,7 +38304,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>doctorStartCall</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:34:24.681</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:35:31</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37051</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:34</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:34</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:34:24.680</con:value></con:property></con:properties></con:testCase><con:testCase id="0d82e9df-db80-4978-9809-f604f5fd4417" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientRejectCall" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="254dda7d-7825-4c0b-9364-f402a9250e55"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="224ea6e2-180b-40c0-8961-05df81141247"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>doctorStartCall</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:13:51.937</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:14:58</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37994</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:13</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:13</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:13:51.937</con:value></con:property></con:properties></con:testCase><con:testCase id="0d82e9df-db80-4978-9809-f604f5fd4417" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientRejectCall" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="254dda7d-7825-4c0b-9364-f402a9250e55"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="224ea6e2-180b-40c0-8961-05df81141247"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -38266,8 +38314,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -38283,6 +38339,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -38298,16 +38355,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="db4ce97a-4e17-46bd-90bf-5b192005a38f"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="9eebd2cf-fbd3-4269-a5b8-ccf5f14f2d12"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="9eebd2cf-fbd3-4269-a5b8-ccf5f14f2d12"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -38482,7 +38546,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientRejectCall</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:35:44.700</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:36:52</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37052</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:35</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:35</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:35:44.700</con:value></con:property></con:properties></con:testCase><con:testCase id="53f47377-0d1c-4aa0-a7b1-e985cc16da0f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=1" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="473b06b9-5bc2-4304-8887-5cdaac80436c"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="4aeb8b65-c2b2-4867-9a9e-6c177a820b76"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientRejectCall</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:14:04.391</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:15:11</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37995</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:14</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:14</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:14:04.391</con:value></con:property></con:properties></con:testCase><con:testCase id="53f47377-0d1c-4aa0-a7b1-e985cc16da0f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=1" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="473b06b9-5bc2-4304-8887-5cdaac80436c"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="4aeb8b65-c2b2-4867-9a9e-6c177a820b76"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -38492,8 +38556,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -38509,6 +38581,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -38524,16 +38597,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="04e40476-d8b7-4fab-8b84-06f30a9f8892"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="b609cc19-6006-4667-aed3-399f3d44b355"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="b609cc19-6006-4667-aed3-399f3d44b355"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -38708,7 +38788,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="0d1bffd6-ec51-4387-a5c0-7400a0c84773" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=2" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="ca1a8840-b5de-42f7-bdfc-e2858159191d"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="668bfc23-7cf1-4f5c-b0a8-9e0a1dff9e87"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:14:17.000</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:15:23</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37996</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:14</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:14</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:14:17.000</con:value></con:property></con:properties></con:testCase><con:testCase id="0d1bffd6-ec51-4387-a5c0-7400a0c84773" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=2" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="ca1a8840-b5de-42f7-bdfc-e2858159191d"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="668bfc23-7cf1-4f5c-b0a8-9e0a1dff9e87"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -38718,8 +38798,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -38735,6 +38823,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -38750,16 +38839,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="63318396-da3f-481e-9f2c-523d18c43c5c"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="990aadbd-3909-4dc8-88fd-a436aadafd81"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="990aadbd-3909-4dc8-88fd-a436aadafd81"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -38934,7 +39030,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>2</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="08479c81-641d-497b-ae7e-de94d77b1f6d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=3" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="e0086274-7cb4-40bc-89ba-e50402797c5e"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="dc02042a-c88e-47b5-b048-2a24f66f1ec2"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:14:28.844</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:15:35</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37997</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:14</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:14</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>2</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:14:28.844</con:value></con:property></con:properties></con:testCase><con:testCase id="08479c81-641d-497b-ae7e-de94d77b1f6d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=3" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="e0086274-7cb4-40bc-89ba-e50402797c5e"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="dc02042a-c88e-47b5-b048-2a24f66f1ec2"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -38944,8 +39040,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -38961,6 +39065,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -38976,16 +39081,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="7800b9ad-fbf7-4041-9d40-2f99e53e067c"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="acb7c592-e2b4-4628-ac30-9ee2b69456b8"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="acb7c592-e2b4-4628-ac30-9ee2b69456b8"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -39160,7 +39272,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>4</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="2d4b86d5-deba-4b3d-8c1b-819cc62dcf60" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=4" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="1b61a98a-5ef0-41ae-a6e3-80f31dd54603"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="9a284798-e06c-4f24-99a5-c16de6445adf"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:14:50.648</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:15:57</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37998</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:14</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:14</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>4</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:14:50.648</con:value></con:property></con:properties></con:testCase><con:testCase id="2d4b86d5-deba-4b3d-8c1b-819cc62dcf60" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=4" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="1b61a98a-5ef0-41ae-a6e3-80f31dd54603"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="9a284798-e06c-4f24-99a5-c16de6445adf"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -39170,8 +39282,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -39187,6 +39307,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -39202,16 +39323,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="622412ad-0526-42ef-a1c9-cbc3cd0047e2"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="d1504e86-e091-488b-9951-4ff877334a98"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="d1504e86-e091-488b-9951-4ff877334a98"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -39386,7 +39514,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>4</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="c931b7bf-7ecb-4cad-aef0-a42a7e7cd550" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=5" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="f8bad0c5-ad77-4048-9d0a-b31822128ffa"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="ab64e7b0-78f5-4fda-8d02-1b0d59ba4006"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:15:03.528</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:16:10</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37999</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:15</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:15</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>4</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:15:03.528</con:value></con:property></con:properties></con:testCase><con:testCase id="c931b7bf-7ecb-4cad-aef0-a42a7e7cd550" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=5" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="f8bad0c5-ad77-4048-9d0a-b31822128ffa"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="ab64e7b0-78f5-4fda-8d02-1b0d59ba4006"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -39396,8 +39524,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -39413,6 +39549,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -39428,16 +39565,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="13b15d77-b4a4-4db0-9646-f39fef82c06b"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="7d37abfb-2d60-4e5a-bea1-451891dce94d"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="7d37abfb-2d60-4e5a-bea1-451891dce94d"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -39612,7 +39756,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>5</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="4cb937fb-30a4-4fdb-9b83-bc77849f65bc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=12" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="40437428-1d0f-4ee3-9011-5694c406b538"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="c9e93c2f-4cda-4bea-bda2-d21d0d9aefeb"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:15:17.029</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:16:24</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38000</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:15</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:15</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>5</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:15:17.029</con:value></con:property></con:properties></con:testCase><con:testCase id="4cb937fb-30a4-4fdb-9b83-bc77849f65bc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=12" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="40437428-1d0f-4ee3-9011-5694c406b538"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="c9e93c2f-4cda-4bea-bda2-d21d0d9aefeb"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -39622,8 +39766,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -39639,6 +39791,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -39654,16 +39807,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="e74de4a0-3db5-4d9b-8956-5a03935985fa"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="81427822-35c7-4ca4-864c-f2e9a7dede3b"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="81427822-35c7-4ca4-864c-f2e9a7dede3b"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -39838,7 +39998,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>12</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="9afdcca0-047b-420f-a74d-01f0dda1aa31" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=13" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="d96c6c3c-b7ca-4768-b9ca-6f57a66ff560"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="1bc813b2-e5f7-47ce-b401-8f2ade384261"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:15:30.178</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:16:37</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38001</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:15</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:15</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:06</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>12</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:15:30.178</con:value></con:property></con:properties></con:testCase><con:testCase id="9afdcca0-047b-420f-a74d-01f0dda1aa31" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=13" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="d96c6c3c-b7ca-4768-b9ca-6f57a66ff560"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="1bc813b2-e5f7-47ce-b401-8f2ade384261"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -39848,8 +40008,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -39865,6 +40033,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -39880,16 +40049,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="d5eb602b-1122-47b6-addc-f86f79c9ffaa"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="231c94fd-ae32-4de1-8bd3-91c37424c395"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="231c94fd-ae32-4de1-8bd3-91c37424c395"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -40064,7 +40240,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>13</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="cafe8f78-3b3e-4d26-8607-47cc8ee8e98c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=14" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="3fdf1f25-c36e-4939-b361-237f8e0485c7"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="f9d5f726-07f9-4109-960a-ff5a5fef9cfd"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:15:43.262</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:16:50</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38002</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:15</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:15</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>13</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:15:43.262</con:value></con:property></con:properties></con:testCase><con:testCase id="cafe8f78-3b3e-4d26-8607-47cc8ee8e98c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=14" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="3fdf1f25-c36e-4939-b361-237f8e0485c7"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="f9d5f726-07f9-4109-960a-ff5a5fef9cfd"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -40074,8 +40250,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -40091,6 +40275,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -40106,16 +40291,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="fb49dc59-090d-49ab-ba9b-082515437f87"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="e7731b80-f05a-497e-bd68-97dd9abeeddf"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="e7731b80-f05a-497e-bd68-97dd9abeeddf"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -40290,7 +40482,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>14</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="0fafb022-b1b7-403d-8a2a-665884e0fa1a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=22" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="14621337-a088-4d8c-9294-9fb7a0b99257"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="9c738c9b-4acd-4b6e-b780-b501630ff4b7"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:15:55.040</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:17:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38003</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:15</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:15</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>14</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:15:55.040</con:value></con:property></con:properties></con:testCase><con:testCase id="0fafb022-b1b7-403d-8a2a-665884e0fa1a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer и unaccessCallCounter=22" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="14621337-a088-4d8c-9294-9fb7a0b99257"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="9c738c9b-4acd-4b6e-b780-b501630ff4b7"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -40300,8 +40492,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -40317,6 +40517,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -40332,16 +40533,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="00feff68-053b-473c-bcf9-d28dad2363ff"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="912b784d-7a51-4307-8037-6b9b9e8476a0"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="912b784d-7a51-4307-8037-6b9b9e8476a0"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -40516,7 +40724,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:46:55.031</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:48:02</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37064</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:46</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:46</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>22</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:46:55.031</con:value></con:property></con:properties></con:testCase><con:testCase id="5c0c46c6-12f2-4bbf-b4ed-097ad231cd75" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer только с обязательными параметрами" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="f044dc1d-c527-4840-8278-a5eb85c9a4f8"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="422a1cbb-8ec7-4156-ac04-dab78afe70ab"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:16:07.237</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:17:14</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38004</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:16</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:16</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>22</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:16:07.237</con:value></con:property></con:properties></con:testCase><con:testCase id="5c0c46c6-12f2-4bbf-b4ed-097ad231cd75" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=patientDidNotAnswer только с обязательными параметрами" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="f044dc1d-c527-4840-8278-a5eb85c9a4f8"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="422a1cbb-8ec7-4156-ac04-dab78afe70ab"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -40526,8 +40734,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -40541,28 +40757,41 @@ testRunner.testCase.setPropertyValue("timePatientDidNotAnswer", timePatientDidNo
 
 patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
+callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
+deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
     "patientId": """+patientId+""",
+    "deviceId": \""""+deviceGuid+"""\",
     "productType": "emiasInfo",
     "appointmentId": """+appointmentId+""",
+    "participantURL": "/7d47420b-5dee-4cfe-bbf1-349fd9776370?participantUuid\u003d1436b14f-479d-432a-8c7f-b3301168b260",
     "eventType": \""""+eventType+"""\",
-    "eventDateTime": \""""+eventDateTime+"""\"
+    "eventDateTime": \""""+eventDateTime+"""\",
+    "unsuccessCallCounter": """+callCounter+"""
 }"""
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="ef55125c-e4df-4bfc-adc2-bf5eb13527e6"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="ed4edc71-c731-425c-8214-23489dee8b65"><con:settings/><con:config><script>import groovy.sql.Sql
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="ed4edc71-c731-425c-8214-23489dee8b65"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -40670,7 +40899,7 @@ if(notificationTelemedicine.size() == 1){
 	tm=notificationTelemedicine[0]
 	log.info("Найдена запись в f_notification_telemedicine с notification_id ="+notificationId)
 	checkParameter("eventDateTime",eventDateTime,date)
-	checkParameter("unaccessCallCounter",unaccessCallCounter,tm.unsuccess_call_counter.toString())
+	checkParameter("unaccessCallCounter",unaccessCallCounter,tm.unsuccess_call_counter)
 	checkParameter("eventType",eventType,tm.event_type.toString())
 }
 else testRunner.fail("Количество записей в f_notification_telemedicine не равно 1. фактическое ="+notificationTelemedicine.size())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification_task" id="997ec83e-4113-4955-b1c5-9f62d2ea24a1"><con:settings/><con:config><script>import groovy.sql.Sql
@@ -40737,7 +40966,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:44:58.771</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:46:06</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37063</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:44</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:44</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:44:58.771</con:value></con:property></con:properties></con:testCase><con:testCase id="66bde11f-15ae-4611-9330-acadf97cbc09" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=conferenceSuccesfullyFinished" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="6659203b-d116-4b20-bd30-56fcbfe8575c"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="eaf43bcf-82ad-4c11-9d1f-61b2288f0487"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientDidNotAnswer</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:16:20.016</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:17:27</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38005</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:16</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:16</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:16:20.016</con:value></con:property></con:properties></con:testCase><con:testCase id="66bde11f-15ae-4611-9330-acadf97cbc09" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=conferenceSuccesfullyFinished" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="6659203b-d116-4b20-bd30-56fcbfe8575c"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="eaf43bcf-82ad-4c11-9d1f-61b2288f0487"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -40747,8 +40976,16 @@ LIMIT 1</con:query><con:properties/></con:config></con:testStep><con:testStep ty
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
+import groovy.sql.Sql
+connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
+sql = Sql.newInstance(connection)
 
 log.info "Отправка сообщения об изменении статуса ТМК"
+
+def date = new Date()
+log.info date
+def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
+testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
 Date dateMinus = LocalDateTime.now().plusSeconds(-67).toDate()
 def currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(dateMinus)
@@ -40764,6 +41001,7 @@ patientId = testRunner.testCase.testSuite.getPropertyValue("patientId")
 appointmentId = testRunner.testCase.getPropertyValue("appointmentId")
 callCounter = testRunner.testCase.getPropertyValue("callCounter")
 eventType = testRunner.testCase.getPropertyValue("eventType")
+userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 deviceGuid = java.util.UUID.randomUUID()
 
 message="""{
@@ -40779,15 +41017,22 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-def date = new Date()
-def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
-testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
+sleep(10000)
 
-int longTime = (date.getTime() - dateMinus.getTime())/1000
+
+query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
+log.info query
+notifications=sql.rows(query)
+createDate=notifications[0].create_date.toString()
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
+log.info timeCallInProgress
 testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="e08af82d-c9f2-4f9a-bbaa-3490d0170dd1"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="01468da7-f316-4f16-8d51-8c72abd5c091"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
@@ -40963,7 +41208,7 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientRejectCall</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-08 17:43:08.426</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-08 17:44:15</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37060</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>17:43</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>08.02.2024 в 17:43</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-08T17:43:08.426</con:value></con:property></con:properties></con:testCase><con:testCase id="61e80137-49d1-476f-b3af-1ba3038c7f88" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=callInProgress" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="b1a6cb95-702e-4fd3-8b70-f7a76fc309e9"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="d2ecb5d8-657a-4080-9f3f-020ead67ca86"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
+</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>patientRejectCall</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:16:32.578</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:17:39</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38006</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:16</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:16</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:16:32.578</con:value></con:property></con:properties></con:testCase><con:testCase id="61e80137-49d1-476f-b3af-1ba3038c7f88" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отправить сообщение с eventType=callInProgress" searchProperties="true"><con:settings/><con:testStep type="calltestcase" name="Проверить наличие пациента со всеми девайсами" id="b1a6cb95-702e-4fd3-8b70-f7a76fc309e9"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>87575f5b-f9ac-4151-b446-443b9fb2d85b</con:targetTestCase><con:properties/><con:returnProperties/><con:runMode>PARALLELL</con:runMode></con:config></con:testStep><con:testStep type="jdbc" name="Найти appointmentId, doctor_short_name, speciality_name" id="d2ecb5d8-657a-4080-9f3f-020ead67ca86"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fna.appointment_id, fna.speciality_name, fna.doctor_short_name from f_notification_appointment fna
 join f_notification fn on fn.id = fna.notification_id
 join f_user fu on fu.id = fn.user_id
 where fu.patient_id = ${#TestSuite#patientId} 
@@ -40980,6 +41225,7 @@ sql = Sql.newInstance(connection)
 log.info "Отправка сообщения об изменении статуса ТМК"
 
 def date = new Date()
+log.info date
 def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
 testRunner.testCase.setPropertyValue("currentDateTimeForDB", currentDateTimeForDB.toString())
 
@@ -41013,22 +41259,23 @@ message="""{
 
 mainScripts.kafka().sendMessageToKafka2("topicTmkNotify",message)
 
-sleep(3000)
+sleep(10000)
 
 
 query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
 log.info query
 notifications=sql.rows(query)
 createDate=notifications[0].create_date.toString()
-createdDate=Date.parse("yyyy-MM-dd hh:mm:ss.SSS", createDate)
-log.info createdDate
-int longTime = (createdDate.getTime() - dateMinus.getTime())/1000
+String createdDate = createDate.substring(0, createDate.length() - 3)
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", createdDate)
+log.info createdDateParsed
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
 int hours = (longTime / 3600)*60;
 int minutes = longTime / 3600*60 + (longTime / 3600) / 60
 int seconds = longTime % 60;
 String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
 log.info timeCallInProgress
-testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="delay" name="Подождать" id="8a61b082-af71-4bb5-95c1-52ebc88429ef"><con:settings/><con:config><delay>3000</delay></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="5a7941b5-ddd4-4d3d-882c-47c36b15bb67"><con:settings/><con:config><script>import groovy.sql.Sql
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="Проверить создание в f_notification" id="5a7941b5-ddd4-4d3d-882c-47c36b15bb67"><con:settings/><con:config><script>import groovy.sql.Sql
 import java.text.SimpleDateFormat
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 sql = Sql.newInstance(connection)
@@ -41203,20 +41450,34 @@ for(i=1; i &lt;=devicesCount; i++ ){
 		}
 	}
 }
-</script></con:config></con:testStep><con:testStep type="groovy" name="1" id="0cca917a-ee8f-42cf-ae46-87d39ce44609"><con:settings/><con:config><script>import java.text.SimpleDateFormat
+</script></con:config></con:testStep><con:testStep type="groovy" name="1" id="0cca917a-ee8f-42cf-ae46-87d39ce44609" disabled="true"><con:settings/><con:config><script>import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
 import groovy.sql.Sql
 connection =testRunner.testCase.testSuite.project.getPropertyValue("emiasInfoNotificationsFullDbConnection")
 
+
+Date dateMinus = LocalDateTime.now().plusSeconds(-600).toDate()
 userId= testRunner.testCase.testSuite.getPropertyValue("userId")
 sql = Sql.newInstance(connection)
 //def date = new Date()
 //def currentDateTimeForDB = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date)
 currentDateTimeForDB = testRunner.testCase.getPropertyValue("currentDateTimeForDB")
 query="SELECT create_date FROM f_notification WHERE user_id = "+userId+" AND notification_type_id=7 and  create_date > '"+currentDateTimeForDB+"'"
-log.info query
 notifications=sql.rows(query)
-createDate=notifications[0].create_date.format("yyyy-MM-dd hh:mm:ss.SSS")
+createDate=notifications[0].create_date.toString()
 log.info createDate
-createdDate=Date.parse("yyyy-MM-dd hh:mm:ss.SSS", createDate)</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>callInProgress</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-09 14:14:40.777</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-09 14:15:47</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>37289</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>14:14</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>09.02.2024 в 14:14</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>03:33</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-09T14:14:40.777</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>patientId</con:name><con:value>123010</con:value></con:property><con:property><con:name>oms</con:name><con:value>1000000000010</con:value></con:property><con:property><con:name>userId</con:name><con:value>13786</con:value></con:property><con:property><con:name>devicesCount</con:name><con:value>9</con:value></con:property><con:property><con:name>deviceGuid1</con:name><con:value>a4110a7d-430b-47b5-95cc-8a8d3a36e804</con:value></con:property><con:property><con:name>deviceGuid2</con:name><con:value>49cbea73-a037-4364-a747-d4ddf07b01a7</con:value></con:property><con:property><con:name>deviceGuid3</con:name><con:value>27170440-f260-44ac-85ea-e7b8e275c5f4</con:value></con:property><con:property><con:name>deviceGuid4</con:name><con:value>9eecff77-4cd8-400f-994f-0dc6f8774398</con:value></con:property><con:property><con:name>deviceGuid5</con:name><con:value>fb7b825a-6df6-42b3-bc90-869976cf0541</con:value></con:property><con:property><con:name>deviceGuid6</con:name><con:value>fa7f54f2-64d2-477c-bf23-fb35a6bec420</con:value></con:property><con:property><con:name>deviceGuid7</con:name><con:value>73c07c66-d9b8-4430-bf29-16db93fdcf92</con:value></con:property><con:property><con:name>deviceGuid8</con:name><con:value>f0b4dc87-5b8f-4510-ac10-83ea8cc792b1</con:value></con:property><con:property><con:name>deviceGuid9</con:name><con:value>638fe89e-88c2-4536-8fa9-fc1afad91eac</con:value></con:property><con:property><con:name>devicesToSend</con:name><con:value>4, 5, 6, 7, 8, 9</con:value></con:property><con:property><con:name>devicesToSendVoip</con:name><con:value>1, 2, 3, 4, 5, 7, 8</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>emiasInfoEndpoint</con:name><con:value>http://application-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoDbConnection</con:name><con:value>172.17.5.11:29102/emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbLogin</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbPassword</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29102/emiasinfoapp?user=emiasinfoapp&amp;password=emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>suppDbConnection</con:name><con:value>@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDbLogin</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppDbPassword</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppFullDbConnection</con:name><con:value> jdbc:oracle:thin:EMIAS_CLUSTER/EMIAS_CLUSTER@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDBDriver</con:name><con:value>oracle.jdbc.driver.OracleDriver</con:value></con:property><con:property><con:name>nsiEndpoint</con:name><con:value>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationHeaders</con:name><con:value><![CDATA[<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">          <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">             <wsse:Username>EIM/EIM</wsse:Username>          </wsse:UsernameToken>       </wsse:Security> ]]></con:value></con:property><con:property><con:name>EI-token</con:name><con:value>-ykfDtplFdsMeQGJVlZn_Lup2XcOeiZWxsaQfKHm9QE</con:value></con:property><con:property><con:name>emiasInfoNotificationsEndpoint</con:name><con:value>http://notification-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbConnection</con:name><con:value>172.17.5.11:29104/notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbLogin</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbPassword</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29104/notification?user=notification&amp;password=notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>topicBookingRecipeInfoMessage</con:name><con:value>BookingRecipeInfoMessage.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>dbType</con:name><con:value>postgre</con:value></con:property><con:property><con:name>dbLogin</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbPassword</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbConnect</con:name><con:value>10.2.173.127:5432/rir2</con:value></con:property><con:property><con:name>bootstrapServers</con:name><con:value>10.2.172.24:9092</con:value></con:property><con:property><con:name>topicMedicationAssignmentChangesPerDay</con:name><con:value>MedicationAssignmentChangesPerDay.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Bm</con:name><con:value>Appointment2Bm.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Doctor</con:name><con:value>Appointment2Doctor.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Ldp</con:name><con:value>Appointment2Ldp.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicKisNazToEmiasPublication</con:name><con:value>kisNazToEmiasPublication.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicTmkNotify</con:name><con:value>tmkNotify.EMIASINFO_SOLIT_TEST_1</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+String result = createDate.substring(0, createDate.length() - 3)
+log.info result
+//createdDate=Date.parse("yyyy-MM-dd hh:mm:ss.SSS", createDate)
+
+createdDateParsed = Date.parse("yyyy-MM-dd HH:mm:ss.SSS", result)
+log.info createdDateParsed
+
+int longTime = (createdDateParsed.getTime() - dateMinus.getTime())/1000
+int hours = (longTime / 3600)*60;
+int minutes = longTime / 3600*60 + (longTime / 3600) / 60
+int seconds = longTime % 60;
+String timeCallInProgress = String.format("%02d:%02d", minutes, seconds)
+log.info timeCallInProgress
+testRunner.testCase.setPropertyValue("timeCallInProgress", timeCallInProgress.toString())</script></con:config></con:testStep><con:properties><con:property><con:name>eventType</con:name><con:value>callInProgress</con:value></con:property><con:property><con:name>appointmentId</con:name><con:value>391930072666</con:value></con:property><con:property><con:name>currentDateTime</con:name><con:value>2024-02-12 12:16:49.625</con:value></con:property><con:property><con:name>specName</con:name><con:value>Врач-терапевт участковый</con:value></con:property><con:property><con:name>docShortName</con:name><con:value>Беляев А.А.</con:value></con:property><con:property><con:name>currentDateTimeForDB</con:name><con:value>2024-02-12 12:17:56</con:value></con:property><con:property><con:name>notificationId</con:name><con:value>38007</con:value></con:property><con:property><con:name>timePatientRejectCall</con:name><con:value>12:16</con:value></con:property><con:property><con:name>timePatientDidNotAnswer</con:name><con:value>12.02.2024 в 12:16</con:value></con:property><con:property><con:name>timeCallInProgress</con:name><con:value>01:07</con:value></con:property><con:property><con:name>callCounter</con:name><con:value>1</con:value></con:property><con:property><con:name>eventDateTime</con:name><con:value>2024-02-12T12:16:49.625</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>patientId</con:name><con:value>123010</con:value></con:property><con:property><con:name>oms</con:name><con:value>1000000000010</con:value></con:property><con:property><con:name>userId</con:name><con:value>13786</con:value></con:property><con:property><con:name>devicesCount</con:name><con:value>9</con:value></con:property><con:property><con:name>deviceGuid1</con:name><con:value>a4110a7d-430b-47b5-95cc-8a8d3a36e804</con:value></con:property><con:property><con:name>deviceGuid2</con:name><con:value>49cbea73-a037-4364-a747-d4ddf07b01a7</con:value></con:property><con:property><con:name>deviceGuid3</con:name><con:value>27170440-f260-44ac-85ea-e7b8e275c5f4</con:value></con:property><con:property><con:name>deviceGuid4</con:name><con:value>9eecff77-4cd8-400f-994f-0dc6f8774398</con:value></con:property><con:property><con:name>deviceGuid5</con:name><con:value>fb7b825a-6df6-42b3-bc90-869976cf0541</con:value></con:property><con:property><con:name>deviceGuid6</con:name><con:value>fa7f54f2-64d2-477c-bf23-fb35a6bec420</con:value></con:property><con:property><con:name>deviceGuid7</con:name><con:value>73c07c66-d9b8-4430-bf29-16db93fdcf92</con:value></con:property><con:property><con:name>deviceGuid8</con:name><con:value>f0b4dc87-5b8f-4510-ac10-83ea8cc792b1</con:value></con:property><con:property><con:name>deviceGuid9</con:name><con:value>638fe89e-88c2-4536-8fa9-fc1afad91eac</con:value></con:property><con:property><con:name>devicesToSend</con:name><con:value>4, 5, 6, 7, 8, 9</con:value></con:property><con:property><con:name>devicesToSendVoip</con:name><con:value>1, 2, 3, 4, 5, 7, 8</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>emiasInfoEndpoint</con:name><con:value>http://application-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoDbConnection</con:name><con:value>172.17.5.11:29102/emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbLogin</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbPassword</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29102/emiasinfoapp?user=emiasinfoapp&amp;password=emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>suppDbConnection</con:name><con:value>@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDbLogin</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppDbPassword</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppFullDbConnection</con:name><con:value> jdbc:oracle:thin:EMIAS_CLUSTER/EMIAS_CLUSTER@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDBDriver</con:name><con:value>oracle.jdbc.driver.OracleDriver</con:value></con:property><con:property><con:name>nsiEndpoint</con:name><con:value>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationHeaders</con:name><con:value><![CDATA[<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">          <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">             <wsse:Username>EIM/EIM</wsse:Username>          </wsse:UsernameToken>       </wsse:Security> ]]></con:value></con:property><con:property><con:name>EI-token</con:name><con:value>-ykfDtplFdsMeQGJVlZn_Lup2XcOeiZWxsaQfKHm9QE</con:value></con:property><con:property><con:name>emiasInfoNotificationsEndpoint</con:name><con:value>http://notification-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbConnection</con:name><con:value>172.17.5.11:29104/notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbLogin</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbPassword</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29104/notification?user=notification&amp;password=notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>topicBookingRecipeInfoMessage</con:name><con:value>BookingRecipeInfoMessage.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>dbType</con:name><con:value>postgre</con:value></con:property><con:property><con:name>dbLogin</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbPassword</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbConnect</con:name><con:value>10.2.173.127:5432/rir2</con:value></con:property><con:property><con:name>bootstrapServers</con:name><con:value>10.2.172.24:9092</con:value></con:property><con:property><con:name>topicMedicationAssignmentChangesPerDay</con:name><con:value>MedicationAssignmentChangesPerDay.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Bm</con:name><con:value>Appointment2Bm.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Doctor</con:name><con:value>Appointment2Doctor.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Ldp</con:name><con:value>Appointment2Ldp.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicKisNazToEmiasPublication</con:name><con:value>kisNazToEmiasPublication.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicTmkNotify</con:name><con:value>tmkNotify.EMIASINFO_SOLIT_TEST_1</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
