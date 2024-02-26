@@ -2277,8 +2277,8 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getAppointmentReceptionsByPatient>\r
-         <omsNumber>7700007178231039</omsNumber>\r
-         <birthDate>1939-10-23</birthDate>\r
+         <omsNumber>7758010875002485</omsNumber>\r
+         <birthDate>1989-01-24</birthDate>\r
          <externalSystemId>EIM</externalSystemId>
          <signActiveArchive>0</signActiveArchive>
       </v5:getAppointmentReceptionsByPatient>\r
@@ -2348,8 +2348,8 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getAssignmentsInfo>\r
-         <omsNumber>770000717823103</omsNumber>\r
-         <birthDate>1939-10-23</birthDate>\r
+         <omsNumber>7758010875002485</omsNumber>\r
+         <birthDate>1989-01-24</birthDate>\r
          <returnExtended>true</returnExtended>\r
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getAssignmentsInfo>\r
@@ -2612,8 +2612,8 @@
    </soap:Header>
    <soap:Body>\r
       <v5:getReferralsInfo>\r
-         <omsNumber>7700003097180466</omsNumber>\r
-         <birthDate>1966-04-18</birthDate>\r
+         <omsNumber>7755530870001052</omsNumber>\r
+         <birthDate>1964-04-29</birthDate>\r
          <returnExtended>true</returnExtended>\r
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getReferralsInfo>\r
@@ -29933,7 +29933,24 @@ including as a SOAP header.</xsd:documentation>
          <recChannel>?</recChannel>\r
       </v1:CreateAppointmentRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/CreateAppointmentRequest"/></con:call></con:operation><con:operation id="62df9149-0c06-4e0a-956e-58c5fb526bdb" isOneWay="false" action="GetAppointmentReceptionsByPatient" name="GetAppointmentReceptionsByPatient" bindingOperationName="GetAppointmentReceptionsByPatient" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd4dd013-1651-4b35-b88f-254ad3e9005f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/CreateAppointmentRequest"/></con:call><con:call id="72b7e641-5cec-4de7-bf59-d0c9d6efe4dd" name="create"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
+<soap:Header>
+ <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <wsse:UsernameToken>
+   <wsse:Username>EIP</wsse:Username>
+  </wsse:UsernameToken>
+ </wsse:Security>
+</soap:Header>
+   <soap:Body>\r
+      <v1:CreateAppointmentRequest>\r
+         <oms>7758010875002485</oms>\r
+         <birthday>1989-01-24</birthday>\r
+         <availableResourceId>5601</availableResourceId>\r
+         <startDate>2024-02-27T15:45:00</startDate>\r
+         <referenceId>21</referenceId>\r
+      </v1:CreateAppointmentRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/CreateAppointmentRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="62df9149-0c06-4e0a-956e-58c5fb526bdb" isOneWay="false" action="GetAppointmentReceptionsByPatient" name="GetAppointmentReceptionsByPatient" bindingOperationName="GetAppointmentReceptionsByPatient" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd4dd013-1651-4b35-b88f-254ad3e9005f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <v1:GetAppointmentReceptionsByPatientRequest>\r
@@ -29955,8 +29972,8 @@ including as a SOAP header.</xsd:documentation>
       <v1:GetAppointmentReceptionsByPatientRequest>\r
          <!--Optional:-->\r
          <upcoming>true</upcoming>\r
-         <oms>770000717823103</oms>\r
-         <birthDate>1939-10-23</birthDate>\r
+         <oms>7758010875002485</oms>\r
+         <birthDate>1989-01-24</birthDate>\r
       </v1:GetAppointmentReceptionsByPatientRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/GetAppointmentReceptionsByPatientRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="279fa1d2-e998-43f6-ab74-ea86e1e8f47b" isOneWay="false" action="GetAvailableResourceScheduleInfo" name="GetAvailableResourceScheduleInfo" bindingOperationName="GetAvailableResourceScheduleInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6614e7ef-7013-4e0a-a9e2-1c9ba5d81ba0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
@@ -29971,7 +29988,25 @@ including as a SOAP header.</xsd:documentation>
          <actual>false</actual>\r
       </v1:GetAvailableResourceScheduleInfoRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/GetAvailableResourceScheduleInfoRequest"/></con:call></con:operation><con:operation id="4966059c-6bfa-4c1a-95f4-329a6868b2c7" isOneWay="false" action="GetLpuList" name="GetLpuList" bindingOperationName="GetLpuList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="54bc9779-02f4-4785-a059-aa9aba6f6caa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/GetAvailableResourceScheduleInfoRequest"/></con:call><con:call id="baa396aa-4279-42df-bbea-36c56bea1f98" name="avResource"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
+<soap:Header>
+ <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <wsse:UsernameToken>
+   <wsse:Username>EIP</wsse:Username>
+  </wsse:UsernameToken>
+ </wsse:Security>
+</soap:Header>
+   <soap:Body>\r
+      <v1:GetAvailableResourceScheduleInfoRequest>\r
+         <lpuId>32</lpuId>\r
+         <referenceId>21</referenceId>\r
+         <startDate>2024-02-26T15:00:00</startDate>\r
+         <endDate>2024-12-31T15:00:00</endDate>\r
+         <!--Optional:-->\r
+         <actual>true</actual>\r
+      </v1:GetAvailableResourceScheduleInfoRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/GetAvailableResourceScheduleInfoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4966059c-6bfa-4c1a-95f4-329a6868b2c7" isOneWay="false" action="GetLpuList" name="GetLpuList" bindingOperationName="GetLpuList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="54bc9779-02f4-4785-a059-aa9aba6f6caa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
 <soap:Header>
  <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
   <wsse:UsernameToken>
@@ -29981,7 +30016,7 @@ including as a SOAP header.</xsd:documentation>
 </soap:Header>
    <soap:Body>\r
       <v1:GetLpuListRequest>\r
-         <lpuId>?</lpuId>\r
+         <lpuId>141</lpuId>\r
       </v1:GetLpuListRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/GetLpuListRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c61a27b4-461e-4c95-b7cb-78120b097a60" isOneWay="false" action="GetLpuList2" name="GetLpuList2" bindingOperationName="GetLpuList2" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a172e026-112d-40de-ae1c-a9a17203b97c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r

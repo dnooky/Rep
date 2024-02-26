@@ -67,3 +67,18 @@ group by
 having 
 	count(*) > 20;
 
+select f.title, f.rating, 															- вывод значения через case (аналог if-else)
+case 
+	when f.rating = 'G' then 'Нет возрастных ограничений'
+	when f.rating = 'PG' then 'Рекомендуется присутствие родителей'
+	when f.rating = 'PG-13' then 'Детям до 13 лет просмотр не желателен'
+	when f.rating = 'R' then 'Лицам до 17 лет обязательно присутствие взрослого'
+	when f.rating = 'NC-17' then 'Нет возрастных ограничений'
+	else "Другое ограничение"
+end as "Возрастное ограничение"
+from film f
+
+limit 50													- Вывести первые 50 строк
+offset 50													- Пропустить первые 50 строк
+
+union intersect except
