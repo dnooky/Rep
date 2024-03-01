@@ -9586,7 +9586,7 @@
    </soap:Header>
    <soap:Body>\r
       <typ:GetPlanShortRequest>\r
-         <typ:patientId>10166510</typ:patientId>\r
+         <typ:patientId>22236990</typ:patientId>\r
       </typ:GetPlanShortRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/dnpdn/planService/v2/planServicePortType/GetPlanShortRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="76217557-0ecc-43c6-bf6a-be30221139d8" wsaVersion="NONE" name="Контингент" type="wsdl" bindingName="{http://impl.service.soap.emias.lanit.ru/v2/}PGUContingentServicePTB" soapVersion="1_1" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/Contingent/PGUContingent/v2S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/Contingent/PGUContingent/v2S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/Contingent/PGUContingent/v2S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="PGUServicesInfoV2" targetNamespace="http://impl.service.soap.emias.lanit.ru/v2/" xmlns:api="http://api.service.soap.emias.lanit.ru/v2/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.service.soap.emias.lanit.ru/v2/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -29946,8 +29946,8 @@ including as a SOAP header.</xsd:documentation>
          <oms>7758010875002485</oms>\r
          <birthday>1989-01-24</birthday>\r
          <availableResourceId>5601</availableResourceId>\r
-         <startDate>2024-02-27T15:45:00</startDate>\r
-         <referenceId>21</referenceId>\r
+         <startDate>2024-03-28T15:45:00</startDate>\r
+         <referenceId>1</referenceId>\r
       </v1:CreateAppointmentRequest>\r
    </soap:Body>\r
 </soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias2.gov.ru/emias/appointment/v1/soap/EmiasGibddAppointmentService/CreateAppointmentRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="62df9149-0c06-4e0a-956e-58c5fb526bdb" isOneWay="false" action="GetAppointmentReceptionsByPatient" name="GetAppointmentReceptionsByPatient" bindingOperationName="GetAppointmentReceptionsByPatient" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd4dd013-1651-4b35-b88f-254ad3e9005f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
@@ -34270,7 +34270,10 @@ including as a SOAP header.</xsd:documentation>
 </con:parameters><con:parameterOrder><con:entry>medicationId</con:entry><con:entry>patientId</con:entry><con:entry>EI-token</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getLpusForVaccinations" path="/api/v2/saOrchestratorCovid/getLpusForVaccinations" id="92104073-8e2a-4646-8b8c-95e091311cf0"><con:settings/><con:parameters><con:parameter><con:name>Mock-saOrchestrator</con:name><con:value/><con:style>HEADER</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="280f0bdb-8d7e-4e15-a4a5-f1ca88b3ce39" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500 404 400</con:status><con:params/><con:element xmlns:get="http://application-emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestratorCovid/getLpusForVaccinations">get:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://application-emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestratorCovid/getLpusForVaccinations">get:Response</con:element></con:representation><con:request name="Request 1" id="461d56ab-c615-456a-bf05-f0e95d26c367" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
     "omsNumber" : "7789789727001182",
     "birthDate": "2012-10-22"
-}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestratorCovid/getLpusForVaccinations</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>Mock-saOrchestrator</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getReferralsInfo" path="/api/v2/saOrchestrator/getReferralsInfo" id="04b904ca-478b-471b-8048-dfa5b49dc7ef"><con:settings/><con:parameters/><con:method name="Method 1" id="f4aabe99-1a31-41b6-bca4-c84f560f0d8c" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:get="http://application-emiasinfo3.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo">get:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="756d86f7-c843-4d9f-8a8b-d48facd2815c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Mock-id" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry/></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="b2d15ca9-7738-45f4-ba10-ba5080de5223" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://notification-emiasinfo1.emias.solit-clouds.ru" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint></con:endpoints><con:resource name="env" path="/actuator/env" id="f11b3854-204e-4728-884b-49a47afaac00"><con:settings/><con:parameters/><con:method name="Method 1" id="df9a5317-c0ac-4b7d-afaf-28ccd487b0ed" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/vnd.spring-boot.actuator.v3+json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:env="http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env">env:Response</con:element></con:representation><con:request name="Request 1" id="adada609-6fe3-4216-9457-de14bb47a415" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint><con:request/><con:originalUri>http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" id="c888db5f-ef1b-4825-b383-55500b1b58d6" wsaVersion="NONE" name="ИД" type="wsdl" bindingName="{http://emias.mos.ru/emiasid/assignmentService/v2_2/}assignmentServiceBindings" soapVersion="1_2" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="assignmentService" targetNamespace="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://emias.mos.ru/emiasid/core/v2/" xmlns:ns1="http://emias.mos.ru/emiasid/assignmentService/v2/types/" xmlns:ns2="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestratorCovid/getLpusForVaccinations</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>Mock-saOrchestrator</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getReferralsInfo" path="/api/v2/saOrchestrator/getReferralsInfo" id="04b904ca-478b-471b-8048-dfa5b49dc7ef"><con:settings/><con:parameters/><con:method name="Method 1" id="f4aabe99-1a31-41b6-bca4-c84f560f0d8c" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:get="http://application-emiasinfo3.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo">get:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="756d86f7-c843-4d9f-8a8b-d48facd2815c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Mock-id" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry/></con:parameterOrder></con:request></con:method></con:resource><con:resource name="saCount" path="/api/v1/mainPage/saCount" id="71402a48-b98e-4974-a89a-0e1c070854c5"><con:settings/><con:parameters/><con:method name="Method 1" id="f3175a26-0145-429a-831e-c2b705f3b700" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sac="http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount">sac:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:sac="http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount">sac:Fault</con:element></con:representation><con:request name="Request 1" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value=""/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="b2d15ca9-7738-45f4-ba10-ba5080de5223" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://notification-emiasinfo1.emias.solit-clouds.ru" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint></con:endpoints><con:resource name="env" path="/actuator/env" id="f11b3854-204e-4728-884b-49a47afaac00"><con:settings/><con:parameters/><con:method name="Method 1" id="df9a5317-c0ac-4b7d-afaf-28ccd487b0ed" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/vnd.spring-boot.actuator.v3+json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:env="http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env">env:Response</con:element></con:representation><con:request name="Request 1" id="adada609-6fe3-4216-9457-de14bb47a415" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint><con:request/><con:originalUri>http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" id="c888db5f-ef1b-4825-b383-55500b1b58d6" wsaVersion="NONE" name="ИД" type="wsdl" bindingName="{http://emias.mos.ru/emiasid/assignmentService/v2_2/}assignmentServiceBindings" soapVersion="1_2" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="assignmentService" targetNamespace="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://emias.mos.ru/emiasid/core/v2/" xmlns:ns1="http://emias.mos.ru/emiasid/assignmentService/v2/types/" xmlns:ns2="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
     <xs:schema>
       <xs:import namespace="http://emias.mos.ru/system/v1/userContext/" schemaLocation="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?xsd=AAAADHAjUCM4P2cuZURELraVudE9Q88Ug79nkJNa6nMjS1nxE63JKJBkOcGMlcKrWUChvMDBzpXFzUVBLsWK1L2VKtA.oW1mqYu6mtvQsRSkABKM7drrlG.1I8mwDBLWiu8ltZrwvS6uJelXTtqdEnQQhBAhzZp3fg0ChBMVMgIpTOzt5nCr6DvvidC2egssQt2UejzC0cbdeW8cBYzb6CL5_pY_tg--"/>
@@ -40554,7 +40557,7 @@ def title = response.ResultSet.Row[0].'F_NOTIFICATION.TITLE'.toString()
 def description = response.ResultSet.Row[0].'F_NOTIFICATION.DESCRIPTION'
 log.info description
 assert title == 'Запись на ' + ST
-assert description == 'Вы записаны ' + ST + ', ' + lpu + ', каб. ' + cabinet + ', ' + startTime</script></con:config></con:testStep><con:properties><con:property><con:name>patientId</con:name><con:value>12300</con:value></con:property><con:property><con:name>birthDate</con:name><con:value>2012-06-07</con:value></con:property><con:property><con:name>omsNumber</con:name><con:value>100000000000</con:value></con:property><con:property><con:name>appointmentIdLdp</con:name><con:value>246729543130</con:value></con:property><con:property><con:name>appointmentIdBm</con:name><con:value>471627652993</con:value></con:property><con:property><con:name>startTime</con:name><con:value>2024-01-20T12:00:00+03:00</con:value></con:property></con:properties></con:testCase><con:testCase id="bc94e7e3-d4b5-438a-b894-62d2324f5334" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. title и description при f_notification_appointment.status == &quot;CREATE&quot; и is_tmk = true. 382044" searchProperties="true"><con:settings/><con:testStep type="jdbc" name="Найти специальность врача" id="5241f84c-cac9-4f5c-9505-692eb5b6b0ad"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select code_reception_type from d_reception_type_tmk_code
+assert description == 'Вы записаны ' + ST + ', ' + lpu + ', каб. ' + cabinet + ', ' + startTime</script></con:config></con:testStep><con:properties><con:property><con:name>patientId</con:name><con:value>12300</con:value></con:property><con:property><con:name>birthDate</con:name><con:value>2012-06-07</con:value></con:property><con:property><con:name>omsNumber</con:name><con:value>100000000000</con:value></con:property><con:property><con:name>appointmentIdLdp</con:name><con:value>986263584014</con:value></con:property><con:property><con:name>appointmentIdBm</con:name><con:value>471627652993</con:value></con:property><con:property><con:name>startTime</con:name><con:value>2024-01-20T12:00:00+03:00</con:value></con:property></con:properties></con:testCase><con:testCase id="bc94e7e3-d4b5-438a-b894-62d2324f5334" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. title и description при f_notification_appointment.status == &quot;CREATE&quot; и is_tmk = true. 382044" searchProperties="true"><con:settings/><con:testStep type="jdbc" name="Найти специальность врача" id="5241f84c-cac9-4f5c-9505-692eb5b6b0ad"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select code_reception_type from d_reception_type_tmk_code
 where archived_reception_type = false
 and is_deleted = false
 LIMIT 1</con:query><con:assertion type="XPath Match" id="3a204ed8-0218-47bf-9404-0f6a71156c34" name="XPath Match"><con:configuration><path>count(//*:Row)</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:properties/></con:config></con:testStep><con:testStep type="jdbc" name="Найти пользователя с устройством" id="2ee89451-f42d-493d-ab46-619ce244d31b"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>${#Project#emiasInfoNotificationsDBDriver}</con:driver><con:connectionString>${#Project#emiasInfoNotificationsFullDbConnection}</con:connectionString><con:query>select fu.patient_id, fd.device_guid, fu.oms_number, fu.birth_date from f_user fu
@@ -46005,4 +46008,1947 @@ else {
   "birthDate": "${#TestCase#bd}",
   "omsNumber": "${#TestCase#oms}",
   "patientId": "${#TestCase#patientId}"
-}</con:request><con:originalUri>http://application-emiasinfo3.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="428e79f0-9464-4bf4-8947-63649f81a3a9" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="7cff31e7-5863-46f9-9559-f65a01fa7695" name="code = SA_ID_ERROR"><con:configuration><path>$.error.code</path><content>SA_ID_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="c1970fa1-c5ab-4e04-8136-b874101a4739" name="description = Не удалось получить часть данных"><con:configuration><path>$.error.description</path><content>Не удалось получить часть данных</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="8c8ae4f4-7bcf-42bf-b0e8-9e93be8399d1" name="type = BUSINESS"><con:configuration><path>$.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7700007178231039</con:value></con:property><con:property><con:name>bd</con:name><con:value>1939-10-23</con:value></con:property><con:property><con:name>patientId</con:name><con:value>10166510</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>emiasInfoEndpoint</con:name><con:value>http://application-emiasinfo3.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoDbConnection</con:name><con:value>172.17.5.12:29105/emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbLogin</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbPassword</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.12:29105/emiasinfoapp?user=emiasinfoapp&amp;password=emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>suppDbConnection</con:name><con:value>@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDbLogin</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppDbPassword</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppFullDbConnection</con:name><con:value> jdbc:oracle:thin:EMIAS_CLUSTER/EMIAS_CLUSTER@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDBDriver</con:name><con:value>oracle.jdbc.driver.OracleDriver</con:value></con:property><con:property><con:name>nsiEndpoint</con:name><con:value>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationHeaders</con:name><con:value><![CDATA[<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">          <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">             <wsse:Username>EIM/EIM</wsse:Username>          </wsse:UsernameToken>       </wsse:Security> ]]></con:value></con:property><con:property><con:name>EI-token</con:name><con:value>-ykfDtplFdsMeQGJVlZn_Lup2XcOeiZWxsaQfKHm9QE</con:value></con:property><con:property><con:name>emiasInfoNotificationsEndpoint</con:name><con:value>http://notification-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbConnection</con:name><con:value>172.17.5.11:29104/notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbLogin</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbPassword</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29104/notification?user=notification&amp;password=notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>topicBookingRecipeInfoMessage</con:name><con:value>BookingRecipeInfoMessage.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>dbType</con:name><con:value>postgre</con:value></con:property><con:property><con:name>dbLogin</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbPassword</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbConnect</con:name><con:value>10.2.173.127:5432/rir2</con:value></con:property><con:property><con:name>bootstrapServers</con:name><con:value>10.2.172.24:9092</con:value></con:property><con:property><con:name>topicMedicationAssignmentChangesPerDay</con:name><con:value>MedicationAssignmentChangesPerDay.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Bm</con:name><con:value>Appointment2Bm.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Doctor</con:name><con:value>Appointment2Doctor.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Ldp</con:name><con:value>Appointment2Ldp.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicKisNazToEmiasPublication</con:name><con:value>kisNazToEmiasPublication.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicTmkNotify</con:name><con:value>tmkNotify.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>mockUrl</con:name><con:value>http://application-mock.emias.solit-clouds.ru</con:value></con:property><con:property><con:name>mockDbFullConnection</con:name><con:value>jdbc:postgresql://172.17.5.13:29107/emias_info_mock?user=emias_info&amp;password=emias_info</con:value></con:property><con:property><con:name>receptionTypeId</con:name><con:value>receptionTypeId</con:value></con:property><con:property><con:name>saOrchestratorEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:value></con:property><con:property><con:name>saOrchestratorDbConnection</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbLogin</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbPassword</con:name><con:value/></con:property><con:property><con:name>saOrchestratorFullDbConnection</con:name><con:value/></con:property><con:property><con:name>emiasIdEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+}</con:request><con:originalUri>http://application-emiasinfo3.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="428e79f0-9464-4bf4-8947-63649f81a3a9" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="7cff31e7-5863-46f9-9559-f65a01fa7695" name="code = SA_ID_ERROR"><con:configuration><path>$.error.code</path><content>SA_ID_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="c1970fa1-c5ab-4e04-8136-b874101a4739" name="description = Не удалось получить часть данных"><con:configuration><path>$.error.description</path><content>Не удалось получить часть данных</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="8c8ae4f4-7bcf-42bf-b0e8-9e93be8399d1" name="type = BUSINESS"><con:configuration><path>$.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7700007178231039</con:value></con:property><con:property><con:name>bd</con:name><con:value>1939-10-23</con:value></con:property><con:property><con:name>patientId</con:name><con:value>10166510</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="c088e446-2e1c-4ff9-a033-384624e2e3e6" name="POST saCount"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1572c69d-89fe-4898-b8e9-d411256c0951" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Получение записей по пациенту &lt; 18 лет без активных записей. 395181" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="c542c5c8-35a6-4cd6-9472-6d8c60681569"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value=""/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e74bef00-0b16-4137-8acd-2e6ce2e83105" name="Отсутствует closeDate"><con:configuration><path>$.payload.activeAppointment[?(!@.closeDate)]</path><content>[0]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 0"><con:configuration><path>$.payload.activeAppointment.count</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7790689773000533</con:value></con:property><con:property><con:name>bd</con:name><con:value>2013-09-26</con:value></con:property></con:properties></con:testCase><con:testCase id="bdcffd16-50d6-4686-ac90-325c2d8db96a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Получение записей по пациенту >= 18 лет без активных записей. 395182" searchProperties="true"><con:settings/><con:testStep type="request" name="getAppointmentReceptionsByPatient" id="1308e096-0d70-4a56-a2af-57543b1c34c4" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Самозапись</con:interface><con:operation>getAppointmentReceptionsByPatient</con:operation><con:request name="getAppointmentReceptionsByPatient" id="65a23d5b-a4ae-4697-a272-9ef34851f027"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#saOrchestratorEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <v5:getAppointmentReceptionsByPatient>\r
+         <omsNumber>${#TestCase#oms}</omsNumber>\r
+         <birthDate>${#TestCase#bd}</birthDate>\r
+         <externalSystemId>EIM</externalSystemId>\r
+      </v5:getAppointmentReceptionsByPatient>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6f8b13e5-9886-4cdb-9b51-e720a31e3aa5" disabled="true"/><con:assertion type="Simple NotContains" id="21f6e5eb-8934-4c2e-851f-c8a22bd9e614" name="В ответе отсутствуют id записей"><con:configuration><token>id</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getAppointmentReceptionsByPatientGIBDD" id="383a7c27-e035-41ba-bdaa-49f9db198363" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ГИБДД</con:interface><con:operation>GetAppointmentReceptionsByPatient</con:operation><con:request name="getAppointmentReceptionsByPatientGIBDD" id="70f5beb2-b9e1-4ec6-9a77-b4bb6699ea87"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasGibddEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
+<soap:Header>
+ <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <wsse:UsernameToken>
+   <wsse:Username>EIP</wsse:Username>
+  </wsse:UsernameToken>
+ </wsse:Security>
+</soap:Header>
+   <soap:Body>\r
+      <v1:GetAppointmentReceptionsByPatientRequest>\r
+         <oms>${#TestCase#oms}</oms>\r
+         <birthDate>${#TestCase#bd}</birthDate>\r
+      </v1:GetAppointmentReceptionsByPatientRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3d17e2ea-c198-4292-9824-0262de5be5fb" disabled="true"/><con:assertion type="Simple NotContains" id="f5c9ffd4-f798-43dd-8d69-d6cac70dd188" name="В ответе отсутствуют appointments"><con:configuration><token>appointments</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="1a320865-c375-4442-8de9-c10295de7a9d"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value=""/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 0"><con:configuration><path>$.payload.activeAppointment.count</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="c686343b-da17-44bb-b78b-853175e8ae77" name="Отсутствует closeDate"><con:configuration><token>closeDate</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7755530870001052</con:value></con:property><con:property><con:name>bd</con:name><con:value>1964-04-29</con:value></con:property></con:properties></con:testCase><con:testCase id="c32fb0c7-4f15-4b47-b189-0420a7db1c5f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Получение записей по пациенту с отсутствующими направлениями и назначениями. 395184" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="355252c9-cd8b-40fb-bcca-7b42d22c2aa7"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value=""/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 0"><con:configuration><path>$.payload.activeAppointment.count</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="b90dc65a-0db1-403d-a961-5170b11d948a" name="Отсутствует closeCount"><con:configuration><token>closeCount</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="9f053a10-ab69-4630-88d2-388e1f1e91de" name="Отсутствует closeDate"><con:configuration><token>closeDate</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7755530870001052</con:value></con:property><con:property><con:name>bd</con:name><con:value>1964-04-29</con:value></con:property></con:properties></con:testCase><con:testCase id="3b02341b-21dc-420b-a54d-5a8678e9035f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Получение записей по пациенту с активными направлениями и назначениями. 395211" searchProperties="true"><con:settings/><con:testStep type="request" name="getAssignmentsInfo" id="b30bc047-c406-41d6-979c-9f845d86bd37"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Самозапись</con:interface><con:operation>getAssignmentsInfo</con:operation><con:request name="getAssignmentsInfo" id="a612036d-ed27-4231-a620-07542ad2c77c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#saOrchestratorEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+   <soap:Header>\r
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">\r
+         <wsse:UsernameToken>\r
+            <wsse:Username>EIM</wsse:Username>\r
+         </wsse:UsernameToken>\r
+      </wsse:Security>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <v5:getAssignmentsInfo>\r
+         <omsNumber>${#TestCase#oms}</omsNumber>\r
+         <birthDate>${#TestCase#bd}</birthDate>\r
+         <returnExtended>true</returnExtended>\r
+         <externalSystemId>EIM</externalSystemId>\r
+      </v5:getAssignmentsInfo>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f3a5f3d9-4535-4cec-a3c5-3e596d26e560"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getReferralsInfo" id="9f6db861-825e-4218-8dc6-3a4d324c4640"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Самозапись</con:interface><con:operation>getReferralsInfo</con:operation><con:request name="getReferralsInfo" id="674323b3-ef4d-47b0-bf9d-3be1d47be36d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#saOrchestratorEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <v5:getReferralsInfo>\r
+         <omsNumber>${#TestCase#oms}</omsNumber>
+         <birthDate>${#TestCase#bd}</birthDate>
+         <returnExtended>true</returnExtended>
+         <externalSystemId>EIM</externalSystemId>
+      </v5:getReferralsInfo>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a6b7692f-8dd3-45bb-88c6-97366499cc31"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="1bea48fc-0f36-4170-8a19-d86e1649b82f"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="92fbda63-92e9-471a-b5ef-4841046be778" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Посчитать записи и сравнить ответ" id="d8a5545f-b0b9-450d-bc3f-77a85f1a5e50"><con:settings/><con:config><script><![CDATA[import groovy.json.JsonSlurper
+import groovy.xml.XmlSlurper
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем ответ из json
+def saCountResponse = context.expand('${POST saCount#Response}')
+def slurperJson = new JsonSlurper()
+def saCount = slurperJson.parseText(saCountResponse)
+def saCountNFO = saCount.payload
+
+//получаем ответ из xml getAssignmentsInfo
+def getAssignmentsInfoResponse = context.expand('${getAssignmentsInfo#Response}')
+getAssignmentsInfo = new XmlSlurper().parseText(getAssignmentsInfoResponse)
+getAssignmentsInfoBody = getAssignmentsInfo.Body.getAssignmentsInfoResponse.assignment
+getAssignmentsInfoSize = getAssignmentsInfo.Body.getAssignmentsInfoResponse.assignment.size()
+
+//получаем ответ из xml getReferralsInfo
+def getReferralsInfoResponse = context.expand('${getReferralsInfo#Response}')
+getReferralsInfo = new XmlSlurper().parseText(getReferralsInfoResponse)
+getReferralsInfoSize = getReferralsInfo.Body.getReferralsInfoResponse.referral.size()
+getReferralsInfoBody = getReferralsInfo.Body.getReferralsInfoResponse.referral
+
+closeCount = 0
+closeDateCount = 0
+closeDateReferralsCount = []
+
+//Получаем количество подходящих из getReferralsInfo записей и заполняем даты для выбора наименьшей
+if (getReferralsInfoSize != 0){
+	for (i=0; i<getReferralsInfoSize; i++){
+		date = new Date()
+		String dateToday = date.format("yyyy-MM-dd")
+		String dateEndParse = Date.parse("yyyy-MM-dd", getReferralsInfoBody[i].endTime.text())
+		dateEnd = Date.parse("yyyy-MM-dd", getReferralsInfoBody[i].endTime.text())
+		if (getReferralsInfoBody[i].appointmentOpenDate == "" && dateToday <= dateEndParse){
+			closeCount++
+			closeDateReferralsCount << dateEnd
+		}
+	}
+}
+
+//Получаем количество подходящих из getAssignmentsInfo записей и заполняем даты для выбора наименьшей
+if (getAssignmentsInfoSize != 0){
+	for (i=0; i<getAssignmentsInfoSize; i++){
+		date = new Date()
+		String dateToday = date.format("yyyy-MM-dd")
+		String dateFromParse = Date.parse("yyyy-MM-dd", getAssignmentsInfoBody[i].period.dateFrom.text())
+		String dateToParse = Date.parse("yyyy-MM-dd", getAssignmentsInfoBody[i].period.dateTo.text())
+		dateTo = Date.parse("yyyy-MM-dd", getAssignmentsInfoBody[i].period.dateTo.text())
+		dateFrom = Date.parse("yyyy-MM-dd", getAssignmentsInfoBody[i].period.dateFrom.text())
+		if (getAssignmentsInfoBody[i].appointmentId == ""){
+			if (getAssignmentsInfoBody[i].toBM.self == false && getAssignmentsInfoBody[i].appointmentOpenDate == "" && dateToday <= dateToParse){
+				log.info getAssignmentsInfoBody[i].registryEntry.entryId
+				closeCount++
+				closeDateReferralsCount << dateTo
+			}
+			if (getAssignmentsInfoBody[i].toBM.self == true && getAssignmentsInfoBody[i].appointmentOpenDate == "" && dateToday <= dateFromParse && dateToday >= dateToParse){
+				closeCount++
+				closeDateReferralsCount << dateTo
+			}
+		}
+	}
+}
+
+//Определяем минимальную дату и сравниваем closeDate
+if (closeDateReferralsCount != 0){
+	Date minCloseDate = Collections.min(closeDateReferralsCount)
+	log.info minCloseDate
+	Date datePlus7= LocalDateTime.now().plusDays(7).toDate()
+	if(minCloseDate <= datePlus7){
+		closeDate = minCloseDate.format("yyyy-MM-dd")
+		assert closeDate == saCountNFO.activeReferrals.closeDate
+	}
+	else {
+		assert saCountNFO.activeReferrals.closeDate == ""
+	}
+}
+
+//Определяем количество совпадений дат с closeDate  и сравниваем с loseDateCount
+if (saCountNFO.activeReferrals.closeDate != ""){
+	closeDateForCount = 0
+	for(i=0; i< closeDateReferralsCount.size(); i++){
+		String dateParse = closeDateReferralsCount[i].format("yyyy-MM-dd")
+		if(dateParse == saCountNFO.activeReferrals.closeDate){
+			closeDateForCount++
+		}
+	}
+	assert closeDateForCount == saCountNFO.activeReferrals.closeCount
+}
+else {
+	assert saCountNFO.activeReferrals.closeDate == ""
+}
+]]></script></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7700007178231039</con:value></con:property><con:property><con:name>bd</con:name><con:value>1939-10-23</con:value></con:property></con:properties></con:testCase><con:testCase id="e8fce82e-dfd1-4317-bc42-190c9630b3a1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Получение записей по пациенту  &lt; 18 лет c активными записями. 395212" searchProperties="true"><con:settings/><con:testStep type="request" name="getAppointmentReceptionsByPatient" id="7cbea6b8-9e73-4a21-aca5-bb0ce8179325"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Самозапись</con:interface><con:operation>getAppointmentReceptionsByPatient</con:operation><con:request name="getAppointmentReceptionsByPatient" id="65a23d5b-a4ae-4697-a272-9ef34851f027"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#saOrchestratorEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <v5:getAppointmentReceptionsByPatient>\r
+         <omsNumber>${#TestCase#oms}</omsNumber>\r
+         <birthDate>${#TestCase#bd}</birthDate>\r
+         <externalSystemId>EIM</externalSystemId>
+         <signActiveArchive>0</signActiveArchive>\r
+      </v5:getAppointmentReceptionsByPatient>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="Simple Contains" id="bf956d8e-4240-49b0-98f5-4556c3be6cd1" name="Вернулся id"><con:configuration><token>id</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getAppointmentReceptionsByPatientGIBDD" id="23c2f05d-9639-414b-a462-e526588b19fc" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ГИБДД</con:interface><con:operation>GetAppointmentReceptionsByPatient</con:operation><con:request name="getAppointmentReceptionsByPatientGIBDD" id="70f5beb2-b9e1-4ec6-9a77-b4bb6699ea87"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasGibddEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
+<soap:Header>
+ <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <wsse:UsernameToken>
+   <wsse:Username>EIP</wsse:Username>
+  </wsse:UsernameToken>
+ </wsse:Security>
+</soap:Header>
+   <soap:Body>\r
+      <v1:GetAppointmentReceptionsByPatientRequest>\r
+         <upcoming>true</upcoming>
+         <oms>${#TestCase#oms}</oms>\r
+         <birthDate>${#TestCase#bd}</birthDate>\r
+      </v1:GetAppointmentReceptionsByPatientRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="Simple Contains" id="8a0920b6-420c-42e0-a256-d3b664da6914" name="Вернулись appointments"><con:configuration><token>appointments</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="c93d1b4b-cf86-48b4-ab1c-5f4f4d86bf39"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="92fbda63-92e9-471a-b5ef-4841046be778" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Посчитать записи и сравнить ответ" id="b46a8286-67d5-4c95-aa07-d458004bb36d"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import groovy.xml.XmlSlurper
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем ответ из json
+def saCountResponse = context.expand('${POST saCount#Response}')
+def slurperJson = new JsonSlurper()
+def saCount = slurperJson.parseText(saCountResponse)
+def saCountNFO = saCount.payload
+
+//получаем ответ из xml getAppointmentReceptionsByPatient
+def garbpSaResponse = context.expand('${getAppointmentReceptionsByPatient#Response}')
+garbpSa = new XmlSlurper().parseText(garbpSaResponse)
+garbpSaBody = garbpSa.Body.getAppointmentReceptionsByPatientResponse.appointment
+garbpSaSize = garbpSa.Body.getAppointmentReceptionsByPatientResponse.appointment.size()
+
+//Сравниваем количество
+assert saCountNFO.activeAppointment.count == garbpSaSize
+closeDateAppointmentCount = []
+
+//Получаем все даты из ответа getAppointmentReceptionsByPatient
+if (garbpSaSize != 0){
+	for (i=0; i&lt;garbpSaSize; i++){
+	dateParse = Date.parse("yyyy-MM-dd'T'hh:mm:ss+03:00", garbpSaBody[i].startTime.text())
+	closeDateAppointmentCount &lt;&lt; dateParse
+	}
+}
+
+//Выбираем минимальную дату и сравниваем с closeDate
+if (closeDateAppointmentCount!=0){
+	minCloseDate = Collections.min(closeDateAppointmentCount)
+	Date datePlus7= LocalDateTime.now().plusDays(7).toDate()
+	if(minCloseDate &lt;= datePlus7){
+		closeDate = minCloseDate.format("yyyy-MM-dd")
+		log.info closeDate
+		assert closeDate == saCountNFO.activeAppointment.closeDate
+	}
+	else {
+		assert saCountNFO.activeAppointment.closeDate == ""
+	}
+}</script></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2018-07-12</con:value></con:property></con:properties></con:testCase><con:testCase id="ef6c7ead-dffc-4f98-af51-e429db99132c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Получение записей по пациенту >= 18 лет c активными записями. 395213" searchProperties="true"><con:settings/><con:testStep type="request" name="getAppointmentReceptionsByPatient" id="9506f957-ce27-4f9a-a406-14a6b364d483"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Самозапись</con:interface><con:operation>getAppointmentReceptionsByPatient</con:operation><con:request name="getAppointmentReceptionsByPatient" id="65a23d5b-a4ae-4697-a272-9ef34851f027"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#saOrchestratorEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <v5:getAppointmentReceptionsByPatient>\r
+         <omsNumber>${#TestCase#oms}</omsNumber>\r
+         <birthDate>${#TestCase#bd}</birthDate>\r
+         <externalSystemId>EIM</externalSystemId>
+         <signActiveArchive>0</signActiveArchive>\r
+      </v5:getAppointmentReceptionsByPatient>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="Simple Contains" id="bf956d8e-4240-49b0-98f5-4556c3be6cd1" name="Вернулся id"><con:configuration><token>id</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getAppointmentReceptionsByPatientGIBDD" id="2b70d4e1-8cc8-4814-88fe-6a6014125940"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ГИБДД</con:interface><con:operation>GetAppointmentReceptionsByPatient</con:operation><con:request name="getAppointmentReceptionsByPatientGIBDD" id="70f5beb2-b9e1-4ec6-9a77-b4bb6699ea87"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasGibddEndpoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://emias2.gov.ru/emias/appointment/v1/">\r
+<soap:Header>
+ <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+  <wsse:UsernameToken>
+   <wsse:Username>EIP</wsse:Username>
+  </wsse:UsernameToken>
+ </wsse:Security>
+</soap:Header>
+   <soap:Body>\r
+      <v1:GetAppointmentReceptionsByPatientRequest>\r
+         <upcoming>true</upcoming>
+         <oms>${#TestCase#oms}</oms>\r
+         <birthDate>${#TestCase#bd}</birthDate>\r
+      </v1:GetAppointmentReceptionsByPatientRequest>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="Simple Contains" id="8a0920b6-420c-42e0-a256-d3b664da6914" name="Вернулись appointments"><con:configuration><token>appointments</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="7e0290de-05a5-41b3-bf97-687494482a9d"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="92fbda63-92e9-471a-b5ef-4841046be778" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Посчитать записи и сравнить ответ" id="406c7ba9-c8b7-40f2-bbdd-6f7dc66a55bb"><con:settings/><con:config><script><![CDATA[import groovy.json.JsonSlurper
+import groovy.xml.XmlSlurper
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем ответ из json
+def saCountResponse = context.expand('${POST saCount#Response}')
+def slurperJson = new JsonSlurper()
+def saCount = slurperJson.parseText(saCountResponse)
+def saCountNFO = saCount.payload
+
+//получаем ответ из xml getAppointmentReceptionsByPatient - saOrchestrator
+def garbpSaResponse = context.expand('${getAppointmentReceptionsByPatient#Response}')
+garbpSa = new XmlSlurper().parseText(garbpSaResponse)
+garbpSaBody = garbpSa.Body.getAppointmentReceptionsByPatientResponse.appointment
+garbpSaSize = garbpSa.Body.getAppointmentReceptionsByPatientResponse.appointment.size()
+
+//получаем ответ из xml getAppointmentReceptionsByPatient - Gibdd
+def garbpGibddResponse = context.expand('${getAppointmentReceptionsByPatientGIBDD#Response}')
+garbpGibdd = new XmlSlurper().parseText(garbpGibddResponse)
+garbpGibddSize = garbpGibdd.Body.GetAppointmentReceptionsByPatientResponse.appointments.size()
+garbpGibddBody = garbpGibdd.Body.GetAppointmentReceptionsByPatientResponse.appointments
+
+//Сравниваем количество
+assert saCountNFO.activeAppointment.count == garbpSaSize + garbpGibddSize
+closeDateAppointmentCount = []
+
+//Получаем все даты из ответа getAppointmentReceptionsByPatient - saOrchestrator
+if (garbpSaSize != 0){
+	for (i=0; i<garbpSaSize; i++){
+	dateParse = Date.parse("yyyy-MM-dd'T'hh:mm:ss+03:00", garbpSaBody[i].startTime.text())
+	closeDateAppointmentCount << dateParse
+	}
+}
+
+//Получаем все даты из ответа getAppointmentReceptionsByPatient - gibdd
+if (garbpGibddSize != 0){
+	for (i=0; i<garbpGibddSize; i++){
+	dateParse = Date.parse("yyyy-MM-dd'T'hh:mm:ss", garbpGibddBody[i].startDate.text())
+	closeDateAppointmentCount << dateParse
+	}
+}
+
+//Выбираем минимальную дату и сравниваем с closeDate
+if (closeDateAppointmentCount!=0){
+	minCloseDate = Collections.min(closeDateAppointmentCount)
+	Date datePlus7= LocalDateTime.now().plusDays(7).toDate()
+	if(minCloseDate <= datePlus7){
+		closeDate = minCloseDate.format("yyyy-MM-dd")
+		assert closeDate == saCountNFO.activeAppointment.closeDate
+	}
+	else {
+		assert saCountNFO.activeAppointment.closeDate == ""
+	}
+}]]></script></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7758010875002485</con:value></con:property><con:property><con:name>bd</con:name><con:value>1989-01-24</con:value></con:property></con:properties></con:testCase><con:testCase id="4c27c269-2109-4a21-a8a9-f619993a214b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Проверка необязательных параметров и корректности отбора записей для пациента = 17 лет . 395214" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Установить даты" id="05c6b0e0-5ebe-4941-a77e-0399f9f8241e"><con:settings/><con:config><script>import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем вчрешнюю, сегодняшнюю и завтрашние даты
+def date = new Date()
+Date datePlus = LocalDateTime.now().plusDays(1).toDate()
+Date dateMinus =  LocalDateTime.now().plusDays(-1).toDate()
+
+//устанавливаем и записываем даты в нужных форматах
+def dateToday = new SimpleDateFormat("yyyy-MM-dd").format(date).toString()
+def dateTomorrow = new SimpleDateFormat("yyyy-MM-dd").format(datePlus).toString()
+def dateYesterday = new SimpleDateFormat("yyyy-MM-dd").format(dateMinus).toString()
+testRunner.testCase.setPropertyValue("dateToday", dateToday)
+testRunner.testCase.setPropertyValue("dateTomorrow", dateTomorrow)
+testRunner.testCase.setPropertyValue("dateYesterday", dateYesterday)</script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAssignmentsInfo" id="78cd2110-a007-4eaf-a461-9fc8849b0a75"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+dateToday = testRunner.testCase.getPropertyValue("dateToday")
+dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+log.info dateYesterday.getClass()
+pathGetAssignmentsInfo = testRunner.testCase.getPropertyValue("pathGetAssignemtnsInfo")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAssignmentsInfoResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:getAssignmentsInfoResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/v5/">
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>1</id>
+               <name>Взятие венозной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <appointmentId>391921600473</appointmentId>
+            <registryEntry>
+               <entryId>152043139</entryId>
+               <laboratoryId>47</laboratoryId>
+               <laboratoryName>Билирубин общий</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>J44.8</code>
+                  <name>Другая уточненная хроническая обструктивная легочная болезнь</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>10000290</moId>
+            <toBM>
+               <id>3</id>
+               <name>Забор самовзятых биоматериалов</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentOpenDate>2025-01-01</appointmentOpenDate>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152035252</entryId>
+               <laboratoryId>2726</laboratoryId>
+               <laboratoryName>Обнаружение гельминтов в кале</laboratoryName>
+               <biomaterialId>4</biomaterialId>
+               <biomaterialName>Кал</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>A04.5</code>
+                  <name>Энтерит, вызванный Campylobacter</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>13024536040</jobExecutionId>
+                  <fio>Мармеладова Софья Семёновна</fio>
+                  <snils>44806166895</snils>
+                  <specialityId>788</specialityId>
+                  <specialityName>Медицинская сестра (медбрат) врача общей практики (семейного врача)</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+            <registryEntry>
+               <entryId>152035251</entryId>
+               <laboratoryId>2911</laboratoryId>
+               <laboratoryName>Общий клинический анализ мочи</laboratoryName>
+               <biomaterialId>3</biomaterialId>
+               <biomaterialName>Моча</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>A04.5</code>
+                  <name>Энтерит, вызванный Campylobacter</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>13024536040</jobExecutionId>
+                  <fio>Мармеладова Софья Семёновна</fio>
+                  <snils>44806166895</snils>
+                  <specialityId>788</specialityId>
+                  <specialityName>Медицинская сестра (медбрат) врача общей практики (семейного врача)</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>2</id>
+               <name>Взятие капиллярной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateYesterday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152040226</entryId>
+               <laboratoryId>2909</laboratoryId>
+               <laboratoryName>Общий клинический анализ крови (общий анализ + СОЭ); микроскопическое исследование мазка крови при выявлении патологии + подсчет ретикулоцитов</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>A00.0</code>
+                  <name>Холера, вызванная холерным вибрионом 01, биовар cholerae</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>11312193</jobExecutionId>
+                  <fio>Бабенкова Лариса Борисовна</fio>
+                  <snils>01558018738</snils>
+                  <specialityId>602</specialityId>
+                  <specialityName>Врач-терапевт участковый</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>6</id>
+               <name>Биоматериал, взятый на приеме у специалиста</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateTomorrow+"""</dateFrom>
+               <dateTo>"""+dateTomorrow+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152042975</entryId>
+               <laboratoryId>2535</laboratoryId>
+               <laboratoryName>Посев на коринебактерии дифтерии (Corynebacterium diphtheriae)</laboratoryName>
+               <biomaterialId>26</biomaterialId>
+               <biomaterialName>Мазок слизистой носа</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.1</code>
+                  <name>Паратиф A</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>12039022543</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>1</specialityId>
+                  <specialityName>Врач-терапевт</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>1</id>
+               <name>Взятие венозной крови</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateYesterday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152025083</entryId>
+               <laboratoryId>3009</laboratoryId>
+               <laboratoryName>Билирубин и фракции (комплекс)</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.0</code>
+                  <name>Брюшной тиф</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10005181</jobExecutionId>
+                  <fio>Панова Ольга Альбертовна</fio>
+                  <snils>01566726963</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>2</id>
+               <name>Взятие капиллярной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>true</appointmentAvailable>
+            <registryEntry>
+               <entryId>152037414</entryId>
+               <laboratoryId>3669</laboratoryId>
+               <laboratoryName>Глюкоза (капиллярная кровь), дети</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A00.0</code>
+                  <name>Холера, вызванная холерным вибрионом 01, биовар cholerae</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>120390225430001</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>11</specialityId>
+                  <specialityName>Врач-гастроэнтеролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>3</id>
+               <name>Забор самовзятых биоматериалов</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+dateTomorrow+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152043146</entryId>
+               <laboratoryId>20</laboratoryId>
+               <laboratoryName>Микроальбумин</laboratoryName>
+               <biomaterialId>18</biomaterialId>
+               <biomaterialName>Моча первая порция</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>I48.3</code>
+                  <name>Типичная форма трепетания предсердий</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>3</id>
+               <name>Забор самовзятых биоматериалов</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152043456</entryId>
+               <laboratoryId>20</laboratoryId>
+               <laboratoryName>Микроальбумин</laboratoryName>
+               <biomaterialId>18</biomaterialId>
+               <biomaterialName>Моча первая порция</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>I48.3</code>
+                  <name>Типичная форма трепетания предсердий</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>6</id>
+               <name>Биоматериал, взятый на приеме у специалиста</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateTomorrow+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152042485</entryId>
+               <laboratoryId>2535</laboratoryId>
+               <laboratoryName>Посев на коринебактерии дифтерии (Corynebacterium diphtheriae)</laboratoryName>
+               <biomaterialId>26</biomaterialId>
+               <biomaterialName>Мазок слизистой носа</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.1</code>
+                  <name>Паратиф A</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>12039022543</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>1</specialityId>
+                  <specialityName>Врач-терапевт</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>6</id>
+               <name>Биоматериал, взятый на приеме у специалиста</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentOpenDate>2025-01-01</appointmentOpenDate>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152042675</entryId>
+               <laboratoryId>2535</laboratoryId>
+               <laboratoryName>Посев на коринебактерии дифтерии (Corynebacterium diphtheriae)</laboratoryName>
+               <biomaterialId>26</biomaterialId>
+               <biomaterialName>Мазок слизистой носа</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.1</code>
+                  <name>Паратиф A</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>12039022543</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>1</specialityId>
+                  <specialityName>Врач-терапевт</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+      </ns2:getAssignmentsInfoResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAssignmentsInfo="update template_response set response='"+getAssignmentsInfoResponse+"' where \"path\"= '"+pathGetAssignmentsInfo+"'"
+sql.execute(queryGetAssignmentsInfo)]]></script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getReferralsInfo" id="c4adad6d-c2c1-4659-b5d4-1789aaea8234"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+def dateToday = testRunner.testCase.getPropertyValue("dateToday")
+def dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+def dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+pathGetReferralsInfo = testRunner.testCase.getPropertyValue("pathGetReferralsInfo")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getReferralsInfoResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns3:getReferralsInfoResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/core/v5/" xmlns:ns3="http://api.service.soap.emias.lanit.ru/v5/">
+         <referral>
+            <id>74404724464</id>
+            <number>Н20230424-351</number>
+            <comment>Постановка диагноза;</comment>
+            <startTime>"""+dateYesterday+"""</startTime>
+            <endTime>"""+dateToday+"""</endTime>
+            <type>REF_TO_LDP</type>
+            <lpuId>204</lpuId>
+            <lpuType>Городская поликлиника</lpuType>
+            <lpuName>ГБУЗ ГП 175 ДЗМ</lpuName>
+            <toLdp>
+               <ldpTypeId>600020</ldpTypeId>
+               <ldpTypeName>ЭКГ</ldpTypeName>
+               <countAssignmentProcedures>1</countAssignmentProcedures>
+            </toLdp>
+            <diagnosis>
+               <code>A01.0</code>
+               <name>Брюшной тиф</name>
+            </diagnosis>
+            <issuedDoctor>
+               <jobExecutionId>11354096</jobExecutionId>
+               <fio>Габдулина Альбина Яковлевна</fio>
+               <snils>07126017324</snils>
+               <specialityId>602</specialityId>
+               <specialityName>Врач-терапевт участковый</specialityName>
+            </issuedDoctor>
+            <appointmentOpenDate>2025-01-01</appointmentOpenDate>
+            <countActiveAppointment>0</countActiveAppointment>
+            <countAppointmentWithReceptionFact>0</countAppointmentWithReceptionFact>
+         </referral>
+         <referral>
+            <id>74416336689</id>
+            <number>Н20230627-69</number>
+            <startTime>"""+dateYesterday+"""</startTime>
+            <endTime>"""+dateYesterday+"""</endTime>
+            <type>REF_TO_DOCTOR</type>
+            <lpuId>10478903</lpuId>
+            <lpuType>Городская больница</lpuType>
+            <lpuName>ГБУЗ «ГКБ им. Д.Д. Плетнева ДЗМ»</lpuName>
+            <toDoctor>
+               <specialityId>72</specialityId>
+               <specialityName>Акушер(-ка)</specialityName>
+               <receptionTypeId>1942</receptionTypeId>
+            </toDoctor>
+            <diagnosis>
+               <code>Z00.0</code>
+               <name>Общий медицинский осмотр</name>
+            </diagnosis>
+            <issuedDoctor>
+               <jobExecutionId>190589687</jobExecutionId>
+               <fio>Багаева Татьяна Вячеславовна</fio>
+               <snils>09544242983</snils>
+               <specialityId>4</specialityId>
+               <specialityName>Врач-акушер-гинеколог</specialityName>
+            </issuedDoctor>
+            <countActiveAppointment>0</countActiveAppointment>
+            <countAppointmentWithReceptionFact>0</countAppointmentWithReceptionFact>
+         </referral>
+         <referral>
+            <id>74395753664</id>
+            <number>Н20230302-199</number>
+            <startTime>"""+dateYesterday+"""</startTime>
+            <endTime>"""+dateToday+"""</endTime>
+            <type>REF_TO_DOCTOR</type>
+            <lpuId>204</lpuId>
+            <lpuType>Городская поликлиника</lpuType>
+            <lpuName>ГБУЗ ГП 175 ДЗМ</lpuName>
+            <toDoctor>
+               <specialityId>70</specialityId>
+               <specialityName>Медицинская сестра (медбрат)</specialityName>
+               <receptionTypeId>777</receptionTypeId>
+            </toDoctor>
+            <diagnosis>
+               <code>Z00.0</code>
+               <name>Общий медицинский осмотр</name>
+            </diagnosis>
+            <issuedDoctor>
+               <jobExecutionId>10005163</jobExecutionId>
+               <fio>Мишеева Вера Анатольевна</fio>
+               <snils>01717644647</snils>
+               <specialityId>602</specialityId>
+               <specialityName>Врач-терапевт участковый</specialityName>
+            </issuedDoctor>
+            <countActiveAppointment>0</countActiveAppointment>
+            <countAppointmentWithReceptionFact>0</countAppointmentWithReceptionFact>
+         </referral>
+      </ns3:getReferralsInfoResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetReferralsInfo="update template_response set response='"+getReferralsInfoResponse+"' where \"path\"= '"+pathGetReferralsInfo+"'"
+sql.execute(queryGetReferralsInfo)]]></script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAppointmentSaOrchestrator" id="d7272583-ed62-462b-8e37-e786c6d7f59d"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+def dateToday = testRunner.testCase.getPropertyValue("dateToday")
+def dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+def dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+pathSaAppointment = testRunner.testCase.getPropertyValue("pathSaAppointment")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAppointmentResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns3:getAppointmentReceptionsByPatientResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/core/v5/" xmlns:ns3="http://api.service.soap.emias.lanit.ru/v5/">
+         <appointment>
+            <id>391921178173</id>
+            <number>И20230926-111</number>
+            <lpuId>204</lpuId>
+            <typeLpu>Городская поликлиника</typeLpu>
+            <nameLpu>ГБУЗ ГП 175 ДЗМ</nameLpu>
+            <lpuAddress>Москва, внутригородская территория поселение Филимонковское, деревня Верхнее Валуево, 5-я Валуевская улица, д. 20</lpuAddress>
+            <startTime>"""+dateToday+"""T18:30:00+03:00</startTime>
+            <endTime>"""+dateToday+"""T19:00:00+03:00</endTime>
+            <type>LDP</type>
+            <enableCancel>true</enableCancel>
+            <enableShift>true</enableShift>
+            <availableResourceId>20455900839</availableResourceId>
+            <complexResourceId>240926738</complexResourceId>
+            <roomId>30510573</roomId>
+            <roomNumber>1602</roomNumber>
+            <addressPointId>9133131</addressPointId>
+            <toLdp>
+               <ldpTypeId>51501</ldpTypeId>
+               <ldpTypeName>Удаление каловых камней, инородных тел прямой кишки</ldpTypeName>
+            </toLdp>
+            <statusId>10</statusId>
+            <referral>
+               <referralId>74431024939</referralId>
+               <startTime>2023-09-26</startTime>
+               <endTime>2024-10-25</endTime>
+               <lpuId>204</lpuId>
+            </referral>
+         </appointment>
+         <appointment>
+            <id>391921177148</id>
+            <number>И20230926-110</number>
+            <lpuId>204</lpuId>
+            <typeLpu>Городская поликлиника</typeLpu>
+            <nameLpu>ГБУЗ ГП 175 ДЗМ</nameLpu>
+            <lpuAddress>Москва, внутригородская территория поселение Филимонковское, деревня Верхнее Валуево, 5-я Валуевская улица, д. 20</lpuAddress>
+            <startTime>"""+dateTomorrow+"""T18:30:00+03:00</startTime>
+            <endTime>"""+dateTomorrow+"""T19:00:00+03:00</endTime>
+            <type>LDP</type>
+            <enableCancel>false</enableCancel>
+            <enableShift>true</enableShift>
+            <availableResourceId>20455900839</availableResourceId>
+            <complexResourceId>240926738</complexResourceId>
+            <roomId>30510573</roomId>
+            <roomNumber>1602</roomNumber>
+            <addressPointId>9133131</addressPointId>
+            <toLdp>
+               <ldpTypeId>51501</ldpTypeId>
+               <ldpTypeName>Удаление каловых камней, инородных тел прямой кишки</ldpTypeName>
+            </toLdp>
+            <statusId>10</statusId>
+            <referral>
+               <referralId>74431024939</referralId>
+               <startTime>2023-09-26</startTime>
+               <endTime>2024-10-25</endTime>
+               <lpuId>204</lpuId>
+            </referral>
+         </appointment>
+      </ns3:getAppointmentReceptionsByPatientResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAppointment="update template_response set response='"+getAppointmentResponse+"' where \"path\"= '"+pathSaAppointment+"'"
+sql.execute(queryGetAppointment)]]></script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAppointmentGibdd" id="43bfe170-7962-4b76-b161-34d9be8bedc3"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+def dateToday = testRunner.testCase.getPropertyValue("dateToday")
+def dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+def dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+pathGibddAppointment = testRunner.testCase.getPropertyValue("pathGibddAppointment")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAppointmentResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:GetAppointmentReceptionsByPatientResponse xmlns:ns2="http://emias2.gov.ru/emias/appointment/v1/" xmlns:ns3="http://emias2.gov.ru/universal/v1/types/exceptions/" xmlns:ns4="http://emias2.gov.ru/emias/appointment/v1/types/" xmlns:ns5="http://emias2.gov.ru/emias/gibdd/v1/types/">
+         <appointments>
+            <ns4:id>452159</ns4:id>
+            <ns4:patient>
+               <ns4:birthday>1989-01-24T00:00:00</ns4:birthday>
+               <ns4:oms>7758010875002485</ns4:oms>
+               <ns4:mobilePhone>9859095400</ns4:mobilePhone>
+            </ns4:patient>
+            <ns4:appointmentNum>СП20230928-13</ns4:appointmentNum>
+            <ns4:startDate>"""+dateToday+"""T18:30:00</ns4:startDate>
+            <ns4:endDate>"""+dateToday+"""T18:45:00</ns4:endDate>
+            <ns4:actual>true</ns4:actual>
+            <ns4:availableResource>
+               <ns4:availableResourceId>5486</ns4:availableResourceId>
+               <ns4:availableResourceTitle>Алипова Ольга Андреевна</ns4:availableResourceTitle>
+               <ns4:roomCode></ns4:roomCode>
+            </ns4:availableResource>
+            <ns4:lpu>
+               <ns5:id>1</ns5:id>
+               <ns5:name>ГБУЗ г. Москвы "Городская поликлиника № 180 ДЗМ"</ns5:name>
+               <ns5:shortName>ГБУ ГП 180 ДЗМ</ns5:shortName>
+               <ns5:lpuAddress>г. Москва, Уваровский переулок, д.4</ns5:lpuAddress>
+               <ns5:moId>145</ns5:moId>
+            </ns4:lpu>
+            <ns4:referenceType>
+               <ns4:referenceTypeId>21</ns4:referenceTypeId>
+               <ns4:referenceTypeName>Справка на Оружие</ns4:referenceTypeName>
+            </ns4:referenceType>
+            <ns4:createDate>2023-09-28T15:58:29.849</ns4:createDate>
+         </appointments>
+         <appointments>
+            <ns4:id>452159</ns4:id>
+            <ns4:patient>
+               <ns4:birthday>1989-01-24T00:00:00</ns4:birthday>
+               <ns4:oms>7758010875002485</ns4:oms>
+               <ns4:mobilePhone>9859095400</ns4:mobilePhone>
+            </ns4:patient>
+            <ns4:appointmentNum>СП20230928-13</ns4:appointmentNum>
+            <ns4:startDate>"""+dateTomorrow+"""T18:30:00</ns4:startDate>
+            <ns4:endDate>"""+dateTomorrow+"""T18:45:00</ns4:endDate>
+            <ns4:actual>true</ns4:actual>
+            <ns4:availableResource>
+               <ns4:availableResourceId>5486</ns4:availableResourceId>
+               <ns4:availableResourceTitle>Алипова Ольга Андреевна</ns4:availableResourceTitle>
+               <ns4:roomCode></ns4:roomCode>
+            </ns4:availableResource>
+            <ns4:lpu>
+               <ns5:id>1</ns5:id>
+               <ns5:name>ГБУЗ г. Москвы "Городская поликлиника № 180 ДЗМ"</ns5:name>
+               <ns5:shortName>ГБУ ГП 180 ДЗМ</ns5:shortName>
+               <ns5:lpuAddress>г. Москва, Уваровский переулок, д.4</ns5:lpuAddress>
+               <ns5:moId>145</ns5:moId>
+            </ns4:lpu>
+            <ns4:referenceType>
+               <ns4:referenceTypeId>21</ns4:referenceTypeId>
+               <ns4:referenceTypeName>Справка на Оружие</ns4:referenceTypeName>
+            </ns4:referenceType>
+            <ns4:createDate>2023-09-28T15:58:29.849</ns4:createDate>
+         </appointments>
+      </ns2:GetAppointmentReceptionsByPatientResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAppointment="update template_response set response='"+getAppointmentResponse+"' where \"path\"= '"+pathGibddAppointment+"'"
+sql.execute(queryGetAppointment)]]></script></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="01364090-7be3-47eb-8f51-aad9b8eaf969"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395214_1"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395214"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e74bef00-0b16-4137-8acd-2e6ce2e83105" name="closeDateAppointment = текущая дата"><con:configuration><path>$.payload.activeAppointment.closeDate</path><content>${#TestCase#dateToday}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countAppointment = 2"><con:configuration><path>$.payload.activeAppointment.count</path><content>2</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countReferrals = 6"><con:configuration><path>$.payload.activeReferrals.count</path><content>6</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e74bef00-0b16-4137-8acd-2e6ce2e83105" name="closeDateReferrals = текущая дата"><con:configuration><path>$.payload.activeReferrals.closeDate</path><content>${#TestCase#dateToday}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="closeCountReferrals = 4"><con:configuration><path>$.payload.activeReferrals.closeCount</path><content>4</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="d53251f0-a7d8-4334-b208-eb244022a185" name="JsonPath Match"><con:configuration><path/><content/><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7790689773000533</con:value></con:property><con:property><con:name>bd</con:name><con:value>2013-09-26</con:value></con:property><con:property><con:name>dateTomorrow</con:name><con:value>2024-02-29</con:value></con:property><con:property><con:name>dateYesterday</con:name><con:value>2024-02-27</con:value></con:property><con:property><con:name>pathGetAssignemtnsInfo</con:name><con:value>/mock/395214/getAssignmentsInfo</con:value></con:property><con:property><con:name>pathGetReferralsInfo</con:name><con:value>/mock/395214/getReferralsInfo</con:value></con:property><con:property><con:name>pathSaAppointment</con:name><con:value>/mock/395214/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>pathGibddAppointment</con:name><con:value>/mock/395214_1/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>dateToday</con:name><con:value>2024-02-28</con:value></con:property></con:properties></con:testCase><con:testCase id="f5fe6be5-fb53-491c-83cd-0d4b1411dfd9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Проверка необязательных параметров и корректности отбора записей для пациента = 18 лет . 395215" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Установить даты" id="209c06dd-2727-4e2f-9b40-c9d1cd342705"><con:settings/><con:config><script>import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем вчрешнюю, сегодняшнюю и завтрашние даты
+def date = new Date()
+Date datePlus = LocalDateTime.now().plusDays(1).toDate()
+Date dateMinus =  LocalDateTime.now().plusDays(-1).toDate()
+
+//устанавливаем и записываем даты в нужных форматах
+def dateToday = new SimpleDateFormat("yyyy-MM-dd").format(date).toString()
+def dateTomorrow = new SimpleDateFormat("yyyy-MM-dd").format(datePlus).toString()
+def dateYesterday = new SimpleDateFormat("yyyy-MM-dd").format(dateMinus).toString()
+testRunner.testCase.setPropertyValue("dateToday", dateToday)
+testRunner.testCase.setPropertyValue("dateTomorrow", dateTomorrow)
+testRunner.testCase.setPropertyValue("dateYesterday", dateYesterday)</script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAssignmentsInfo" id="5066ebc5-ae80-4ac7-a459-48ddec9e47ab"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+dateToday = testRunner.testCase.getPropertyValue("dateToday")
+dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+log.info dateYesterday.getClass()
+pathGetAssignmentsInfo = testRunner.testCase.getPropertyValue("pathGetAssignemtnsInfo")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAssignmentsInfoResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:getAssignmentsInfoResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/v5/">
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>1</id>
+               <name>Взятие венозной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <appointmentId>391921600473</appointmentId>
+            <registryEntry>
+               <entryId>152043139</entryId>
+               <laboratoryId>47</laboratoryId>
+               <laboratoryName>Билирубин общий</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>J44.8</code>
+                  <name>Другая уточненная хроническая обструктивная легочная болезнь</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>10000290</moId>
+            <toBM>
+               <id>3</id>
+               <name>Забор самовзятых биоматериалов</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentOpenDate>2025-01-01</appointmentOpenDate>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152035252</entryId>
+               <laboratoryId>2726</laboratoryId>
+               <laboratoryName>Обнаружение гельминтов в кале</laboratoryName>
+               <biomaterialId>4</biomaterialId>
+               <biomaterialName>Кал</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>A04.5</code>
+                  <name>Энтерит, вызванный Campylobacter</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>13024536040</jobExecutionId>
+                  <fio>Мармеладова Софья Семёновна</fio>
+                  <snils>44806166895</snils>
+                  <specialityId>788</specialityId>
+                  <specialityName>Медицинская сестра (медбрат) врача общей практики (семейного врача)</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+            <registryEntry>
+               <entryId>152035251</entryId>
+               <laboratoryId>2911</laboratoryId>
+               <laboratoryName>Общий клинический анализ мочи</laboratoryName>
+               <biomaterialId>3</biomaterialId>
+               <biomaterialName>Моча</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>A04.5</code>
+                  <name>Энтерит, вызванный Campylobacter</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>13024536040</jobExecutionId>
+                  <fio>Мармеладова Софья Семёновна</fio>
+                  <snils>44806166895</snils>
+                  <specialityId>788</specialityId>
+                  <specialityName>Медицинская сестра (медбрат) врача общей практики (семейного врача)</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>2</id>
+               <name>Взятие капиллярной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateYesterday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152040226</entryId>
+               <laboratoryId>2909</laboratoryId>
+               <laboratoryName>Общий клинический анализ крови (общий анализ + СОЭ); микроскопическое исследование мазка крови при выявлении патологии + подсчет ретикулоцитов</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>A00.0</code>
+                  <name>Холера, вызванная холерным вибрионом 01, биовар cholerae</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>11312193</jobExecutionId>
+                  <fio>Бабенкова Лариса Борисовна</fio>
+                  <snils>01558018738</snils>
+                  <specialityId>602</specialityId>
+                  <specialityName>Врач-терапевт участковый</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>6</id>
+               <name>Биоматериал, взятый на приеме у специалиста</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateTomorrow+"""</dateFrom>
+               <dateTo>"""+dateTomorrow+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152042975</entryId>
+               <laboratoryId>2535</laboratoryId>
+               <laboratoryName>Посев на коринебактерии дифтерии (Corynebacterium diphtheriae)</laboratoryName>
+               <biomaterialId>26</biomaterialId>
+               <biomaterialName>Мазок слизистой носа</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.1</code>
+                  <name>Паратиф A</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>12039022543</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>1</specialityId>
+                  <specialityName>Врач-терапевт</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>1</id>
+               <name>Взятие венозной крови</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateYesterday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152025083</entryId>
+               <laboratoryId>3009</laboratoryId>
+               <laboratoryName>Билирубин и фракции (комплекс)</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.0</code>
+                  <name>Брюшной тиф</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10005181</jobExecutionId>
+                  <fio>Панова Ольга Альбертовна</fio>
+                  <snils>01566726963</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>2</id>
+               <name>Взятие капиллярной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>true</appointmentAvailable>
+            <registryEntry>
+               <entryId>152037414</entryId>
+               <laboratoryId>3669</laboratoryId>
+               <laboratoryName>Глюкоза (капиллярная кровь), дети</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A00.0</code>
+                  <name>Холера, вызванная холерным вибрионом 01, биовар cholerae</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>120390225430001</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>11</specialityId>
+                  <specialityName>Врач-гастроэнтеролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>3</id>
+               <name>Забор самовзятых биоматериалов</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+dateTomorrow+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152043146</entryId>
+               <laboratoryId>20</laboratoryId>
+               <laboratoryName>Микроальбумин</laboratoryName>
+               <biomaterialId>18</biomaterialId>
+               <biomaterialName>Моча первая порция</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>I48.3</code>
+                  <name>Типичная форма трепетания предсердий</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>3</id>
+               <name>Забор самовзятых биоматериалов</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152043456</entryId>
+               <laboratoryId>20</laboratoryId>
+               <laboratoryName>Микроальбумин</laboratoryName>
+               <biomaterialId>18</biomaterialId>
+               <biomaterialName>Моча первая порция</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>I48.3</code>
+                  <name>Типичная форма трепетания предсердий</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>6</id>
+               <name>Биоматериал, взятый на приеме у специалиста</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateYesterday+"""</dateFrom>
+               <dateTo>"""+dateTomorrow+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152042485</entryId>
+               <laboratoryId>2535</laboratoryId>
+               <laboratoryName>Посев на коринебактерии дифтерии (Corynebacterium diphtheriae)</laboratoryName>
+               <biomaterialId>26</biomaterialId>
+               <biomaterialName>Мазок слизистой носа</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.1</code>
+                  <name>Паратиф A</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>12039022543</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>1</specialityId>
+                  <specialityName>Врач-терапевт</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>6</id>
+               <name>Биоматериал, взятый на приеме у специалиста</name>
+               <self>true</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+dateToday+"""</dateTo>
+            </period>
+            <active>false</active>
+            <appointmentOpenDate>2025-01-01</appointmentOpenDate>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152042675</entryId>
+               <laboratoryId>2535</laboratoryId>
+               <laboratoryName>Посев на коринебактерии дифтерии (Corynebacterium diphtheriae)</laboratoryName>
+               <biomaterialId>26</biomaterialId>
+               <biomaterialName>Мазок слизистой носа</biomaterialName>
+               <hasMemo>false</hasMemo>
+               <diagnosis>
+                  <code>A01.1</code>
+                  <name>Паратиф A</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>12039022543</jobExecutionId>
+                  <fio>Беда Раиса Андреевна</fio>
+                  <snils>00540362396</snils>
+                  <specialityId>1</specialityId>
+                  <specialityName>Врач-терапевт</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+      </ns2:getAssignmentsInfoResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAssignmentsInfo="update template_response set response='"+getAssignmentsInfoResponse+"' where \"path\"= '"+pathGetAssignmentsInfo+"'"
+sql.execute(queryGetAssignmentsInfo)]]></script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getReferralsInfo" id="c3882a9c-f8da-40fa-b777-627fb788a15e"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+def dateToday = testRunner.testCase.getPropertyValue("dateToday")
+def dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+def dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+pathGetReferralsInfo = testRunner.testCase.getPropertyValue("pathGetReferralsInfo")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getReferralsInfoResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns3:getReferralsInfoResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/core/v5/" xmlns:ns3="http://api.service.soap.emias.lanit.ru/v5/">
+         <referral>
+            <id>74404724464</id>
+            <number>Н20230424-351</number>
+            <comment>Постановка диагноза;</comment>
+            <startTime>"""+dateYesterday+"""</startTime>
+            <endTime>"""+dateToday+"""</endTime>
+            <type>REF_TO_LDP</type>
+            <lpuId>204</lpuId>
+            <lpuType>Городская поликлиника</lpuType>
+            <lpuName>ГБУЗ ГП 175 ДЗМ</lpuName>
+            <toLdp>
+               <ldpTypeId>600020</ldpTypeId>
+               <ldpTypeName>ЭКГ</ldpTypeName>
+               <countAssignmentProcedures>1</countAssignmentProcedures>
+            </toLdp>
+            <diagnosis>
+               <code>A01.0</code>
+               <name>Брюшной тиф</name>
+            </diagnosis>
+            <issuedDoctor>
+               <jobExecutionId>11354096</jobExecutionId>
+               <fio>Габдулина Альбина Яковлевна</fio>
+               <snils>07126017324</snils>
+               <specialityId>602</specialityId>
+               <specialityName>Врач-терапевт участковый</specialityName>
+            </issuedDoctor>
+            <appointmentOpenDate>2025-01-01</appointmentOpenDate>
+            <countActiveAppointment>0</countActiveAppointment>
+            <countAppointmentWithReceptionFact>0</countAppointmentWithReceptionFact>
+         </referral>
+         <referral>
+            <id>74416336689</id>
+            <number>Н20230627-69</number>
+            <startTime>"""+dateYesterday+"""</startTime>
+            <endTime>"""+dateYesterday+"""</endTime>
+            <type>REF_TO_DOCTOR</type>
+            <lpuId>10478903</lpuId>
+            <lpuType>Городская больница</lpuType>
+            <lpuName>ГБУЗ «ГКБ им. Д.Д. Плетнева ДЗМ»</lpuName>
+            <toDoctor>
+               <specialityId>72</specialityId>
+               <specialityName>Акушер(-ка)</specialityName>
+               <receptionTypeId>1942</receptionTypeId>
+            </toDoctor>
+            <diagnosis>
+               <code>Z00.0</code>
+               <name>Общий медицинский осмотр</name>
+            </diagnosis>
+            <issuedDoctor>
+               <jobExecutionId>190589687</jobExecutionId>
+               <fio>Багаева Татьяна Вячеславовна</fio>
+               <snils>09544242983</snils>
+               <specialityId>4</specialityId>
+               <specialityName>Врач-акушер-гинеколог</specialityName>
+            </issuedDoctor>
+            <countActiveAppointment>0</countActiveAppointment>
+            <countAppointmentWithReceptionFact>0</countAppointmentWithReceptionFact>
+         </referral>
+         <referral>
+            <id>74395753664</id>
+            <number>Н20230302-199</number>
+            <startTime>"""+dateYesterday+"""</startTime>
+            <endTime>"""+dateToday+"""</endTime>
+            <type>REF_TO_DOCTOR</type>
+            <lpuId>204</lpuId>
+            <lpuType>Городская поликлиника</lpuType>
+            <lpuName>ГБУЗ ГП 175 ДЗМ</lpuName>
+            <toDoctor>
+               <specialityId>70</specialityId>
+               <specialityName>Медицинская сестра (медбрат)</specialityName>
+               <receptionTypeId>777</receptionTypeId>
+            </toDoctor>
+            <diagnosis>
+               <code>Z00.0</code>
+               <name>Общий медицинский осмотр</name>
+            </diagnosis>
+            <issuedDoctor>
+               <jobExecutionId>10005163</jobExecutionId>
+               <fio>Мишеева Вера Анатольевна</fio>
+               <snils>01717644647</snils>
+               <specialityId>602</specialityId>
+               <specialityName>Врач-терапевт участковый</specialityName>
+            </issuedDoctor>
+            <countActiveAppointment>0</countActiveAppointment>
+            <countAppointmentWithReceptionFact>0</countAppointmentWithReceptionFact>
+         </referral>
+      </ns3:getReferralsInfoResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetReferralsInfo="update template_response set response='"+getReferralsInfoResponse+"' where \"path\"= '"+pathGetReferralsInfo+"'"
+sql.execute(queryGetReferralsInfo)]]></script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAppointmentSaOrchestrator" id="bcd34cdb-f948-4317-b9a3-d371b2c09bac"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+def dateToday = testRunner.testCase.getPropertyValue("dateToday")
+def dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+def dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+pathSaAppointment = testRunner.testCase.getPropertyValue("pathSaAppointment")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAppointmentResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns3:getAppointmentReceptionsByPatientResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/core/v5/" xmlns:ns3="http://api.service.soap.emias.lanit.ru/v5/">
+         <appointment>
+            <id>391921177148</id>
+            <number>И20230926-110</number>
+            <lpuId>204</lpuId>
+            <typeLpu>Городская поликлиника</typeLpu>
+            <nameLpu>ГБУЗ ГП 175 ДЗМ</nameLpu>
+            <lpuAddress>Москва, внутригородская территория поселение Филимонковское, деревня Верхнее Валуево, 5-я Валуевская улица, д. 20</lpuAddress>
+            <startTime>"""+dateTomorrow+"""T18:30:00+03:00</startTime>
+            <endTime>"""+dateTomorrow+"""T19:00:00+03:00</endTime>
+            <type>LDP</type>
+            <enableCancel>false</enableCancel>
+            <enableShift>true</enableShift>
+            <availableResourceId>20455900839</availableResourceId>
+            <complexResourceId>240926738</complexResourceId>
+            <roomId>30510573</roomId>
+            <roomNumber>1602</roomNumber>
+            <addressPointId>9133131</addressPointId>
+            <toLdp>
+               <ldpTypeId>51501</ldpTypeId>
+               <ldpTypeName>Удаление каловых камней, инородных тел прямой кишки</ldpTypeName>
+            </toLdp>
+            <statusId>10</statusId>
+            <referral>
+               <referralId>74431024939</referralId>
+               <startTime>2023-09-26</startTime>
+               <endTime>2024-10-25</endTime>
+               <lpuId>204</lpuId>
+            </referral>
+         </appointment>
+      </ns3:getAppointmentReceptionsByPatientResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAppointment="update template_response set response='"+getAppointmentResponse+"' where \"path\"= '"+pathSaAppointment+"'"
+sql.execute(queryGetAppointment)]]></script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAppointmentGibdd" id="a541134e-0932-4c65-b465-501edc99f093"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+def dateToday = testRunner.testCase.getPropertyValue("dateToday")
+def dateTomorrow = testRunner.testCase.getPropertyValue("dateTomorrow")
+def dateYesterday = testRunner.testCase.getPropertyValue("dateYesterday")
+pathGibddAppointment = testRunner.testCase.getPropertyValue("pathGibddAppointment")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAppointmentResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:GetAppointmentReceptionsByPatientResponse xmlns:ns2="http://emias2.gov.ru/emias/appointment/v1/" xmlns:ns3="http://emias2.gov.ru/universal/v1/types/exceptions/" xmlns:ns4="http://emias2.gov.ru/emias/appointment/v1/types/" xmlns:ns5="http://emias2.gov.ru/emias/gibdd/v1/types/">
+         <appointments>
+            <ns4:id>452159</ns4:id>
+            <ns4:patient>
+               <ns4:birthday>1989-01-24T00:00:00</ns4:birthday>
+               <ns4:oms>7758010875002485</ns4:oms>
+               <ns4:mobilePhone>9859095400</ns4:mobilePhone>
+            </ns4:patient>
+            <ns4:appointmentNum>СП20230928-13</ns4:appointmentNum>
+            <ns4:startDate>"""+dateToday+"""T18:30:00</ns4:startDate>
+            <ns4:endDate>"""+dateToday+"""T18:45:00</ns4:endDate>
+            <ns4:actual>true</ns4:actual>
+            <ns4:availableResource>
+               <ns4:availableResourceId>5486</ns4:availableResourceId>
+               <ns4:availableResourceTitle>Алипова Ольга Андреевна</ns4:availableResourceTitle>
+               <ns4:roomCode></ns4:roomCode>
+            </ns4:availableResource>
+            <ns4:lpu>
+               <ns5:id>1</ns5:id>
+               <ns5:name>ГБУЗ г. Москвы "Городская поликлиника № 180 ДЗМ"</ns5:name>
+               <ns5:shortName>ГБУ ГП 180 ДЗМ</ns5:shortName>
+               <ns5:lpuAddress>г. Москва, Уваровский переулок, д.4</ns5:lpuAddress>
+               <ns5:moId>145</ns5:moId>
+            </ns4:lpu>
+            <ns4:referenceType>
+               <ns4:referenceTypeId>21</ns4:referenceTypeId>
+               <ns4:referenceTypeName>Справка на Оружие</ns4:referenceTypeName>
+            </ns4:referenceType>
+            <ns4:createDate>2023-09-28T15:58:29.849</ns4:createDate>
+         </appointments>
+         <appointments>
+            <ns4:id>452159</ns4:id>
+            <ns4:patient>
+               <ns4:birthday>1989-01-24T00:00:00</ns4:birthday>
+               <ns4:oms>7758010875002485</ns4:oms>
+               <ns4:mobilePhone>9859095400</ns4:mobilePhone>
+            </ns4:patient>
+            <ns4:appointmentNum>СП20230928-13</ns4:appointmentNum>
+            <ns4:startDate>"""+dateTomorrow+"""T18:30:00</ns4:startDate>
+            <ns4:endDate>"""+dateTomorrow+"""T18:45:00</ns4:endDate>
+            <ns4:actual>true</ns4:actual>
+            <ns4:availableResource>
+               <ns4:availableResourceId>5486</ns4:availableResourceId>
+               <ns4:availableResourceTitle>Алипова Ольга Андреевна</ns4:availableResourceTitle>
+               <ns4:roomCode></ns4:roomCode>
+            </ns4:availableResource>
+            <ns4:lpu>
+               <ns5:id>1</ns5:id>
+               <ns5:name>ГБУЗ г. Москвы "Городская поликлиника № 180 ДЗМ"</ns5:name>
+               <ns5:shortName>ГБУ ГП 180 ДЗМ</ns5:shortName>
+               <ns5:lpuAddress>г. Москва, Уваровский переулок, д.4</ns5:lpuAddress>
+               <ns5:moId>145</ns5:moId>
+            </ns4:lpu>
+            <ns4:referenceType>
+               <ns4:referenceTypeId>21</ns4:referenceTypeId>
+               <ns4:referenceTypeName>Справка на Оружие</ns4:referenceTypeName>
+            </ns4:referenceType>
+            <ns4:createDate>2023-09-28T15:58:29.849</ns4:createDate>
+         </appointments>
+      </ns2:GetAppointmentReceptionsByPatientResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAppointment="update template_response set response='"+getAppointmentResponse+"' where \"path\"= '"+pathGibddAppointment+"'"
+sql.execute(queryGetAppointment)]]></script></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="d5c7df3a-c6e9-4663-b65d-908c6c566afd"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395215_1"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395215"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e74bef00-0b16-4137-8acd-2e6ce2e83105" name="closeDateAppointment = текущая дата"><con:configuration><path>$.payload.activeAppointment.closeDate</path><content>${#TestCase#dateToday}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countAppointment = 2"><con:configuration><path>$.payload.activeAppointment.count</path><content>3</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countReferrals = 6"><con:configuration><path>$.payload.activeReferrals.count</path><content>6</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e74bef00-0b16-4137-8acd-2e6ce2e83105" name="closeDateReferrals = текущая дата"><con:configuration><path>$.payload.activeReferrals.closeDate</path><content>${#TestCase#dateToday}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="closeCountReferrals = 4"><con:configuration><path>$.payload.activeReferrals.closeCount</path><content>4</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>0000000000044446</con:value></con:property><con:property><con:name>bd</con:name><con:value>2005-01-18</con:value></con:property><con:property><con:name>dateTomorrow</con:name><con:value>2024-03-01</con:value></con:property><con:property><con:name>dateYesterday</con:name><con:value>2024-02-28</con:value></con:property><con:property><con:name>pathGetAssignemtnsInfo</con:name><con:value>/mock/395215/getAssignmentsInfo</con:value></con:property><con:property><con:name>pathGetReferralsInfo</con:name><con:value>/mock/395215/getReferralsInfo</con:value></con:property><con:property><con:name>pathSaAppointment</con:name><con:value>/mock/395215/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>pathGibddAppointment</con:name><con:value>/mock/395215_1/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>dateToday</con:name><con:value>2024-02-29</con:value></con:property></con:properties></con:testCase><con:testCase id="f8f820d8-4980-40e0-b6b5-fbfc0dbcbf66" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Проверка отбора assignment.closeDate по дате отличной от текущей на 7 дней. 395218" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Установить даты" id="504b5dcf-0c0b-48fb-848d-3e3bc7602ca0"><con:settings/><con:config><script>import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем вчрешнюю, сегодняшнюю и завтрашние даты
+def date = new Date()
+Date datePlus = LocalDateTime.now().plusDays(7).toDate()
+
+//устанавливаем и записываем даты в нужных форматах
+def dateToday = new SimpleDateFormat("yyyy-MM-dd").format(date).toString()
+def closeDate = new SimpleDateFormat("yyyy-MM-dd").format(datePlus).toString()
+testRunner.testCase.setPropertyValue("dateToday", dateToday)
+testRunner.testCase.setPropertyValue("closeDate", closeDate)</script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAssignmentsInfo" id="214961c5-51f7-4434-bb20-1c3202089019"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+dateToday = testRunner.testCase.getPropertyValue("dateToday")
+closeDate = testRunner.testCase.getPropertyValue("closeDate")
+pathGetAssignmentsInfo = testRunner.testCase.getPropertyValue("pathGetAssignemtnsInfo")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAssignmentsInfoResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:getAssignmentsInfoResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/v5/">
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>1</id>
+               <name>Взятие венозной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+closeDate+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152043139</entryId>
+               <laboratoryId>47</laboratoryId>
+               <laboratoryName>Билирубин общий</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>J44.8</code>
+                  <name>Другая уточненная хроническая обструктивная легочная болезнь</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+      </ns2:getAssignmentsInfoResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAssignmentsInfo="update template_response set response='"+getAssignmentsInfoResponse+"' where \"path\"= '"+pathGetAssignmentsInfo+"'"
+sql.execute(queryGetAssignmentsInfo)]]></script></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="ec35482e-a8fa-40f6-8966-04ab623d305f"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395218"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countReferrals = 1"><con:configuration><path>$.payload.activeReferrals.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e74bef00-0b16-4137-8acd-2e6ce2e83105" name="closeDateReferrals = текущая дата + 7 дней"><con:configuration><path>$.payload.activeReferrals.closeDate</path><content>${#TestCase#closeDate}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="closeCountReferrals = 1"><con:configuration><path>$.payload.activeReferrals.closeCount</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>0000000000044446</con:value></con:property><con:property><con:name>bd</con:name><con:value>2005-01-18</con:value></con:property><con:property><con:name>dateTomorrow</con:name><con:value>2024-03-01</con:value></con:property><con:property><con:name>dateYesterday</con:name><con:value>2024-02-28</con:value></con:property><con:property><con:name>pathGetAssignemtnsInfo</con:name><con:value>/mock/395218/getAssignmentsInfo</con:value></con:property><con:property><con:name>pathGetReferralsInfo</con:name><con:value>/mock/395218/getReferralsInfo</con:value></con:property><con:property><con:name>pathSaAppointment</con:name><con:value>/mock/395218/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>pathGibddAppointment</con:name><con:value>/mock/395215_1/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>dateToday</con:name><con:value>2024-02-29</con:value></con:property><con:property><con:name>closeDate</con:name><con:value>2024-03-07</con:value></con:property></con:properties></con:testCase><con:testCase id="9dbe3b46-734f-4871-b803-25e212122d49" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Проверка отбора assignment.closeDate по дате отличной от текущей на 8 дней. 395219" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Установить даты" id="d43265bc-2b1b-4291-8f5e-46133dd750a4"><con:settings/><con:config><script>import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем вчрешнюю, сегодняшнюю и завтрашние даты
+def date = new Date()
+Date datePlus = LocalDateTime.now().plusDays(8).toDate()
+
+//устанавливаем и записываем даты в нужных форматах
+def dateToday = new SimpleDateFormat("yyyy-MM-dd").format(date).toString()
+def closeDate = new SimpleDateFormat("yyyy-MM-dd").format(datePlus).toString()
+testRunner.testCase.setPropertyValue("dateToday", dateToday)
+testRunner.testCase.setPropertyValue("closeDate", closeDate)</script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAssignmentsInfo" id="ddebe8c1-cc75-4a04-88de-1ce317fff9d3"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+dateToday = testRunner.testCase.getPropertyValue("dateToday")
+closeDate = testRunner.testCase.getPropertyValue("closeDate")
+pathGetAssignmentsInfo = testRunner.testCase.getPropertyValue("pathGetAssignemtnsInfo")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAssignmentsInfoResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:getAssignmentsInfoResponse xmlns:ns2="http://api.service.soap.emias.lanit.ru/v5/">
+         <assignment>
+            <moId>204</moId>
+            <toBM>
+               <id>1</id>
+               <name>Взятие венозной крови</name>
+               <self>false</self>
+            </toBM>
+            <period>
+               <dateFrom>"""+dateToday+"""</dateFrom>
+               <dateTo>"""+closeDate+"""</dateTo>
+            </period>
+            <active>true</active>
+            <appointmentAvailable>false</appointmentAvailable>
+            <registryEntry>
+               <entryId>152043139</entryId>
+               <laboratoryId>47</laboratoryId>
+               <laboratoryName>Билирубин общий</laboratoryName>
+               <biomaterialId>2</biomaterialId>
+               <biomaterialName>Кровь цельная</biomaterialName>
+               <hasMemo>true</hasMemo>
+               <diagnosis>
+                  <code>J44.8</code>
+                  <name>Другая уточненная хроническая обструктивная легочная болезнь</name>
+               </diagnosis>
+               <issuedDoctor>
+                  <jobExecutionId>10293369</jobExecutionId>
+                  <fio>Борисова Оксана Михайловна</fio>
+                  <snils>07894490330</snils>
+                  <specialityId>9</specialityId>
+                  <specialityName>Врач-невролог</specialityName>
+               </issuedDoctor>
+            </registryEntry>
+         </assignment>
+      </ns2:getAssignmentsInfoResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAssignmentsInfo="update template_response set response='"+getAssignmentsInfoResponse+"' where \"path\"= '"+pathGetAssignmentsInfo+"'"
+sql.execute(queryGetAssignmentsInfo)]]></script></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="38dbb30d-3c5d-4c06-9d37-a06782d3449f"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395218"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countReferrals = 1"><con:configuration><path>$.payload.activeReferrals.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="36c2244b-81b5-4d75-85ea-89b155b69872" name="Отсутствует closeDateReferrals"><con:configuration><token>closeDate</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="fcb9fb25-3fbc-43da-a937-ec15ddbe2d94" name="Отсутствует closeCountReferrals"><con:configuration><token>closeCount</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>0000000000044446</con:value></con:property><con:property><con:name>bd</con:name><con:value>2005-01-18</con:value></con:property><con:property><con:name>dateTomorrow</con:name><con:value>2024-03-01</con:value></con:property><con:property><con:name>dateYesterday</con:name><con:value>2024-02-28</con:value></con:property><con:property><con:name>pathGetAssignemtnsInfo</con:name><con:value>/mock/395218/getAssignmentsInfo</con:value></con:property><con:property><con:name>pathGetReferralsInfo</con:name><con:value>/mock/395218/getReferralsInfo</con:value></con:property><con:property><con:name>pathSaAppointment</con:name><con:value>/mock/395218/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>pathGibddAppointment</con:name><con:value>/mock/395215_1/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>dateToday</con:name><con:value>2024-02-29</con:value></con:property><con:property><con:name>closeDate</con:name><con:value>2024-03-08</con:value></con:property></con:properties></con:testCase><con:testCase id="0245dd1b-cff1-4f27-b66a-dd2efcf4ecae" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Проверка отбора appointment.closeDate по дате отличной от текущей на 7 дней. 395220" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Установить даты" id="2342232c-ee65-4538-98f2-0f52960dc8f6"><con:settings/><con:config><script>import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем вчрешнюю, сегодняшнюю и завтрашние даты
+def date = new Date()
+Date datePlus = LocalDateTime.now().plusDays(7).toDate()
+
+//устанавливаем и записываем даты в нужных форматах
+def dateToday = new SimpleDateFormat("yyyy-MM-dd").format(date).toString()
+def closeDate = new SimpleDateFormat("yyyy-MM-dd").format(datePlus).toString()
+testRunner.testCase.setPropertyValue("dateToday", dateToday)
+testRunner.testCase.setPropertyValue("closeDate", closeDate)</script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAppointmentGibdd" id="94cfb64e-be80-48c0-a98d-e1b52f4be186"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+dateToday = testRunner.testCase.getPropertyValue("dateToday")
+closeDate = testRunner.testCase.getPropertyValue("closeDate")
+pathGibddAppointment = testRunner.testCase.getPropertyValue("pathGibddAppointment")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAppointmentResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:GetAppointmentReceptionsByPatientResponse xmlns:ns2="http://emias2.gov.ru/emias/appointment/v1/" xmlns:ns3="http://emias2.gov.ru/universal/v1/types/exceptions/" xmlns:ns4="http://emias2.gov.ru/emias/appointment/v1/types/" xmlns:ns5="http://emias2.gov.ru/emias/gibdd/v1/types/">
+         <appointments>
+            <ns4:id>453853</ns4:id>
+            <ns4:patient>
+               <ns4:birthday>1989-01-24T00:00:00</ns4:birthday>
+               <ns4:oms>7758010875002485</ns4:oms>
+               <ns4:mobilePhone>9859095400</ns4:mobilePhone>
+            </ns4:patient>
+            <ns4:appointmentNum>СП20240226-4</ns4:appointmentNum>
+            <ns4:startDate>"""+closeDate+"""T18:45:00</ns4:startDate>
+            <ns4:endDate>"""+closeDate+"""T19:00:00</ns4:endDate>
+            <ns4:actual>true</ns4:actual>
+            <ns4:availableResource>
+               <ns4:availableResourceId>5601</ns4:availableResourceId>
+               <ns4:availableResourceTitle>Аверочкина Ирина Ивановна</ns4:availableResourceTitle>
+               <ns4:roomCode>404</ns4:roomCode>
+            </ns4:availableResource>
+            <ns4:lpu>
+               <ns5:id>32</ns5:id>
+               <ns5:name>ГБУЗ г. Москвы "Городская поликлиника № 219 ДЗМ"</ns5:name>
+               <ns5:shortName>ГБУЗ ГП 219 ДЗМ</ns5:shortName>
+               <ns5:lpuAddress>г. Москва, бульвар Яна Райниса, д. 47</ns5:lpuAddress>
+               <ns5:moId>10000370</ns5:moId>
+            </ns4:lpu>
+            <ns4:referenceType>
+               <ns4:referenceTypeId>21</ns4:referenceTypeId>
+               <ns4:referenceTypeName>Справка на Оружие</ns4:referenceTypeName>
+            </ns4:referenceType>
+            <ns4:createDate>2024-02-26T16:27:08.578</ns4:createDate>
+         </appointments>
+      </ns2:GetAppointmentReceptionsByPatientResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAppointment="update template_response set response='"+getAppointmentResponse+"' where \"path\"= '"+pathGibddAppointment+"'"
+sql.execute(queryGetAppointment)]]></script></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="5b9544ab-1563-43a4-8b9b-e51cb2e470c1"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395220"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value=""/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e74bef00-0b16-4137-8acd-2e6ce2e83105" name="closeDateAppointment = текущая дата + 7 lytq"><con:configuration><path>$.payload.activeAppointment.closeDate</path><content>${#TestCase#closeDate}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countAppointment = 1"><con:configuration><path>$.payload.activeAppointment.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>0000000000044446</con:value></con:property><con:property><con:name>bd</con:name><con:value>2005-01-18</con:value></con:property><con:property><con:name>dateTomorrow</con:name><con:value>2024-03-01</con:value></con:property><con:property><con:name>dateYesterday</con:name><con:value>2024-02-28</con:value></con:property><con:property><con:name>pathGetAssignemtnsInfo</con:name><con:value>/mock/395215/getAssignmentsInfo</con:value></con:property><con:property><con:name>pathGetReferralsInfo</con:name><con:value>/mock/395215/getReferralsInfo</con:value></con:property><con:property><con:name>pathSaAppointment</con:name><con:value>/mock/395215/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>pathGibddAppointment</con:name><con:value>/mock/395220/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>dateToday</con:name><con:value>2024-02-29</con:value></con:property><con:property><con:name>closeDate</con:name><con:value>2024-03-07</con:value></con:property></con:properties></con:testCase><con:testCase id="d3ebfcdc-e330-4b2b-93cc-3b64dd148612" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Проверка отбора appointment.closeDate по дате отличной от текущей на 8 дней. 395221" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Установить даты" id="121f21d5-7b68-4942-9186-a54b939d33d3"><con:settings/><con:config><script>import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.util.Date
+
+//получаем вчрешнюю, сегодняшнюю и завтрашние даты
+def date = new Date()
+Date datePlus = LocalDateTime.now().plusDays(8).toDate()
+
+//устанавливаем и записываем даты в нужных форматах
+def dateToday = new SimpleDateFormat("yyyy-MM-dd").format(date).toString()
+def closeDate = new SimpleDateFormat("yyyy-MM-dd").format(datePlus).toString()
+testRunner.testCase.setPropertyValue("dateToday", dateToday)
+testRunner.testCase.setPropertyValue("closeDate", closeDate)</script></con:config></con:testStep><con:testStep type="groovy" name="Отредактировать мок getAppointmentGibdd" id="39ea15af-9a4c-4644-ad32-5ff8cb6dbb46"><con:settings/><con:config><script><![CDATA[import groovy.xml.XmlSlurper
+import groovy.sql.Sql
+
+dateToday = testRunner.testCase.getPropertyValue("dateToday")
+closeDate = testRunner.testCase.getPropertyValue("closeDate")
+pathGibddAppointment = testRunner.testCase.getPropertyValue("pathGibddAppointment")
+
+//подключиться к бд 
+connection =testRunner.testCase.testSuite.project.getPropertyValue("mockDbFullConnection")
+sql = Sql.newInstance(connection)
+
+//Формируем ответ для заполнения бд
+getAppointmentResponse = """<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <ns2:GetAppointmentReceptionsByPatientResponse xmlns:ns2="http://emias2.gov.ru/emias/appointment/v1/" xmlns:ns3="http://emias2.gov.ru/universal/v1/types/exceptions/" xmlns:ns4="http://emias2.gov.ru/emias/appointment/v1/types/" xmlns:ns5="http://emias2.gov.ru/emias/gibdd/v1/types/">
+         <appointments>
+            <ns4:id>453853</ns4:id>
+            <ns4:patient>
+               <ns4:birthday>1989-01-24T00:00:00</ns4:birthday>
+               <ns4:oms>7758010875002485</ns4:oms>
+               <ns4:mobilePhone>9859095400</ns4:mobilePhone>
+            </ns4:patient>
+            <ns4:appointmentNum>СП20240226-4</ns4:appointmentNum>
+            <ns4:startDate>"""+closeDate+"""T18:45:00</ns4:startDate>
+            <ns4:endDate>"""+closeDate+"""T19:00:00</ns4:endDate>
+            <ns4:actual>true</ns4:actual>
+            <ns4:availableResource>
+               <ns4:availableResourceId>5601</ns4:availableResourceId>
+               <ns4:availableResourceTitle>Аверочкина Ирина Ивановна</ns4:availableResourceTitle>
+               <ns4:roomCode>404</ns4:roomCode>
+            </ns4:availableResource>
+            <ns4:lpu>
+               <ns5:id>32</ns5:id>
+               <ns5:name>ГБУЗ г. Москвы "Городская поликлиника № 219 ДЗМ"</ns5:name>
+               <ns5:shortName>ГБУЗ ГП 219 ДЗМ</ns5:shortName>
+               <ns5:lpuAddress>г. Москва, бульвар Яна Райниса, д. 47</ns5:lpuAddress>
+               <ns5:moId>10000370</ns5:moId>
+            </ns4:lpu>
+            <ns4:referenceType>
+               <ns4:referenceTypeId>21</ns4:referenceTypeId>
+               <ns4:referenceTypeName>Справка на Оружие</ns4:referenceTypeName>
+            </ns4:referenceType>
+            <ns4:createDate>2024-02-26T16:27:08.578</ns4:createDate>
+         </appointments>
+      </ns2:GetAppointmentReceptionsByPatientResponse>
+   </soap:Body>
+</soap:Envelope>"""
+
+queryGetAppointment="update template_response set response='"+getAppointmentResponse+"' where \"path\"= '"+pathGibddAppointment+"'"
+sql.execute(queryGetAppointment)]]></script></con:config></con:testStep><con:testStep type="restrequest" name="POST saCount" id="4a9f9d48-2517-42b5-908e-cef7988ead48"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395220"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value=""/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="countAppointment = 1"><con:configuration><path>$.payload.activeAppointment.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0e4d6c98-d86f-4393-b943-af3c8193ba42" name="Not Contains"><con:configuration><token>closeDate</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>0000000000044446</con:value></con:property><con:property><con:name>bd</con:name><con:value>2005-01-18</con:value></con:property><con:property><con:name>dateTomorrow</con:name><con:value>2024-03-01</con:value></con:property><con:property><con:name>dateYesterday</con:name><con:value>2024-02-28</con:value></con:property><con:property><con:name>pathGetAssignemtnsInfo</con:name><con:value>/mock/395215/getAssignmentsInfo</con:value></con:property><con:property><con:name>pathGetReferralsInfo</con:name><con:value>/mock/395215/getReferralsInfo</con:value></con:property><con:property><con:name>pathSaAppointment</con:name><con:value>/mock/395215/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>pathGibddAppointment</con:name><con:value>/mock/395220/getAppointmentReceptionsByPatient</con:value></con:property><con:property><con:name>dateToday</con:name><con:value>2024-02-29</con:value></con:property><con:property><con:name>closeDate</con:name><con:value>2024-03-08</con:value></con:property></con:properties></con:testCase><con:testCase id="c5624150-4784-42dc-8505-035a392bdf2e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Ошибка &quot;SA_APPOINTMENT_ERROR&quot; для пациента = 18 лет" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="f077509e-2a0c-42e3-a604-1a0c1b59843e"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395316_1"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395316"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 1"><con:configuration><path>$.payload.activeAppointment.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = SA_APPOINTMENT_ERROR"><con:configuration><path>$.payload.activeAppointment.error.code</path><content>SA_APPOINTMENT_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось найти записи пациента"><con:configuration><path>$.payload.activeAppointment.error.description</path><content>Не удалось получить записи пациента</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeAppointment.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2006-01-01</con:value></con:property></con:properties></con:testCase><con:testCase id="fc741409-8468-496f-b4fd-b4738caefe7b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Ошибка &quot;SA_APPOINTMENT_ERROR&quot; для пациента &lt; 18 лет" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="2985a0ee-3b75-49ee-8691-b5ce40d4a89b"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395316_1"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395316"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 0"><con:configuration><path>$.payload.activeAppointment.count</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = SA_APPOINTMENT_ERROR"><con:configuration><path>$.payload.activeAppointment.error.code</path><content>SA_APPOINTMENT_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось найти записи пациента"><con:configuration><path>$.payload.activeAppointment.error.description</path><content>Не удалось получить записи пациента</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeAppointment.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2007-01-01</con:value></con:property></con:properties></con:testCase><con:testCase id="6d4e9e3d-0ca5-44ac-8c47-ec83d1e8693f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Ошибка &quot;SA_REFERRAL_ERROR&quot; для пациента &lt; 18 лет" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="648fc32b-ee62-4a3f-b924-0f8a23be2eb5"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395319"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 1"><con:configuration><path>$.payload.activeReferrals.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = SA_REFERRAL_ERROR"><con:configuration><path>$.payload.activeReferrals.error.code</path><content>SA_REFERRAL_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось получить часть данных"><con:configuration><path>$.payload.activeReferrals.error.description</path><content>Не удалось получить часть данных</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeReferrals.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2007-01-01</con:value></con:property></con:properties></con:testCase><con:testCase id="8b6e3308-c1c7-4a41-921f-90b45888e634" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Ошибка &quot;SA_ASSIGNMENT_ERROR&quot;" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="cc63d831-8fc9-49ae-aba3-6144dc393427"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395321"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 1"><con:configuration><path>$.payload.activeReferrals.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = SA_ASSIGNMENT_ERROR"><con:configuration><path>$.payload.activeReferrals.error.code</path><content>SA_ASSIGNMENT_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось получить часть данных"><con:configuration><path>$.payload.activeReferrals.error.description</path><content>Не удалось получить часть данных</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeReferrals.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2006-01-01</con:value></con:property></con:properties></con:testCase><con:testCase id="6ffe64d6-c607-467f-bb8a-4f34bcd3c40b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Ошибка &quot;PIN_GET_APPOINTMENT_ERROR&quot;. В ответе getAppointmentReceptionsByPatient вернулись данные. 395374" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="0c927f44-a39b-47d8-b038-a20b1c7a0843"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395374_1"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395374"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 1"><con:configuration><path>$.payload.activeAppointment.count</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = PIN_GET_APPOINTMENT_ERROR"><con:configuration><path>$.payload.activeAppointment.error.code</path><content>PIN_GET_APPOINTMENT_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось получить список записей на освидетельствование"><con:configuration><path>$.payload.activeAppointment.error.description</path><content>Не удалось получить список записей на освидетельствование</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeAppointment.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2006-01-01</con:value></con:property></con:properties></con:testCase><con:testCase id="547a6a28-eb9f-4a11-a0ef-974f926ce0cb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС. Ошибка &quot;PIN_GET_APPOINTMENT_ERROR&quot;. В ответе getAppointmentReceptionsByPatient вернулись данные. 395375" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="POST saCount" id="9c3b363a-549a-46a6-a2f7-c4949f386a2b"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/mainPage/saCount" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="POST saCount" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
+  &lt;con:entry key="Mock-pinAppointment" value="${#Project#mockUrl}/mock/395375_1"/>&#13;
+  &lt;con:entry key="Mock-saOrchestrator" value="${#Project#mockUrl}/mock/395375"/>&#13;
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "birthDate": "${#TestCase#bd}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 0"><con:configuration><path>$.payload.activeAppointment.count</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = PIN_GET_APPOINTMENT_ERROR"><con:configuration><path>$.payload.activeAppointment.error.code</path><content>PIN_GET_APPOINTMENT_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось получить список записей на освидетельствование"><con:configuration><path>$.payload.activeAppointment.error.description</path><content>Не удалось получить список записей на освидетельствование</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeAppointment.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2006-01-01</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>emiasInfoEndpoint</con:name><con:value>http://application-emiasinfo4.emias.solit-clouds.ru</con:value></con:property><con:property><con:name>emiasInfoDbConnection</con:name><con:value>172.17.5.11:29301/emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbLogin</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbPassword</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29301/emiasinfoapp?user=emiasinfoapp&amp;password=emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>suppDbConnection</con:name><con:value>@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDbLogin</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppDbPassword</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppFullDbConnection</con:name><con:value> jdbc:oracle:thin:EMIAS_CLUSTER/EMIAS_CLUSTER@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDBDriver</con:name><con:value>oracle.jdbc.driver.OracleDriver</con:value></con:property><con:property><con:name>nsiEndpoint</con:name><con:value>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationHeaders</con:name><con:value><![CDATA[<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">          <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">             <wsse:Username>EIM/EIM</wsse:Username>          </wsse:UsernameToken>       </wsse:Security> ]]></con:value></con:property><con:property><con:name>EI-token</con:name><con:value>-ykfDtplFdsMeQGJVlZn_Lup2XcOeiZWxsaQfKHm9QE</con:value></con:property><con:property><con:name>emiasInfoNotificationsEndpoint</con:name><con:value>http://notification-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbConnection</con:name><con:value>172.17.5.11:29104/notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbLogin</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbPassword</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29104/notification?user=notification&amp;password=notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>topicBookingRecipeInfoMessage</con:name><con:value>BookingRecipeInfoMessage.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>dbType</con:name><con:value>postgre</con:value></con:property><con:property><con:name>dbLogin</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbPassword</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbConnect</con:name><con:value>10.2.173.127:5432/rir2</con:value></con:property><con:property><con:name>bootstrapServers</con:name><con:value>10.2.172.24:9092</con:value></con:property><con:property><con:name>topicMedicationAssignmentChangesPerDay</con:name><con:value>MedicationAssignmentChangesPerDay.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Bm</con:name><con:value>Appointment2Bm.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Doctor</con:name><con:value>Appointment2Doctor.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Ldp</con:name><con:value>Appointment2Ldp.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicKisNazToEmiasPublication</con:name><con:value>kisNazToEmiasPublication.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicTmkNotify</con:name><con:value>tmkNotify.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>mockUrl</con:name><con:value>http://application-mock.emias.solit-clouds.ru</con:value></con:property><con:property><con:name>mockDbFullConnection</con:name><con:value>jdbc:postgresql://172.17.5.13:29107/emias_info_mock?user=emias_info&amp;password=emias_info</con:value></con:property><con:property><con:name>receptionTypeId</con:name><con:value>receptionTypeId</con:value></con:property><con:property><con:name>saOrchestratorEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:value></con:property><con:property><con:name>saOrchestratorDbConnection</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbLogin</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbPassword</con:name><con:value/></con:property><con:property><con:name>saOrchestratorFullDbConnection</con:name><con:value/></con:property><con:property><con:name>emiasIdEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService</con:value></con:property><con:property><con:name>emiasGibddEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
