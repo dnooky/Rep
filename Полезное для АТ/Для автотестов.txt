@@ -1,11 +1,14 @@
 Для автотестов
 
 ЗАПУСТИТЬ ШАГ
-testRunner.runTestStepByName( "getDrugInfo")
+testRunner.runTestStepByName("getDrugInfo")
 
 JSONPATH
 ПОИСК JSONPATH БЕЗ []
 $.error.code - расписать весь путь (иначе $..code вернет ответ со скобками [])
+ПРОВЕРИТЬ ЕСТЬ ЛИ НУЖНЫЙ ПАРАМЕТР И ЕСЛИ ЕСТЬ ВЫВЕСТИ ДРУГОЙ
+$.subscription[?(@.notificationFormat)].destinationAddress
+
 
 XPATH
 ПОЛУЧИТЬ ЗНАЧЕНИЕ АТРИБУТА XML

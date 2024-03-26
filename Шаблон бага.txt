@@ -64,15 +64,19 @@ http://emiasinfo3.emias.solit-clouds.ru/
 
 Закрытие задачи
 {color:#00875a}Проверено полностью{color}
+За исключение вопроса [EINFOSRV-2359|https://jira.mos.social/browse/EINFOSRV-2359]. Ожидается ответ
 {code:java}
-http://emiasinfo1.emias.solit-clouds.ru
+http://application-emiasinfo1.emias.solit-clouds.ru/
 Проект собран из репозитория: https://git.emias.mos.ru/emias-info/services
-Версия: 1.5.0
-Ветка: release_1.5.0
-Ревизия: 1099eaf870836563f12c37bd2b906ed4599597bf
+Версия: 1.11.0
+Ветка: release_1.1.0
+Ревизия: 88c3a91961d009dec7f856e7a11f7d1189ba5c84
 {code}
 
 Проверены:
-1. Работа метода после доработки
-2. Получение пустой истории
-3. Написана [документация|https://testit.solit-clouds.ru/projects/145062/tests?isolatedSection=25265d96-a8fa-4d73-b2f2-ebdfbab696ae]
+1. Получение пустого и не пустого списка заказов
+2. Получение активных и архивных заказов
+3. Обязательность и множественность параметров
+4. Все АС
+5. Написана [документация|https://testit.solit-clouds.ru/projects/145062/tests?isolatedSection=dc965adc-adcd-4fd8-b54b-4f665c04912b]
+6. Написан АТ. Выгружен в репозиторий

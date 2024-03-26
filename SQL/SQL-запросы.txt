@@ -1,3 +1,64 @@
+ТИПЫ ДАННЫХ
+--serial  автоматическая нумерация строк
+-- smallint  2 байта   -32 768..32 767
+-- int       4 байта   -2 147 483 648..2 147 483 647
+-- bigint    8 байт    -9 223 372 036 854 775 808..9 223 372 036 854 775 807
+
+-- character  char (длина всегда фиксированная, даже если слово 10 символов, а поле  рассчитано на 20 - будут добавляться пробелы в конце)
+-- character varying  varchar
+-- text
+
+-- float float4 real  4 байта   - особенность у данного типа - при операциях (н-р делении) значения округляются (не исп-ся для денежных типов данных)
+-- double precision, float8  8 байт - особенность у данного типа - при операциях (н-р делении) значения округляются (не исп-ся для денежных типов данных)
+-- numeric(n, m), decimal(n, m)   1 234 567.890   numeric(15, 5)
+
+-- date
+-- timestamp 
+-- time
+-- interval
+ 
+--bool
+
+drop table internet_customer;				- удалить таблицу
+
+create table internet_customer 				- создать таблицу
+(internet_customer_id int not null,
+login varchar(20) not null,
+rating float default(0) not null)
+
+alter table internet_customer add column 	- добавить колонку к уже существующей таблице с данными
+confirmed bool default(false) not null;
+
+alter table internet_customer drop column 	- добавить колонку от уже существующей таблицы с данными без потери других данных
+confirmed;
+
+insert into internet_customer				- заполнить таблицу данными
+(login, internet_customer_id)
+values 
+('login1', 1),
+('login2', 2)
+
+insert into internet_film						- заполнить таблицу взяв нужные поля из другой таблицы 
+(title, price, rental_duration, description)		(в данном случае берем название рейтинг описание и выбираем только фильмы с рейтингом G)
+select
+f.title,
+2,
+f.rental_duration,
+f.description 
+from 
+film f
+where 
+f.rating = 'G';
+
+delete from internet_customer				- удалить значения из таблицы
+where
+internet_customer_id = 1;
+
+update internet_customer					- обновить данные в таблице
+set login = 'testlogin'
+where 
+login  = 'login1';
+
 select concat('текст перед значенирем поля 1', название поля 1; 	- объединить 2 поля в одно с добавлением какого-либо текста
 'текст перед значением поля 2', название поля 2; итд) 				
 
@@ -81,4 +142,33 @@ from film f
 limit 50													- Вывести первые 50 строк
 offset 50													- Пропустить первые 50 строк
 
-union intersect except
+UNION INTERSECT EXCEPT
+union - объединяет 2 запроса, исключая дубли
+union all - объединяет 2 запроса, результат выводится вместе с дублями
+except - разность 2х запросов (Отображает все значения, которые есть в результате левого запроса, но отсутствуют в результате правого запроса)
+intersect - возвращает только те значения, которые есть в результатах обоих запросов
+ПРИМЕРЫ
+select f.title from film f
+where rating = 'R'
+UNION ALL - вернет 253 строки
+UNION вернет 245 строк
+select f.title from film f
+join film_category fc using (film_id)
+join category c using (category_id)
+where c."name" = 'Comedy'
+
+select f.title as src from film f
+where rating = 'R'
+EXCEPT
+select f.title from film f
+join film_category fc using (film_id)
+join category c using (category_id)
+where c."name" = 'Comedy'
+
+select 										- фильтрация по количеству
+count(*),									- просто посчитать количество
+count(*) filter(where length > 100),		- посчитать количество с указанным фильтром (длина фильма больше 100, 120, 140)
+count(*) filter(where length > 120),
+count(*) filter(where length > 140)
+from 
+film;

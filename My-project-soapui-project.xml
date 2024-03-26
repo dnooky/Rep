@@ -27806,7 +27806,24 @@ including as a SOAP header.</xsd:documentation>
          <externalSystemId>?</externalSystemId>\r
       </v5:getAvailableResourceScheduleInfo>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getAvailableResourceScheduleInfo"/></con:call></con:operation><con:operation id="9d070a4d-e8cd-4113-9b55-1c5e613d7262" isOneWay="false" action="urn://getAvailableResourceScheduleInfoForGroup" name="getAvailableResourceScheduleInfoForGroup" bindingOperationName="getAvailableResourceScheduleInfoForGroup" type="Request-Response" outputName="getAvailableResourceScheduleInfoForGroupResponse" inputName="getAvailableResourceScheduleInfoForGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5efb6983-0725-40ec-ad42-3d349cd09fc2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/covidselfapp/CovidSelfAppointment/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getAvailableResourceScheduleInfo"/></con:call><con:call id="64c8d5e8-bac1-448f-908f-e2dd4bd956c6" name="garsi"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/covidselfapp/CovidSelfAppointment/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-876c4f67-9ea0-4662-84d4-702131f96863">
+            <wsse:Username>EIM/EIM</wsse:Username>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>\r
+      <v5:getAvailableResourceScheduleInfo>\r
+         <availableResourceId>19457933</availableResourceId>\r
+         <complexResourceId>87478088</complexResourceId>\r
+         <omsNumber>7700007104620689</omsNumber>\r
+         <birthDate>1989-06-12</birthDate>\r
+         <externalSystemId>EIM</externalSystemId>\r
+      </v5:getAvailableResourceScheduleInfo>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.service.soap.emias.lanit.ru/v5/SelfAppointmentServiceV5PT/getAvailableResourceScheduleInfo"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9d070a4d-e8cd-4113-9b55-1c5e613d7262" isOneWay="false" action="urn://getAvailableResourceScheduleInfoForGroup" name="getAvailableResourceScheduleInfoForGroup" bindingOperationName="getAvailableResourceScheduleInfoForGroup" type="Request-Response" outputName="getAvailableResourceScheduleInfoForGroupResponse" inputName="getAvailableResourceScheduleInfoForGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5efb6983-0725-40ec-ad42-3d349cd09fc2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/covidselfapp/CovidSelfAppointment/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v5="http://api.service.soap.emias.lanit.ru/v5/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <v5:getAvailableResourceScheduleInfoForGroup>\r
@@ -27990,8 +28007,8 @@ including as a SOAP header.</xsd:documentation>
    </soap:Header>
    <soap:Body>\r
       <v5:getLpusForVaccination>\r
-         <omsNumber>7793899793001224</omsNumber>\r
-         <birthDate>2001-06-06</birthDate>\r
+         <omsNumber>0000000000001073</omsNumber>\r
+         <birthDate>2014-12-25</birthDate>\r
          <externalSystemId>EIM</externalSystemId>\r
       </v5:getLpusForVaccination>\r
    </soap:Body>\r
@@ -34273,7 +34290,7 @@ including as a SOAP header.</xsd:documentation>
 }</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestratorCovid/getLpusForVaccinations</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>Mock-saOrchestrator</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getReferralsInfo" path="/api/v2/saOrchestrator/getReferralsInfo" id="04b904ca-478b-471b-8048-dfa5b49dc7ef"><con:settings/><con:parameters/><con:method name="Method 1" id="f4aabe99-1a31-41b6-bca4-c84f560f0d8c" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://emiasinfo1.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:get="http://application-emiasinfo3.emias.solit-clouds.ru/api/v2/saOrchestrator/getReferralsInfo">get:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="756d86f7-c843-4d9f-8a8b-d48facd2815c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Mock-id" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry/></con:parameterOrder></con:request></con:method></con:resource><con:resource name="saCount" path="/api/v1/mainPage/saCount" id="71402a48-b98e-4974-a89a-0e1c070854c5"><con:settings/><con:parameters/><con:method name="Method 1" id="f3175a26-0145-429a-831e-c2b705f3b700" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:sac="http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount">sac:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:sac="http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount">sac:Fault</con:element></con:representation><con:request name="Request 1" id="5f6db6e9-e155-4cf3-b305-9894cafd6559" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">&#13;
   &lt;con:entry key="Mock-pinAppointment" value=""/>&#13;
   &lt;con:entry key="Mock-saOrchestrator" value=""/>&#13;
-&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="b2d15ca9-7738-45f4-ba10-ba5080de5223" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://notification-emiasinfo1.emias.solit-clouds.ru" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint></con:endpoints><con:resource name="env" path="/actuator/env" id="f11b3854-204e-4728-884b-49a47afaac00"><con:settings/><con:parameters/><con:method name="Method 1" id="df9a5317-c0ac-4b7d-afaf-28ccd487b0ed" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/vnd.spring-boot.actuator.v3+json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:env="http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env">env:Response</con:element></con:representation><con:request name="Request 1" id="adada609-6fe3-4216-9457-de14bb47a415" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint><con:request/><con:originalUri>http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" id="c888db5f-ef1b-4825-b383-55500b1b58d6" wsaVersion="NONE" name="ИД" type="wsdl" bindingName="{http://emias.mos.ru/emiasid/assignmentService/v2_2/}assignmentServiceBindings" soapVersion="1_2" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="assignmentService" targetNamespace="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://emias.mos.ru/emiasid/core/v2/" xmlns:ns1="http://emias.mos.ru/emiasid/assignmentService/v2/types/" xmlns:ns2="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="foodGetList" path="/api/v1/freefood/foodGetList" id="ec6ae106-8647-4f91-baab-d077088e5b6e"><con:settings/><con:parameters><con:parameter><con:name>Mock-freeFoodInfo</con:name><con:value/><con:style>HEADER</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>EI-Token</con:name><con:value/><con:style>HEADER</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="507bfe6b-5d1c-420d-b3fe-c7ddaa8a7d98" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>401 500 404 403</con:status><con:params/><con:element xmlns:food="http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList">food:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:food="http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList">food:Response</con:element></con:representation><con:request name="Request 1" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="b2d15ca9-7738-45f4-ba10-ba5080de5223" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://notification-emiasinfo1.emias.solit-clouds.ru" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint></con:endpoints><con:resource name="env" path="/actuator/env" id="f11b3854-204e-4728-884b-49a47afaac00"><con:settings/><con:parameters/><con:method name="Method 1" id="df9a5317-c0ac-4b7d-afaf-28ccd487b0ed" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/vnd.spring-boot.actuator.v3+json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:env="http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env">env:Response</con:element></con:representation><con:request name="Request 1" id="adada609-6fe3-4216-9457-de14bb47a415" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://notification-emiasinfo1.emias.solit-clouds.ru</con:endpoint><con:request/><con:originalUri>http://notification-emiasinfo1.emias.solit-clouds.ru/actuator/env</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" id="c888db5f-ef1b-4825-b383-55500b1b58d6" wsaVersion="NONE" name="ИД" type="wsdl" bindingName="{http://emias.mos.ru/emiasid/assignmentService/v2_2/}assignmentServiceBindings" soapVersion="1_2" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="assignmentService" targetNamespace="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://emias.mos.ru/emiasid/core/v2/" xmlns:ns1="http://emias.mos.ru/emiasid/assignmentService/v2/types/" xmlns:ns2="http://emias.mos.ru/emiasid/assignmentService/v2_2/types/" xmlns:nsf="http://emias.mos.ru/system/v1/faults/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://emias.mos.ru/emiasid/assignmentService/v2_2/" xmlns:uctx="http://emias.mos.ru/system/v1/userContext/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
     <xs:schema>
       <xs:import namespace="http://emias.mos.ru/system/v1/userContext/" schemaLocation="http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService?xsd=AAAADHAjUCM4P2cuZURELraVudE9Q88Ug79nkJNa6nMjS1nxE63JKJBkOcGMlcKrWUChvMDBzpXFzUVBLsWK1L2VKtA.oW1mqYu6mtvQsRSkABKM7drrlG.1I8mwDBLWiu8ltZrwvS6uJelXTtqdEnQQhBAhzZp3fg0ChBMVMgIpTOzt5nCr6DvvidC2egssQt2UejzC0cbdeW8cBYzb6CL5_pY_tg--"/>
@@ -38092,7 +38109,435 @@ true - только экстренные
          </v1:options>\r
       </typ:searchAssignmentsShortRequest>\r
    </soap:Body>\r
-</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/emiasid/assignmentService/v2_2/assignmentServicePortType/searchAssignmentsShortRequest"/></con:call></con:operation></con:interface><con:testSuite id="8e4e3cf0-d417-40d4-8198-983248086ba3" name="authentication/logout"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4afb6346-0ccf-461d-9147-a43a9ff182b8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС0_ID279037" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="logout. Ошибка SERVER_ERROR" id="a5634437-fb7f-4986-8422-1e606b194863"><con:settings/><con:config service="http://emiasinfo1.emias.solit-clouds.ru" resourcePath="/api/v1/user/authentication/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="logout. Ошибка SERVER_ERROR" id="0d9178c4-e1da-4f0e-bf61-a348e7ffdd59" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://emias.mos.ru/emiasid/assignmentService/v2_2/assignmentServicePortType/searchAssignmentsShortRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="987ddeef-28eb-4732-99dd-12b562c42118" wsaVersion="NONE" name="Молочная кухня" type="wsdl" bindingName="{http://emias2.gov.ru/business/freeFoodInfo/v1}FreeFoodInfoServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService?wsdl"><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="FreeFoodInfoServiceV1" targetNamespace="http://emias2.gov.ru/business/freeFoodInfo/v1" xmlns:ns1="http://emias2.gov.ru/business/freeFoodInfo/v1/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://emias2.gov.ru/business/freeFoodInfo/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://emias2.gov.ru/business/freeFoodInfo/v1/types" schemaLocation="http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService?xsd=AAAADHAjUCM4P2cuZURELlFF9_9ZLgn8htUIM0pOoFA67.1Ek1idIcDntjSE3uhQHFAvqkSwY5vXfp8rrnFzOs7gx.8yDelbw_5nxAd1Y4MdiZgfNog7c8tHba7uV1L5vPrY2_AAmeFlHQ0bY6RQ_EkpTR1XhKFN5t_3ZwDvhscLTw--"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="fpiCheckPatientResponse">
+    <wsdl:part element="ns1:fpiCheckPatientResponse" name="fpiCheckPatientResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetSchedule">
+    <wsdl:part element="ns1:fpiGetScheduleRequest" name="fpiGetScheduleRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetMilkShopListResponse">
+    <wsdl:part element="ns1:fpiGetMilkShopListResponse" name="fpiGetMilkShopListResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetMilkShopList">
+    <wsdl:part element="ns1:fpiGetMilkShopListRequest" name="fpiGetMilkShopListRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetScheduleResponse">
+    <wsdl:part element="ns1:fpiGetScheduleResponse" name="fpiGetScheduleResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetDetails">
+    <wsdl:part element="ns1:fpiGetDetailsRequest" name="fpiGetDetailsRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetDetailsResponse">
+    <wsdl:part element="ns1:fpiGetDetailsResponse" name="fpiGetDetailsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiCheckPatient">
+    <wsdl:part element="ns1:fpiCheckPatientRequest" name="fpiCheckPatientRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetListResponse">
+    <wsdl:part element="ns1:fpiGetListResponse" name="fpiGetListResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fpiGetList">
+    <wsdl:part element="ns1:fpiGetListRequest" name="fpiGetListRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="FreeFoodInfoSrv">
+    <wsdl:operation name="fpiCheckPatient">
+      <wsdl:input message="tns:fpiCheckPatient" name="fpiCheckPatient"></wsdl:input>
+      <wsdl:output message="tns:fpiCheckPatientResponse" name="fpiCheckPatientResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetSchedule">
+      <wsdl:input message="tns:fpiGetSchedule" name="fpiGetSchedule"></wsdl:input>
+      <wsdl:output message="tns:fpiGetScheduleResponse" name="fpiGetScheduleResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetMilkShopList">
+      <wsdl:input message="tns:fpiGetMilkShopList" name="fpiGetMilkShopList"></wsdl:input>
+      <wsdl:output message="tns:fpiGetMilkShopListResponse" name="fpiGetMilkShopListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetList">
+      <wsdl:input message="tns:fpiGetList" name="fpiGetList"></wsdl:input>
+      <wsdl:output message="tns:fpiGetListResponse" name="fpiGetListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetDetails">
+      <wsdl:input message="tns:fpiGetDetails" name="fpiGetDetails"></wsdl:input>
+      <wsdl:output message="tns:fpiGetDetailsResponse" name="fpiGetDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FreeFoodInfoServiceSoapBinding" type="tns:FreeFoodInfoSrv">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="fpiCheckPatient">
+      <soap:operation soapAction="fpiCheckPatient" style="document"/>
+      <wsdl:input name="fpiCheckPatient">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fpiCheckPatientResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetSchedule">
+      <soap:operation soapAction="fpiGetSchedule" style="document"/>
+      <wsdl:input name="fpiGetSchedule">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fpiGetScheduleResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetMilkShopList">
+      <soap:operation soapAction="fpiGetMilkShopList" style="document"/>
+      <wsdl:input name="fpiGetMilkShopList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fpiGetMilkShopListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetList">
+      <soap:operation soapAction="fpiGetList" style="document"/>
+      <wsdl:input name="fpiGetList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fpiGetListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fpiGetDetails">
+      <soap:operation soapAction="fpiGetDetails" style="document"/>
+      <wsdl:input name="fpiGetDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fpiGetDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FreeFoodInfoService">
+    <wsdl:port binding="tns:FreeFoodInfoServiceSoapBinding" name="FreeFoodInfoSrvPort">
+      <soap:address location="http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService?xsd=AAAADHAjUCM4P2cuZURELlFF9_9ZLgn8htUIM0pOoFA67.1Ek1idIcDntjSE3uhQHFAvqkSwY5vXfp8rrnFzOs7gx.8yDelbw_5nxAd1Y4MdiZgfNog7c8tHba7uV1L5vPrY2_AAmeFlHQ0bY6RQ_EkpTR1XhKFN5t_3ZwDvhscLTw--</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://emias2.gov.ru/business/freeFoodInfo/v1/types" xmlns:tns="http://emias2.gov.ru/business/freeFoodInfo/v1/types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService?xsd=AAAADHAjUCM4P2cuZURELlFF9_9ZLgn8htUIM0pOoFA67.1Ek1idIcDntjSE3uhQHFAvqkSwY5vXfp8rrnFzOs7gx.8yDelbw_5nxAd1Y4MdiZgfNog7c8tHba7uV1L5vPrY2_AAmfFvHR5ceLIa9yW_uCz1B8szq2l45MZBQQ--"/>
+  <xs:complexType name="extendedResponse">
+    <xs:complexContent>
+      <xs:extension base="tns:detailedResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="resultUserInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="detailedResponse">
+    <xs:complexContent>
+      <xs:extension base="tns:generalResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="resultDetails" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="generalResponse">
+    <xs:sequence>
+      <xs:element name="resultCode" type="xs:int"/>
+      <xs:element minOccurs="0" name="resultDescription" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiCheckPatientRequestType">
+    <xs:sequence>
+      <xs:element name="ident" type="xs:string"/>
+      <xs:element minOccurs="0" name="oms" type="xs:string"/>
+      <xs:element minOccurs="0" name="patientID" type="xs:string"/>
+      <xs:element minOccurs="0" name="snils" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiCheckPatientResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hasFoodPrescriptions" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="result" type="tns:extendedResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiGetScheduleRequestType">
+    <xs:sequence>
+      <xs:element name="ident" type="xs:string"/>
+      <xs:element name="prescriptionNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiGetScheduleResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="milkShop" type="tns:milkShop"/>
+      <xs:element minOccurs="0" name="prescriptionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="prescriptionPeriod" type="xs:string"/>
+      <xs:element minOccurs="0" name="result" type="tns:extendedResponse"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="schedule" nillable="true" type="tns:fpiScheduleItem"/>
+      <xs:element minOccurs="0" name="serviceMode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="milkShop">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiScheduleItem">
+    <xs:sequence>
+      <xs:element name="day" type="xs:int"/>
+      <xs:element minOccurs="0" name="notes" type="xs:string"/>
+      <xs:element name="scheduled" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="timeSlot" nillable="true" type="tns:timeSlotItem"/>
+      <xs:element name="workLoad" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="timeSlotItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="service" nillable="true" type="xs:string"/>
+      <xs:element name="slotEnd" type="xs:string"/>
+      <xs:element name="slotStart" type="xs:string"/>
+      <xs:element name="slotType" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scheduleItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dayDirections" type="xs:string"/>
+      <xs:element minOccurs="0" name="dayZ" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="remainder" nillable="true" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiGetMilkShopListRequestType">
+    <xs:sequence>
+      <xs:element name="ident" type="xs:string"/>
+      <xs:element minOccurs="0" name="OMKTE" type="xs:string"/>
+      <xs:element minOccurs="0" name="searchString" type="xs:string"/>
+      <xs:element minOccurs="0" name="stationID" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiGetMilkShopListResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="milkShop" nillable="true" type="tns:fullMilkShop"/>
+      <xs:element minOccurs="0" name="result" type="tns:extendedResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fullMilkShop">
+    <xs:complexContent>
+      <xs:extension base="tns:milkShop">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="area" type="tns:area"/>
+          <xs:element minOccurs="0" name="geoTag" type="xs:string"/>
+          <xs:element minOccurs="0" name="loadLevel" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="nearestMetro" nillable="true" type="tns:metro"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="area">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OMKTE" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="metro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineID" type="xs:long"/>
+      <xs:element minOccurs="0" name="stationID" type="xs:long"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiListRequestType">
+    <xs:sequence>
+      <xs:element name="ident" type="xs:string"/>
+      <xs:element minOccurs="0" name="mode" type="xs:string"/>
+      <xs:element minOccurs="0" name="oms" type="xs:string"/>
+      <xs:element minOccurs="0" name="patientID" type="xs:string"/>
+      <xs:element minOccurs="0" name="snils" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiListResponseType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="foodPrescription" nillable="true" type="tns:foodPrescriptionItem"/>
+      <xs:element minOccurs="0" name="result" type="tns:extendedResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="foodPrescriptionItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="issueDate" type="xs:date"/>
+      <xs:element minOccurs="0" name="milkShop" type="tns:milkShop"/>
+      <xs:element minOccurs="0" name="notes" type="xs:string"/>
+      <xs:element name="prescriptionNumber" type="xs:string"/>
+      <xs:element name="prescriptionPeriod" type="xs:string"/>
+      <xs:element name="prescriptionTitle" type="xs:string"/>
+      <xs:element name="state" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiDetailsRequestType">
+    <xs:sequence>
+      <xs:element name="ident" type="xs:string"/>
+      <xs:element name="prescriptionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="options" type="tns:Options"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fpiDetailsResponseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="doctor" type="tns:doctorInfo"/>
+      <xs:element minOccurs="0" name="issueDate" type="xs:date"/>
+      <xs:element minOccurs="0" name="milkShop" type="tns:milkShop"/>
+      <xs:element minOccurs="0" name="MO" type="tns:moInfo"/>
+      <xs:element minOccurs="0" name="notes" type="xs:string"/>
+      <xs:element minOccurs="0" name="prescriptionNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="prescriptionPeriod" type="tns:prescriptionPeriod"/>
+      <xs:element minOccurs="0" name="prescriptionTitle" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="productLine" nillable="true" type="tns:productLineItem"/>
+      <xs:element minOccurs="0" name="result" type="tns:extendedResponse"/>
+      <xs:element minOccurs="0" name="state" type="xs:string"/>
+      <xs:element minOccurs="0" name="QRCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="feedingType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="doctorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="doctorID" type="xs:string"/>
+      <xs:element minOccurs="0" name="fullName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="moInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MOID" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prescriptionPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dateBegin" type="xs:date"/>
+      <xs:element minOccurs="0" name="dateEnd" type="xs:date"/>
+      <xs:element minOccurs="0" name="periodTitle" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="periodicity" type="xs:string"/>
+      <xs:element name="productName" type="xs:string"/>
+      <xs:element name="productOutput" type="xs:long"/>
+      <xs:element minOccurs="0" name="unit" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="fpiCheckPatientRequest" nillable="true" type="tns:fpiCheckPatientRequestType"/>
+  <xs:element name="fpiCheckPatientResponse" nillable="true" type="tns:fpiCheckPatientResponseType"/>
+  <xs:element name="fpiGetScheduleRequest" nillable="true" type="tns:fpiGetScheduleRequestType"/>
+  <xs:element name="fpiGetScheduleResponse" nillable="true" type="tns:fpiGetScheduleResponseType"/>
+  <xs:element name="fpiGetMilkShopListRequest" nillable="true" type="tns:fpiGetMilkShopListRequestType"/>
+  <xs:element name="fpiGetMilkShopListResponse" nillable="true" type="tns:fpiGetMilkShopListResponseType"/>
+  <xs:element name="fpiGetListRequest" nillable="true" type="tns:fpiListRequestType"/>
+  <xs:element name="fpiGetListResponse" nillable="true" type="tns:fpiListResponseType"/>
+  <xs:element name="fpiGetDetailsRequest" nillable="true" type="tns:fpiDetailsRequestType"/>
+  <xs:element name="fpiGetDetailsResponse" nillable="true" type="tns:fpiDetailsResponseType"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService?xsd=AAAADHAjUCM4P2cuZURELlFF9_9ZLgn8htUIM0pOoFA67.1Ek1idIcDntjSE3uhQHFAvqkSwY5vXfp8rrnFzOs7gx.8yDelbw_5nxAd1Y4MdiZgfNog7c8tHba7uV1L5vPrY2_AAmfFvHR5ceLIa9yW_uCz1B8szq2l45MZBQQ--</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="KeyValuePair">
+    <xs:annotation>
+      <xs:documentation>Представляет тип "ключ/значение"</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="key" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:documentation>Ключ</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="options" type="Options">
+    <xs:annotation>
+      <xs:documentation>Параметры вызова метода</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="Options">
+    <xs:annotation>
+      <xs:documentation>Набор именованных значений</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="entry" type="KeyValuePair">
+        <xs:annotation>
+          <xs:documentation>Именованное значение</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:endpoint></con:endpoints><con:operation id="cc76ba96-29a9-46e6-a3d0-866554062ec0" isOneWay="false" action="fpiCheckPatient" name="fpiCheckPatient" bindingOperationName="fpiCheckPatient" type="Request-Response" outputName="fpiCheckPatientResponse" inputName="fpiCheckPatient" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="118321e3-37a9-4dd5-9725-504388f4f2d7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:fpiCheckPatientRequest>\r
+         <typ:ident>?</typ:ident>\r
+         <!--Optional:-->\r
+         <typ:oms>?</typ:oms>\r
+         <!--Optional:-->\r
+         <typ:patientID>?</typ:patientID>\r
+         <!--Optional:-->\r
+         <typ:snils>?</typ:snils>\r
+      </typ:fpiCheckPatientRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="fpiCheckPatient"/></con:call></con:operation><con:operation id="f2fa3148-df23-4298-a3ea-66b9a3019275" isOneWay="false" action="fpiGetDetails" name="fpiGetDetails" bindingOperationName="fpiGetDetails" type="Request-Response" outputName="fpiGetDetailsResponse" inputName="fpiGetDetails" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ab2a9c9a-0cad-4594-911b-5cb20606e308" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:fpiGetDetailsRequest>\r
+         <typ:ident>?</typ:ident>\r
+         <typ:prescriptionNumber>?</typ:prescriptionNumber>\r
+         <!--Optional:-->\r
+         <typ:options>\r
+            <!--Zero or more repetitions:-->\r
+            <typ:entry key="?">?</typ:entry>\r
+         </typ:options>\r
+      </typ:fpiGetDetailsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="fpiGetDetails"/></con:call></con:operation><con:operation id="cb6858ad-f861-4eb5-a13d-ab4ab420ddbb" isOneWay="false" action="fpiGetList" name="fpiGetList" bindingOperationName="fpiGetList" type="Request-Response" outputName="fpiGetListResponse" inputName="fpiGetList" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="af83da2b-5110-40ff-9cbb-6cde41e20012" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:fpiGetListRequest>\r
+         <typ:ident>?</typ:ident>\r
+         <!--Optional:-->\r
+         <typ:mode>?</typ:mode>\r
+         <!--Optional:-->\r
+         <typ:oms>?</typ:oms>\r
+         <!--Optional:-->\r
+         <typ:patientID>?</typ:patientID>\r
+         <!--Optional:-->\r
+         <typ:snils>?</typ:snils>\r
+      </typ:fpiGetListRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="fpiGetList"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b4f9f522-f164-473e-9f9e-d6823dfe9287" name="getList"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:fpiGetListRequest>\r
+         <typ:ident>EMIASINFO</typ:ident>\r
+         <typ:mode>active</typ:mode>\r
+      </typ:fpiGetListRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="fpiGetList"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c8d87489-7d42-42e3-9fa0-81b25dc00451" isOneWay="false" action="fpiGetMilkShopList" name="fpiGetMilkShopList" bindingOperationName="fpiGetMilkShopList" type="Request-Response" outputName="fpiGetMilkShopListResponse" inputName="fpiGetMilkShopList" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6c3405e7-7dde-43a7-b8a2-2d8749175256" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:fpiGetMilkShopListRequest>\r
+         <typ:ident>?</typ:ident>\r
+         <!--Optional:-->\r
+         <typ:OMKTE>?</typ:OMKTE>\r
+         <!--Optional:-->\r
+         <typ:searchString>?</typ:searchString>\r
+         <!--Optional:-->\r
+         <typ:stationID>?</typ:stationID>\r
+      </typ:fpiGetMilkShopListRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="fpiGetMilkShopList"/></con:call></con:operation><con:operation id="bfd41757-d5ae-4987-bb34-ec8adaba1089" isOneWay="false" action="fpiGetSchedule" name="fpiGetSchedule" bindingOperationName="fpiGetSchedule" type="Request-Response" outputName="fpiGetScheduleResponse" inputName="fpiGetSchedule" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="903d9791-90cc-4830-b527-5b8a6e144a14" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:fpiGetScheduleRequest>\r
+         <typ:ident>?</typ:ident>\r
+         <typ:prescriptionNumber>?</typ:prescriptionNumber>\r
+      </typ:fpiGetScheduleRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="fpiGetSchedule"/></con:call></con:operation></con:interface><con:testSuite id="8e4e3cf0-d417-40d4-8198-983248086ba3" name="authentication/logout"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4afb6346-0ccf-461d-9147-a43a9ff182b8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС0_ID279037" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="logout. Ошибка SERVER_ERROR" id="a5634437-fb7f-4986-8422-1e606b194863"><con:settings/><con:config service="http://emiasinfo1.emias.solit-clouds.ru" resourcePath="/api/v1/user/authentication/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="logout. Ошибка SERVER_ERROR" id="0d9178c4-e1da-4f0e-bf61-a348e7ffdd59" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
   "deviceGuid": "e1428369-71c0-40ee-a71e-7b7b8b4dc29",
   "patientId": [
     17612323
@@ -47951,4 +48396,127 @@ sql.execute(queryGetAppointment)]]></script></con:config></con:testStep><con:tes
 &lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
   "birthDate": "${#TestCase#bd}",
   "omsNumber": "${#TestCase#oms}"
-}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 0"><con:configuration><path>$.payload.activeAppointment.count</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = PIN_GET_APPOINTMENT_ERROR"><con:configuration><path>$.payload.activeAppointment.error.code</path><content>PIN_GET_APPOINTMENT_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось получить список записей на освидетельствование"><con:configuration><path>$.payload.activeAppointment.error.description</path><content>Не удалось получить список записей на освидетельствование</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeAppointment.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2006-01-01</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>emiasInfoEndpoint</con:name><con:value>http://application-emiasinfo4.emias.solit-clouds.ru</con:value></con:property><con:property><con:name>emiasInfoDbConnection</con:name><con:value>172.17.5.11:29301/emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbLogin</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbPassword</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29301/emiasinfoapp?user=emiasinfoapp&amp;password=emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>suppDbConnection</con:name><con:value>@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDbLogin</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppDbPassword</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppFullDbConnection</con:name><con:value> jdbc:oracle:thin:EMIAS_CLUSTER/EMIAS_CLUSTER@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDBDriver</con:name><con:value>oracle.jdbc.driver.OracleDriver</con:value></con:property><con:property><con:name>nsiEndpoint</con:name><con:value>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationHeaders</con:name><con:value><![CDATA[<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">          <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">             <wsse:Username>EIM/EIM</wsse:Username>          </wsse:UsernameToken>       </wsse:Security> ]]></con:value></con:property><con:property><con:name>EI-token</con:name><con:value>-ykfDtplFdsMeQGJVlZn_Lup2XcOeiZWxsaQfKHm9QE</con:value></con:property><con:property><con:name>emiasInfoNotificationsEndpoint</con:name><con:value>http://notification-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbConnection</con:name><con:value>172.17.5.11:29104/notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbLogin</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbPassword</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29104/notification?user=notification&amp;password=notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>topicBookingRecipeInfoMessage</con:name><con:value>BookingRecipeInfoMessage.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>dbType</con:name><con:value>postgre</con:value></con:property><con:property><con:name>dbLogin</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbPassword</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbConnect</con:name><con:value>10.2.173.127:5432/rir2</con:value></con:property><con:property><con:name>bootstrapServers</con:name><con:value>10.2.172.24:9092</con:value></con:property><con:property><con:name>topicMedicationAssignmentChangesPerDay</con:name><con:value>MedicationAssignmentChangesPerDay.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Bm</con:name><con:value>Appointment2Bm.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Doctor</con:name><con:value>Appointment2Doctor.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Ldp</con:name><con:value>Appointment2Ldp.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicKisNazToEmiasPublication</con:name><con:value>kisNazToEmiasPublication.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicTmkNotify</con:name><con:value>tmkNotify.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>mockUrl</con:name><con:value>http://application-mock.emias.solit-clouds.ru</con:value></con:property><con:property><con:name>mockDbFullConnection</con:name><con:value>jdbc:postgresql://172.17.5.13:29107/emias_info_mock?user=emias_info&amp;password=emias_info</con:value></con:property><con:property><con:name>receptionTypeId</con:name><con:value>receptionTypeId</con:value></con:property><con:property><con:name>saOrchestratorEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:value></con:property><con:property><con:name>saOrchestratorDbConnection</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbLogin</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbPassword</con:name><con:value/></con:property><con:property><con:name>saOrchestratorFullDbConnection</con:name><con:value/></con:property><con:property><con:name>emiasIdEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService</con:value></con:property><con:property><con:name>emiasGibddEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+}</con:request><con:originalUri>http://application-emiasinfo4.emias.solit-clouds.ru/api/v1/mainPage/saCount</con:originalUri><con:assertion type="JsonPath Match" id="e40d1e2e-42ac-41fb-b728-fb885bd93954" name="count = 0"><con:configuration><path>$.payload.activeAppointment.count</path><content>0</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="code = PIN_GET_APPOINTMENT_ERROR"><con:configuration><path>$.payload.activeAppointment.error.code</path><content>PIN_GET_APPOINTMENT_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="description = Не удалось получить список записей на освидетельствование"><con:configuration><path>$.payload.activeAppointment.error.description</path><content>Не удалось получить список записей на освидетельствование</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="288e76db-7e80-434c-a19e-cd6bfa8f01fc" name="type = BUSINESS"><con:configuration><path>$.payload.activeAppointment.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>oms</con:name><con:value>7792189787001617</con:value></con:property><con:property><con:name>bd</con:name><con:value>2006-01-01</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="c441b657-d885-46dd-b46c-4ea833dfc51f" name="POST foodGetList"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="62403609-4000-4c40-b528-7b222fd6cfe3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Сохранить токен в проект" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Сохранить токен" id="3d66431c-9009-43f6-b693-12218aba74d4"><con:settings/><con:config><script>def sudirToken =com.eviware.soapui.SoapUI.globalProperties.getPropertyValue( "sudirToken" )
+
+testRunner.testCase.testSuite.project.setPropertyValue("EI-token", sudirToken)
+log.info "w"</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f3fce2ed-cfac-4980-b4aa-0882917f7c68" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Получить список активных заказов на питание. 403378" searchProperties="true"><con:settings/><con:testStep type="request" name="Получить список бесплатного питания" id="843b26d0-3a08-431a-a6f7-b3d15335d8a8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Молочная кухня</con:interface><con:operation>fpiGetList</con:operation><con:request name="Получить список бесплатного питания" id="8060fdce-17b6-48ea-b1b8-1485c1502afb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#freeFoodEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:fpiGetListRequest>
+         <typ:ident>EMIASINFO</typ:ident>
+         <typ:mode>${#TestCase#mode}</typ:mode>
+         <typ:oms>${#TestCase#oms}</typ:oms>
+      </typ:fpiGetListRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="57e511d1-18f3-4794-9644-5dbd99b44ac2" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="def38f63-6991-46d4-9513-d76dc9976171" name="Вернулся объект foodPrescription"><con:configuration><token>foodPrescription</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="dab2ff1c-6b75-441d-85e0-11ea6fc8cdfc"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="EI-Token" value="${#Project#EI-token}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Сравнить ответ" id="745c709a-939c-4abb-a87a-0af929b75211"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import groovy.xml.XmlSlurper
+import java.util.ArrayList
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+
+def restResponse = context.expand('${Получить список активных заказов на питание#Response}')
+def slurperJson = new JsonSlurper()
+def rest = slurperJson.parseText(restResponse)
+restBody = rest.foodPrescription
+
+def soapResponse = context.expand('${Получить список бесплатного питания#Response}')
+soap = new XmlSlurper().parseText(soapResponse)
+soapBody = soap.Body.fpiGetListResponse.foodPrescription
+
+for(i=0; i&lt;soapBody.size(); i++){
+	if(soapBody[i].state.toString() in ['active', 'protected', 'inprogress']){
+		assert soapBody[i].prescriptionNumber.toString() == restBody[i].prescriptionNumber.toString()
+		assert soapBody[i].prescriptionPeriod.toString() == restBody[i].prescriptionPeriod.toString()
+		assert soapBody[i].state.toString() == restBody[i].state.code.toString()
+		assert restBody[i].state.title.toString() == 'Действующий'
+	}
+	else {
+		log.info 'Статус' + ' ' + soapBody[i].state.toString() + ' ' + 'отсутствует в маппинге'
+	}
+}
+</script></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>active</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="97aa6cab-216f-457b-9f05-84d2e651aee6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Получить список архивных заказов на питание. 403530" searchProperties="true"><con:settings/><con:testStep type="request" name="Получить список бесплатного питания" id="b71d3c69-71c1-4435-875c-d84c4368518a"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Молочная кухня</con:interface><con:operation>fpiGetList</con:operation><con:request name="Получить список бесплатного питания" id="8060fdce-17b6-48ea-b1b8-1485c1502afb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#freeFoodEndpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://emias2.gov.ru/business/freeFoodInfo/v1/types">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <typ:fpiGetListRequest>
+         <typ:ident>EMIASINFO</typ:ident>
+         <typ:mode>${#TestCase#mode}</typ:mode>
+         <typ:oms>${#TestCase#oms}</typ:oms>
+      </typ:fpiGetListRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="57e511d1-18f3-4794-9644-5dbd99b44ac2" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="def38f63-6991-46d4-9513-d76dc9976171" name="Вернулся объект foodPrescription"><con:configuration><token>foodPrescription</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="eb089b41-8b7d-4da1-93fb-71af04ba42b5"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="EI-Token" value="${#Project#EI-token}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Сравнить ответ" id="35aaf458-41f6-43f9-b902-6a830d0f2904"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import groovy.xml.XmlSlurper
+import java.util.ArrayList
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+
+def restResponse = context.expand('${Получить список активных заказов на питание#Response}')
+def slurperJson = new JsonSlurper()
+def rest = slurperJson.parseText(restResponse)
+restBody = rest.foodPrescription
+
+def soapResponse = context.expand('${Получить список бесплатного питания#Response}')
+soap = new XmlSlurper().parseText(soapResponse)
+soapBody = soap.Body.fpiGetListResponse.foodPrescription
+
+for(i=0; i&lt;soapBody.size(); i++){
+	if(soapBody[i].state.toString() in ['expired', 'finished']){
+		assert soapBody[i].prescriptionNumber.toString() == restBody[i].prescriptionNumber.toString()
+		assert soapBody[i].prescriptionPeriod.toString() == restBody[i].prescriptionPeriod.toString()
+		assert soapBody[i].state.toString() == restBody[i].state.code.toString()
+		if(soapBody[i].state.toString() == 'expired'){
+			assert restBody[i].state.title.toString() == 'Просрочен'
+		}
+		if(soapBody[i].state.toString() == 'finished'){
+			assert restBody[i].state.title.toString() == 'Обслужен'
+		}
+	}
+	else {
+		log.info 'Статус' + ' ' + soapBody[i].state.toString() + ' ' + 'отсутствует в маппинге'
+	}
+}
+</script></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>old</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="796f11b5-15c4-4abf-ab2f-c9d0826eba0c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Значение state.title = &quot;Действующий&quot;. 403566" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="fe5f0de5-7310-41d2-a7a2-0ba80387335c"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="title1 = Действующий"><con:configuration><path>$.foodPrescription[?(@.prescriptionNumber == 'БП-001')].state["title"]</path><content>[Действующий]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="title2 = Действующий"><con:configuration><path>$.foodPrescription[?(@.prescriptionNumber == 'БП-002')].state["title"]</path><content>[Действующий]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="title3 = Действующий"><con:configuration><path>$.foodPrescription[?(@.prescriptionNumber == 'БП-003')].state["title"]</path><content>[Действующий]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Mock-freeFoodInfo" value="${#Project#mockUrl}/mock/403566"/>
+  <con:entry key="EI-Token" value="${#Project#EI-token}"/>
+</con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>active</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="7ad7152c-e4bd-4657-9530-4e8a610a8314" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Значение state.title = &quot;Просрочен&quot;. 403584" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="3ce70f26-158a-46bf-96ce-f62a421d124e"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="title = Просрочен"><con:configuration><path>$.foodPrescription[?(@.prescriptionNumber == 'БП-001')].state["title"]</path><content>[Просрочен]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Mock-freeFoodInfo" value="${#Project#mockUrl}/mock/403584"/>
+  <con:entry key="EI-Token" value="${#Project#EI-token}"/>
+</con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>old</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="012db5f1-8297-4aa0-bb54-a00fa72a1895" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ОС. Значение state.title = &quot;Обслужен&quot;. 403625" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="ef40286a-478c-4986-ba0a-f05c3038b311"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 200"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="title = Обслужен"><con:configuration><path>$.foodPrescription[?(@.prescriptionNumber == 'БП-001')].state["title"]</path><content>[Обслужен]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Mock-freeFoodInfo" value="${#Project#mockUrl}/mock/403625"/>
+  <con:entry key="EI-Token" value="${#Project#EI-token}"/>
+</con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>old</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="f451392f-45d2-453b-b153-e8700c38a233" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС1. Ошибка &quot;SUDIR_TOKEN_EXPIRED&quot;. 403652" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="af2292bc-4e56-41f2-b208-215b0da0b6d9"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 401"><con:configuration><codes>401</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="description = Время действия токена в СУДИР истекло"><con:configuration><path>$.error.description</path><content>Время действия токена в СУДИР истекло</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="type = BUSINESS"><con:configuration><path>$.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="EI-Token" value="221654" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>old</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="f7fa20ca-b31a-424b-b232-2f989b62babd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС1. Ошибка &quot;ACCESS_DENIED&quot;. 403653" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="5d1e7f0e-54d0-41e2-8b01-633d1ba32392"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 403"><con:configuration><codes>403</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="description = Доступ к запрошенной медкарте отсутствует"><con:configuration><path>$.error.description</path><content>Доступ к запрошенной медкарте отсутствует</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="type = BUSINESS"><con:configuration><path>$.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="EI-Token" value="${#Project#EI-token}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>old</con:value></con:property><con:property><con:name>oms</con:name><con:value>5954720874000571</con:value></con:property></con:properties></con:testCase><con:testCase id="7bcf4073-d66c-402e-95b1-4b857cb7ed34" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС2. Ошибка &quot;FF_SERVER_ERROR&quot;. 403735" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="db8eeae0-4304-4e1c-b2b4-26fbed793e58"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 400"><con:configuration><codes>500</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="code = FF_SERVER_ERROR"><con:configuration><path>$.error.code</path><content>FF_SERVER_ERROR</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="description = Сервис ЕМИАС.БП не отвечает"><con:configuration><path>$.error.description</path><content>Сервис ЕМИАС.БП не отвечает</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="type = TECHNICAL"><con:configuration><path>$.error.type</path><content>TECHNICAL</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Mock-freeFoodInfo" value="${#Project#mockUrl}/mock/403735"/>
+  <con:entry key="EI-Token" value="${#Project#EI-token}"/>
+</con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>active</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="2af5b469-f6cc-45c3-8740-121ced46e95d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС3. Ошибка &quot;FF_ORDER_NOT_FOUND&quot; при получении foodPrescription.state не из списка. 403734" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="edb5e24c-3e0d-454c-ac53-a458e49d0e8d"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 404"><con:configuration><codes>404</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="code = FF_ORDER_NOT_FOUND"><con:configuration><path>$.error.code</path><content>FF_ORDER_NOT_FOUND</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="description = Отсутствуют заказы на питание"><con:configuration><path>$.error.description</path><content>Отсутствуют заказы на питание</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="type = BUSINESS"><con:configuration><path>$.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Mock-freeFoodInfo" value="${#Project#mockUrl}/mock/403734"/>
+  <con:entry key="EI-Token" value="${#Project#EI-token}"/>
+</con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>active</con:value></con:property><con:property><con:name>oms</con:name><con:value>7787589724000449</con:value></con:property></con:properties></con:testCase><con:testCase id="425561af-6701-4b8a-b9c0-de15cf92fd8a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="АС3. Ошибка &quot;FF_ORDER_NOT_FOUND&quot;. 403659" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Получить список активных заказов на питание" id="72b0e42b-6411-4041-92e8-f6a9383ce8eb"><con:settings/><con:config service="http://application-emiasinfo4.emias.solit-clouds.ru" resourcePath="/api/v1/freefood/foodGetList" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Получить список активных заказов на питание" id="257c6a13-fac0-4bbb-b8d5-d77fcc906260" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#emiasInfoEndpoint}</con:endpoint><con:request>{
+  "mode": "${#TestCase#mode}",
+  "omsNumber": "${#TestCase#oms}"
+}</con:request><con:originalUri>http://application-emiasinfo1.emias.solit-clouds.ru/api/v1/freefood/foodGetList</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="3d890c81-5342-436e-bf7b-94130e8d39bf" name="Код ответа 404"><con:configuration><codes>404</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="code = FF_ORDER_NOT_FOUND"><con:configuration><path>$.error.code</path><content>FF_ORDER_NOT_FOUND</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="description = Отсутствуют заказы на питание"><con:configuration><path>$.error.description</path><content>Отсутствуют заказы на питание</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ec56797e-22b5-4118-a267-bfd0e62ebc5e" name="type = BUSINESS"><con:configuration><path>$.error.type</path><content>BUSINESS</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="EI-Token" value="${#Project#EI-token}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>Mock-freeFoodInfo</con:entry><con:entry>EI-Token</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>mode</con:name><con:value>active</con:value></con:property><con:property><con:name>oms</con:name><con:value>7751900891000355</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>emiasInfoEndpoint</con:name><con:value>http://application-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoDbConnection</con:name><con:value>172.17.5.11:29102/emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbLogin</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDbPassword</con:name><con:value>emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29102/emiasinfoapp?user=emiasinfoapp&amp;password=emiasinfoapp</con:value></con:property><con:property><con:name>emiasInfoDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>suppDbConnection</con:name><con:value>@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDbLogin</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppDbPassword</con:name><con:value>EMIAS_CLUSTER</con:value></con:property><con:property><con:name>suppFullDbConnection</con:name><con:value> jdbc:oracle:thin:EMIAS_CLUSTER/EMIAS_CLUSTER@//10.2.172.242:1521/emiasdb</con:value></con:property><con:property><con:name>suppDBDriver</con:name><con:value>oracle.jdbc.driver.OracleDriver</con:value></con:property><con:property><con:name>nsiEndpoint</con:name><con:value>http://esbcamel.test.emias.mos.ru/proxy/Composite/nsi2PublicationAuth/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/emiaslovv/pillboxService/v1S/ProxyService</con:value></con:property><con:property><con:name>medicationHeaders</con:name><con:value><![CDATA[<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">          <wsse:UsernameToken wsu:Id="UsernameToken-c607cef5-5a4f-4d2">             <wsse:Username>EIM/EIM</wsse:Username>          </wsse:UsernameToken>       </wsse:Security> ]]></con:value></con:property><con:property><con:name>EI-token</con:name><con:value>bGeef69N7EPjXnMPfXvDPSXEzC96mq0hXfnFAF2KvoY</con:value></con:property><con:property><con:name>emiasInfoNotificationsEndpoint</con:name><con:value>http://notification-emiasinfo1.emias.solit-clouds.ru/</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbConnection</con:name><con:value>172.17.5.11:29104/notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbLogin</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDbPassword</con:name><con:value>notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsFullDbConnection</con:name><con:value>jdbc:postgresql://172.17.5.11:29104/notification?user=notification&amp;password=notification</con:value></con:property><con:property><con:name>emiasInfoNotificationsDBDriver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>topicBookingRecipeInfoMessage</con:name><con:value>BookingRecipeInfoMessage.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>dbType</con:name><con:value>postgre</con:value></con:property><con:property><con:name>dbLogin</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbPassword</con:name><con:value>rir2</con:value></con:property><con:property><con:name>dbConnect</con:name><con:value>10.2.173.127:5432/rir2</con:value></con:property><con:property><con:name>bootstrapServers</con:name><con:value>10.2.172.24:9092</con:value></con:property><con:property><con:name>topicMedicationAssignmentChangesPerDay</con:name><con:value>MedicationAssignmentChangesPerDay.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Bm</con:name><con:value>Appointment2Bm.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Doctor</con:name><con:value>Appointment2Doctor.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicAppointment2Ldp</con:name><con:value>Appointment2Ldp.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicKisNazToEmiasPublication</con:name><con:value>kisNazToEmiasPublication.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>topicTmkNotify</con:name><con:value>tmkNotify.EMIASINFO_SOLIT_TEST_1</con:value></con:property><con:property><con:name>mockUrl</con:name><con:value>http://application-mock.emias.solit-clouds.ru</con:value></con:property><con:property><con:name>mockDbFullConnection</con:name><con:value>jdbc:postgresql://172.17.5.13:29107/emias_info_mock?user=emias_info&amp;password=emias_info</con:value></con:property><con:property><con:name>receptionTypeId</con:name><con:value>receptionTypeId</con:value></con:property><con:property><con:name>saOrchestratorEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/Composite/saOrchestrator/v1S/ProxyService</con:value></con:property><con:property><con:name>saOrchestratorDbConnection</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbLogin</con:name><con:value/></con:property><con:property><con:name>saOrchestratorDbPassword</con:name><con:value/></con:property><con:property><con:name>saOrchestratorFullDbConnection</con:name><con:value/></con:property><con:property><con:name>emiasIdEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/instrumental/assignment/v2.2S/ProxyService</con:value></con:property><con:property><con:name>emiasGibddEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/Gibdd/Appointment/v2S/ProxyService</con:value></con:property><con:property><con:name>freeFoodEndpoint</con:name><con:value>http://esbcamelvv.test.emias.mos.ru/proxy/emiasff/freeFoodInfoService/v1S/ProxyService</con:value></con:property><con:property><con:name>sudirToken</con:name><con:value>oIkO9U6iA1bu0YGsUyofu4LwF_ORoJr-kl9dqaltPTg</con:value></con:property><con:property><con:name>X-Access-JWT</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1c2VyX2F1dGgiLCJleHAiOjE3MTEzNzQ0MjQsImF1ZCI6IlBBVElFTlQiLCJzdWIiOiI3NTgzNWNiNy05ZTI3LTRhY2ItYTk1ZC1hOWRiMzRlOTY0MWUiLCJzaWQiOiIyNDE5M2ZjZC1hMDhlLTQ1OTAtYjViMC1mZDM3MTRhYWQ0ZGUiLCJwaG9uZSI6Ijc5MTUwMDQ5NzY2Iiwic3NvX2lkIjoiWkRYQlVmVjJuOVNBUEI3ZzJ6QlMzS3UxOVNicHlHSE9HOCtHSFpNR3VsY3d6R3BZZXZiUFFFQU15LzYyT0UzQzdLRnMxcFdHd2dnYlhXRFd6eFcraVd0T2FKN29rRDcwZ2VFSkhVTnpnODU3R2gzOVNKc0RKLzVnZ00yWXJWR1JnbkU3U1pUK1hSV0Z6QzBsQ2dJMlB3L1d4dmNQdTFUc01UMFlyU2Z4cTdJajdlZE9FTWpEMEJuVzZKU3RySVdJWnd5cTExNFhZYjZmN04rd3kvdFFiZzVHd2dhY2VVYm9GakY4RkRxRDZFT3lVMUVtbjh6RHlvemlLcG4zQmdpQkFtd0dKWTZLNTRHMVdVUi9HOFBJTTJGblhaaTFHVkYvYUhVRENncjRjaUN2dHk0ZTNBUEdvaEZONnJHWEFVUjhqdlpoajlhZXBOeWNEcXVyOHhNYytRPT0iLCJlbWFpbCI6IiIsImZpcnN0X25hbWUiOiJcdTA0MjVcdTA0MzBcdTA0M2RcdTA0NDNcdTA0M2MiLCJzZWNvbmRfbmFtZSI6Ilx1MDQxMC4iLCJtaWRkbGVfbmFtZSI6Ilx1MDQxN1x1MDQzOFx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQ0M1x1MDQ0Mlx1MDQzNFx1MDQzOFx1MDQzZFx1MDQzZVx1MDQzMlx1MDQzZFx1MDQzMCIsImJpcnRoX2RhdGUiOiIyMDAxLTA2LTA2IiwiYW1yIjpbXX0.FwQbFa4ayBH8UVSQ_sFju2I0UqrE84efN3M2SyJ8DDoONHzfznfZKaK_HbF0x-wx8n6w8uLTfx4Dk-mmDiQbfD5X5H0bsyfB7Gvf1MImbEed4bAT_gOgkZpBFjKkGg29faA3elqs1uGzDhfK_qKQSorXalJjWTABfhs5u_mBUyBu_YT5pxxJvy9t5_FkPKg1exYjl5O4df5LA1ux_Gs7MhCDJpmuCsK57mawLC1kojt99iAxqegN40dzS7bM8_sowD8aprnm26We5xkpRX9LHpObdCd-cZkl6JTiNMqAemCjYA86kSc81CR9m_b2tLt02NhvXy0qvylmkdNwIiXzLCHr4UMbs8dxRY24Tb75jsxIr7AhwiC8pjaHSN9eQ4-0YRJNvb2Vng10E0qL7CIrkumFVRrt1Nr5domFO-6v9jTUiy0yxBidMpu8-oTVp1GOllnIqq6uCH6Texk9sOH5ho6p3xMhhKthUWAXUSl46apR7N5PP6H5NVMMY7f44XwemtfsWbBxwTw__1eECwuh6ddFXMN5u6Z2UOQU1_fjcpNTi-9ME7MvW4AiREl4eEGiGx_JSLKjMTMPJLqBwi7oB5gnOJPXnuu_aKbPXq0E8BTF7e-c1F4eQueMKwTCnrt3HVmCM3fqDnBeI4xvPzXBw2BzKkEzesH7iIVCdg9uLQs</con:value></con:property><con:property><con:name>refreshToken</con:name><con:value>9Q45psEDt5fA8DJNWzuEVIlhgnWFd2i0_5kOQT7b7jcd3-2qCupM_tHgKVGUAlKV3kkL3aycya2qeMC7x2nk6Q</con:value></con:property><con:property><con:name>refresh-X-Access-JWT</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1c2VyX2F1dGgiLCJyaWQiOiI0YzhmZmE0Ni0wMWI0LTRjOWYtOTA0Yi0wMWI3MzRjYjRhZTUiLCJzaWQiOiIyNDE5M2ZjZC1hMDhlLTQ1OTAtYjViMC1mZDM3MTRhYWQ0ZGUiLCJleHAiOjE3MTE5NzU2MjQsInN1YiI6Ijc1ODM1Y2I3LTllMjctNGFjYi1hOTVkLWE5ZGIzNGU5NjQxZSIsInNzb19pZCI6Ing2WVdpaFUzSVlTR3FGWjRMRk9TUkhoWEh0dGQwaGdiVmZVbENUZmdkNENKYVJyV2YxcVdFOGcvS2V2Tzhob2JCWDFCTVRJRWlnV1FpcHN2SVJDZkJyN215Z1YzVC9pUGZFSkJibDlybjRNWVFPVFhPRHRYbjNXdDJtQit2MlQwN0Nlb0ZuK0hYemYxV2xSMVRERi91azhhMEt3NnBDamZ2Lyt1d2txUmhBSEV4Q0hzL3ZkYUIyTkdtSzkrQU4wNEVJWWhTK2xwTVdFNzhpZGlHZFVuRUw5K0ZCbW9SSlI2WVlHZy9YVHpTbWtTbHlyZzAzQnJhdXNDREVldS9Ic3ZKTVMrYUdSQ3d1aUhYSDBkKzE0WDE2UW9wdURLVUxuZjZUVlZkYkRrOUZkcy9zaVo1L1hzaDNWa2NqVUxQYWlhNGxLSFo5V3YxWUNOd0JZWGdvb1MvQT09In0.U8kaf0dnEJlcwp4thQB2t1bbv33VWz6Nd3UyAfWsY2B50J2eE8Svah-CK6QYcLIWqwK4KrArrTcjadyJ-mUvjwVA7gYBJQo4yXZFZE3YJ7rphF78kjCsP80hvSd3vtkQQDXTUTBFldIdu07HARCjCvsFzEvqEJR9mEeHKXh3xkM0TllYuGuZTwDM81vcz5EClnrju3z9EYBqUW4zv96JGscbFvOVnI8t-Aqq18QyYeVSg4SG6kDUZjw9Oa4mPFTBfli5hdcLmvZOwPql_slaP1JqzSaNRbwLm8j_HkCMEiQCohtgYW154PdnsRzP65RtXYJECyw4K-ElMz5pvIS9LOi8JR3yrecWmUuKt7XHexx3REnM5tKATyoDeBEzAUzVp3YIwq1VJmWG9dqpMFyRzC4PTo1Erlqw3uOmXaTW0cfERsIthkOb_UWAHv8jITqkGKeZxi1oBoFaIpp5Rn_3QDTWLT53JL7aWBT3t6gexpJNYrjHC517M96y0h2Rlq_koXCuhsadf4LALQho1pFr1cCgJIzc3wPesOnfi2rCtDSJIe1FE8u_MeCDmrlHAhHQwQBEhPzKel5a0A5da6i6J5sKYcWR1z1qTA7_J7kV0w4mRP41gw1Ha6vUbGijgUFZbbvGEh8mV99dK-A1AbTVpbgT51NDa7zZcLpYkb21gJ8</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
